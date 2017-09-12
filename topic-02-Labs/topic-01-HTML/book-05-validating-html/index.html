@@ -1,0 +1,339 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      HTML Basics
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Validating HTML">
+      Validating HTML
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Validating HTML">
+        <h1>Objectives</h1>
+<p>In this lab, you will use an online tool to validate your HTML code and check that it is correctly structured.</p>
+<h2>Contents</h2>
+<ul>
+<li><a href="#/01">HTML validator</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h2>The World Wide Web Consortium (W3C)</h2>
+<p>The World Wide Web Consortium (W3C) is an international community that develops open standards to ensure the long-term growth of the Web. Member organizations, a full-time staff, and the public work together to develop Web standards. Led by Web inventor Tim Berners-Lee and CEO Jeffrey Jaffe, W3C&#39;s mission is to lead the Web to its full potential.</p>
+<p>The W3C provide online validation tools that you allow to check whether your HTML code complies with the standard they have set. You will try out this tool in this lab.</p>
+<h2>HTML Validator</h2>
+<ul>
+<li><p>To use the validator, go to <a href="https://validator.w3.org/" target="_blank"><code>https://validator.w3.org/</code></a>. </p>
+</li>
+<li><p>Once there, you have three options:</p>
+<ul>
+<li>Validate by URI: enter a URL/web address to check the HTML on that webpage.</li>
+</ul>
+<p><img src="./img/01.png" alt=""></p>
+<ul>
+<li>Validate by file upload: Click on choose file and find the HTML file you want to check, wherever you have saved it.</li>
+</ul>
+<p><img src="./img/02.png" alt=""></p>
+<ul>
+<li>Validate by direct input: Copy and paste the HTML you want to check into the box provided.</li>
+</ul>
+<p><img src="./img/03.png" alt=""></p>
+</li>
+</ul>
+<h3>Common errors</h3>
+<ul>
+<li>Opening or closing tag missing: for example, you may have two opening <code>&lt;p&gt;</code> tags and only one closing <code>&lt;/p&gt;</code> tag. The validator will spot these and should also tell you roughly what line the error occurs on. </li>
+<li><b>Tip!</b> Sometimes the error is actually on the line <i>above</i> the one that the validator suggests!</li>
+<li>Tags nested incorrectly: for example, these tags are nested incorrectly <code>&lt;p&gt;&lt;b&gt;Text&lt;/p&gt;&lt;/b&gt;</code>  Tags should be closed in the opposite order from how they were opened. In this example, the bold element should be fully enclosed in the paragraph element, like this: <code>&lt;p&gt;&lt;b&gt;Text&lt;/b&gt;&lt;/p&gt;</code></li>
+<li>Doctype, language code or charset missing: You may have noticed in our labs we have been including some extra lines in our code: these are required for correct validation. You can see these in the code below:</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;WIT Home Page&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  Waterford Institute of Technology
+  WIT Home Page
+  &lt;p&gt;Waterford Institute of Technology (WIT) is a university-level institution in the South-East
+     of Ireland with over 10,000 students and 1000 staff. &lt;/p&gt;
+  &lt;p&gt;WIT offers tuition and research programs in various areas up to PhD level.&lt;/p&gt;
+   &lt;/body&gt;
+  &lt;/html&gt;</code></pre>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code>: this tells the browser what language we are using (HTML)</li>
+<li><code>&lt;html lang=&quot;en&quot;&gt;</code>: adding the language attribute to the HTML tag sets the language of the page as English (en).</li>
+<li><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>: including this line in the head section tells the browser what character set we are using (UTF-8).</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h2>HTML Validator</h2>
+<ul>
+<li>Now, try it yourself!</li>
+<li>Go to <a href="https://validator.w3.org/" target="_blank"><code>https://validator.w3.org/</code></a></li>
+<li>Upload some of the HTML pages you created in this lab</li>
+<li>Fix any errors that you find</li>
+<li>If you&#39;re not sure what some of them mean, ask your tutor</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

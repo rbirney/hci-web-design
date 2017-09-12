@@ -1,0 +1,427 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      HTML Basics
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Adding lists">
+      Adding lists
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Adding lists">
+        <h1>Objectives</h1>
+<p>This lab will show you how to add numbered and bulleted lists to your web page.</p>
+<h2>Contents</h2>
+<ul>
+<li><a href="#/01">Unordered Lists</a></li>
+<li><a href="#/02">Ordered Lists</a></li>
+<li><a href="#/03">Description Lists</a></li>
+<li><a href="#/04">Nested Lists</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h2>Lists</h2>
+<p>It is possible to display a group of items in a list or bulleted format. You can have them numbered, un-numbered or in definition format. In the list syntax the tag <code>&lt;li&gt;</code> identifies an element of the list (list item).</p>
+<h2>Unordered Lists</h2>
+<pre><code>&lt;ul&gt; 
+&lt;li&gt; ...&lt;/li&gt; 
+&lt;li&gt; ...&lt;/li&gt; 
+&lt;/ul&gt;</code></pre>
+<p>Displays a list of items that uses bullet points. The <code>&lt;ul&gt;</code> indicates that a unordered list is to follow. Each of the elements in the list is started with <code>&lt;li&gt;</code> and ended with <code>&lt;/li&gt;</code>. When you are done with the list it is closed with a <code>&lt;/ul&gt;</code> tag.</p>
+<p>HTML Code</p>
+<pre><code>&lt;h2&gt;Fast food in Vermillion&lt;/h2&gt;
+&lt;ul&gt;
+   &lt;li&gt;Burger King&lt;/li&gt;
+   &lt;li&gt;Dairy Queen&lt;/li&gt;
+   &lt;li&gt;Dominos&lt;/li&gt;
+   &lt;li&gt;Hardee&#39;s&lt;/li&gt;
+   &lt;li&gt;Pizza Hut&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<p><a href="archives/examples/example13.htm" target="_blank">Unordered List Example</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h2>Ordered Lists</h2>
+<pre><code>&lt;ol&gt; 
+&lt;li&gt; ...&lt;/li&gt; 
+&lt;li&gt; ...&lt;/li&gt; 
+&lt;/ol&gt;</code></pre>
+<p>Displays items in a numbered list. The <code>&lt;ol&gt;</code> tells the browser to start an ordered list. Each element of the list must start with <code>&lt;li&gt;</code>. To end the list you must close with a <code>&lt;/ol&gt;</code> tag.</p>
+<p>HTML Code</p>
+<pre><code>&lt;h2&gt;Fast food in Vermillion&lt;/h2&gt;
+&lt;ol&gt;
+   &lt;li&gt;Burger King&lt;/li&gt;
+   &lt;li&gt;Dairy Queen&lt;/li&gt;
+   &lt;li&gt;Dominos&lt;/li&gt;
+   &lt;li&gt;Hardee&#39;s&lt;/li&gt;
+   &lt;li&gt;Pizza Hut&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<p><a href="archives/examples/example14.htm" target="_blank">Ordered List Example</a></p>
+<p>The <b>start</b> attribute lets you specify with which number your list should begin. </p>
+<p>HTML Code</p>
+<pre><code>&lt;h2&gt;Fast food in Vermillion&lt;/h2&gt;
+&lt;ol start=&quot;5&quot;&gt;
+   &lt;li&gt;Burger King&lt;/li&gt;
+   &lt;li&gt;Dairy Queen&lt;/li&gt;
+   &lt;li&gt;Dominos&lt;/li&gt;
+   &lt;li&gt;Hardee&#39;s&lt;/li&gt;
+   &lt;li&gt;Pizza Hut&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<p><a href="archives/examples/example15.htm" target="_blank">Ordered List Example (with Start attribute)</a></p>
+<p>The <b>reversed</b> attribute,when present, reverses the order of the list items. </p>
+<p>HTML Code</p>
+<pre><code>&lt;h2&gt;Fast food in Vermillion&lt;/h2&gt;
+&lt;ol start=&quot;5&quot; reversed&gt;
+   &lt;li&gt;Burger King&lt;/li&gt;
+   &lt;li&gt;Dairy Queen&lt;/li&gt;
+   &lt;li&gt;Dominos&lt;/li&gt;
+   &lt;li&gt;Hardee&#39;s&lt;/li&gt;
+   &lt;li&gt;Pizza Hut&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<p><a href="archives/examples/example16.htm" target="_blank">Ordered List Example (with Start and Reversed attributes)</a></p>
+<p>Note: Browser support is good for start, but reversed is not fully supported. This means it may not be displayed correctly in every browser.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h2>Description List</h2>
+<pre><code>&lt;dl&gt; 
+&lt;dt&gt; ... &lt;/dt&gt; 
+&lt;dd&gt; ... &lt;/dd&gt; 
+&lt;/dl&gt;</code></pre>
+<p>Description lists should be used to mark up any kind of name-value pairs, including terms and definitions, questions and answers, etc. These tags automatically indent the definitions. The opening <code>&lt;dl&gt;</code> and closing <code>&lt;/dl&gt;</code>tags enclose the description list. <code>&lt;dt&gt;</code> refers to the term to be defined/described. <code>&lt;dd&gt;</code> refers to the definition/description of the term.</p>
+<p>HTML Code</p>
+<pre><code>&lt;h2&gt;Fast food in Vermillion&lt;/h2&gt;
+&lt;dl&gt;
+   &lt;dt&gt;Burger King&lt;/dt&gt;
+      &lt;dd&gt; hamburger&lt;/dd&gt;
+   &lt;dt&gt;Dairy Queen&lt;/dt&gt;
+      &lt;dd&gt; hamburger&lt;/dd&gt;
+   &lt;dt&gt;Dominos&lt;/dt&gt;
+      &lt;dd&gt; pizza&lt;/dd&gt;
+   &lt;dt&gt;Hardee&#39;s&lt;/dt&gt;
+      &lt;dd&gt; hamburger&lt;/dd&gt;
+   &lt;dt&gt;Pizza Hut&lt;/dt&gt;
+      &lt;dd&gt; pizza&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+<p><a href="archives/examples/example17.htm" target="_blank">Description List Example</a></p>
+<p><a href="archives/examples/Definition.htm" target="_blank">Another Description List Example</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h2>Nesting Lists</h2>
+<p>It is possible to nest lists to achieve an outline type of display. To do this the innermost list must be enclosed within the outermost list.</p>
+<p>HTML Code</p>
+<pre><code>&lt;ol&gt;
+   &lt;li&gt;topic 1
+   &lt;ol&gt;
+     &lt;li&gt;subtopic A&lt;/li&gt;
+     &lt;li&gt;subtopic B
+     &lt;ol&gt;
+       &lt;li&gt;sub-subtopic i&lt;/li&gt;
+       &lt;li&gt;sub-subtopic ii&lt;/li&gt;
+     &lt;/ol&gt;
+     &lt;/li&gt;
+     &lt;li&gt;subtopic C&lt;/li&gt;
+     &lt;/ol&gt;&lt;/li&gt;
+   &lt;li&gt;topic 2&lt;/li&gt;
+   &lt;li&gt;topic 3&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<p><a href="archives/examples/Ordered.htm" target="_blank">Nested Ordered List Example</a></p>
+<p><a href="archives/examples/Unordered.htm" target="_blank">Nested Unordered List Example</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h2>Adding lists: Exercises</h2>
+<h3>Exercise One</h3>
+<ul>
+<li>Create a folder called &#39;Lab03&#39; in your HCI and Web Design/Week01 folder. </li>
+<li>Open a text editor and create a new web page called ListExercise1.htm. Save it into the Lab03 folder.</li>
+<li>Include the required tags to create the following web page which includes some lists:</li>
+</ul>
+<p><img src="./img/exercise1.png" alt=""></p>
+<ul>
+<li>Remember to use <code>&lt;ul&gt;</code> for unordered lists, <code>&lt;ol&gt;</code> for ordered lists, and <code>&lt;dl&gt;</code> for description lists. Each list item in an unordered or ordered list is marked up with a <code>&lt;li&gt;</code> tag.</li>
+<li>Don&#39;t forget to add all the usual HTML tags that should be on every page (html, head, title, body, etc.)</li>
+</ul>
+<h3>Exercise Two</h3>
+<ul>
+<li>Open a text editor and create a new web page called ListExercise2.htm.  Save it into the Lab03 folder.</li>
+<li>Include the required tags to create the following web page which includes a nested list:</li>
+</ul>
+<p><img src="./img/exercise2.png" alt=""></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

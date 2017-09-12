@@ -1,0 +1,371 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      HTML Basics
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Linking pages">
+      Linking pages
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Linking pages">
+        <h1>Objectives</h1>
+<p>In this lab, you will learn how web pages are linked together.</p>
+<h2>Contents</h2>
+<ul>
+<li><a href="#/01">External links</a></li>
+<li><a href="#/02">Linking between pages in a website</a></li>
+<li><a href="#/03">Linking within the same page</a></li>
+<li><a href="#/04">Mail to links</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h2>Links</h2>
+<p>Hyperlinks, or links, are how you move around the web. An <code>&lt;a&gt;</code> or anchor tag is how you make hyperlinks in HTML. Hyperlinks are basically pointers to other information on the World Wide Web. The other sites might be a file in the same directory, in Japan or anywhere in the world. The syntax varies a little depending on what kind of connection is required to visit the proposed site.</p>
+<h3>URLs</h3>
+<p>URL stands for Uniform Resource Locator. A URL, basically, is a way to tell your web browser (or other program) where to look for something. If you wanted to make a hypertext link to a page, you would need its URL.</p>
+<p>For Example: the URL for Microsoft is <code>http://www.microsoft.com</code></p>
+<h2>External links</h2>
+<p>To make the actual link to the Microsoft page, you would see something like this: <a href="http://www.microsoft.com" target="_blank">Microsoft</a> - a word that is clickable. This is accomplished with the following HTML code:</p>
+<pre><code>&lt;a href=&quot;http://www.microsoft.com&quot;&gt;Microsoft&lt;/a&gt;</code></pre>
+<h3>&#39;target&#39; attribute</h3>
+<p>If you want an external link to open in a new tab (so the user doesn&#39;t leave your website!) you can use the target attribute, as follows:</p>
+<pre><code>&lt;a href=&quot;http://www.microsoft.com&quot; target=&quot;_blank&quot;&gt;Microsoft&lt;/a&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h2>Linking within your own site</h2>
+<p>If the file you want to link to is on your computer (or on the same website), you just need to provide the filename (plus extension) as the URL. For example: </p>
+<pre><code>&lt;a href=&quot;index.htm&quot;&gt;Home Page&lt;/a&gt; 
+&lt;a href=&quot;aboutwit.htm&quot;&gt;About WIT&lt;/a&gt; 
+&lt;a href=&quot;director.htm&quot;&gt;Director&lt;/a&gt;</code></pre>
+<p>All of these pages are saved in the same folder, as you can see here: </p>
+<p><img src="./img/01.png" alt=""></p>
+<p>Note that if the pages were saved in different folders, you would need to include the full path (i.e. the location of the file) so that the browser would be able to find it! For now, just make sure that all the pages you want to link are saved in the same folder. </p>
+<p><a href="archives/examples/cv.htm" target="_blank">Link Example</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h2>Linking within the same page</h2>
+<p>An anchor is a point in a web page that you wish to go to. You mark the section using the following: <code>&lt;a href = &quot;#name&quot;&gt;</code> where #name is the name of the section.</p>
+<h3>Example of setting an anchor</h3>
+<p>This code sets this piece of text at the top of the page as an anchor, and gives it the name &quot;top&quot;.</p>
+<pre><code>&lt;a name=&quot;top&quot;&gt;Hi! I&#39;m the first piece of text on this page!!!&lt;/a&gt;</code></pre>
+<h3>Linking to that anchor</h3>
+<p>Then, later on, we can link to this area of the page using the hash symbol and the name we defined (so #top). This is done as follows:</p>
+<pre><code>&lt;p&gt;I&#39;m way, way, way down at the bottom of the page... Too lazy to scroll back up? That&#39;s okay! Click here: 
+&lt;a href=&quot;#top&quot;&gt;Back to top&lt;/a&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h2>Mail to links</h2>
+<p>To email a contact address from a web page, use <code>&lt;a href = &quot;mailto:email address&quot;&gt;</code> where email address is the address of the contact you wish to email. For example:</p>
+<pre><code>&lt;a href=&quot;mailto:webdev@wit.ie&quot;&gt;Send me a comment&lt;/a&gt;</code></pre>
+<p>When clicked, this will open up the computer&#39;s default mail program and start an email to the address you specified. If it doesn&#39;t work on the PCs in the lab you&#39;re in, it might be because there isn&#39;t a default mail program set.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h2>Linking pages: Exercise</h2>
+<ul>
+<li>Download this zip file into your HCI and Web Design/Week01 folder: <a href="archives/lab04.zip">lab04.zip</a></li>
+<li>Extract/unzip the file (if you right-click on the file, you will usually see an &#39;extract here&#39; option which is the easiest way to do this! If you&#39;re unsure, please ask your tutor.)</li>
+<li>Open the three HTML pages in your text editor. Then, carry out the following instructions.</li>
+</ul>
+<h3>On each page</h3>
+<ul>
+<li>Markup the first line of each web page (Waterford Institute of Technology) as a <code>&lt;h1&gt;</code> heading. </li>
+<li>Markup the second line of each web page (WIT Home Page, About WIT, Director’s Welcome) as a <code>&lt;h2&gt;</code> heading. </li>
+</ul>
+<p><img src="./img/pt1.png" alt=""></p>
+<h3>On the director.htm page</h3>
+<ul>
+<li>After the h2 heading, add the image of the director to director.htm. The image (president.jpg) is in the images sub folder.</li>
+</ul>
+<p><img src="./img/pt2.png" alt=""></p>
+<h3>Add links between the pages</h3>
+<ul>
+<li>Link the 3 pages together. Place the links after the h1 heading but before the h2 heading. The files required for the links are: index.htm, aboutwit.htm, and director.htm.</li>
+</ul>
+<p><img src="./img/pt3.png" alt=""></p>
+<h3>Add an external link (on aboutwit.htm)</h3>
+<ul>
+<li>Add an external link for the National Qualifications Authority of Ireland at the end of the second paragraph in the aboutwit.htm page. The link (web address) is <code>http://www.qqi.ie</code>. </li>
+<li>Add the attribute-value target=&quot;_blank&quot; to the link (a tag).</li>
+</ul>
+<p><img src="./img/pt4.png" alt=""></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

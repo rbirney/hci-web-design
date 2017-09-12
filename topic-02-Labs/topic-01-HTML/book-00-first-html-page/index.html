@@ -1,0 +1,419 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      HTML Basics
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Create your first HTML page">
+      Create your first HTML page
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Create your first HTML page">
+        <h1>Objectives</h1>
+<p>This lab will firstly introduce you to the tools we will use during the web development module and secondly introduce you to creating, editing, saving and displaying a web page.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction Project</h1>
+<p>You will create a simple web page for it Starbuzz Coffee shop. They have made a name for itself as the fastest growing coffee shop around. If you’ve seen one on your local corner, look across the street—you’ll see another one. In fact, they’ve grown so quickly, they haven’t even managed to put up a web page yet…and therein lies your big break: By chance, while buying your Starbuzz Chai Tea, you run into
+the Starbuzz CEO… who asks for your help...</p>
+<p><img src="./img/10.png" alt=""></p>
+<p>These are the steps you will carry out:</p>
+<p><img src="./img/11.png" alt=""></p>
+<p>To prepare we will create a folder structure to store our work.</p>
+<p>If you are working on a PC in the IT lab, create a new folder on either your G drive/WIT OneDrive or on your usb drive and name the folder HCI and Web Design. Inside that folder create another folder called Week01. You will be creating a new folder for each week this semester. Inside that folder, create a folder for this lab, called Lab00.</p>
+<p>First on the list of tasks is to create a html file in a text editor. To start with, we&#39;re going to use the Notepad application. In a few steps, you&#39;ll get to choose a different text editor to work with; but for now, open Notepad.</p>
+<p>In Notepad, choose New File from the File menu, and a new blank page should appear. When you open a new file you must tell Notepad what you want to name it. Click Save on the File menu and name the file index.html, save it into the Lab00 folder. Make sure you change the file type to &#39;All Files&#39;. </p>
+<p><img src="./img/07.png" alt=""></p>
+<p>Second on the list of tasks we type in the menu that the CEO provided to us on the napkin.</p>
+<p>To do this we click on the index.html file we just created. In that page we type the following:</p>
+<pre><code>
+Starbuzz Coffee Beverages
+
+House Blend, $1.49
+A smooth, mild blend of coffees from Mexico, Bolivia and Guatemala.
+
+Mocha Cafe Latte, $2.35
+Espresso, steamed mild and chocolate syrup.
+
+Cappuccino, $1.89
+A mixture of espresso, steamed milk and foam.
+
+Chai Tea, $1.85
+A spicy drink made with black tea, spices, milk and honey.</code></pre>
+<p>Third on the list of tasks is to save the file. Click on the File menu in Notepad and choose Save.</p>
+<p>Your file should look like this:</p>
+<p><img src="./img/16.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Web Browser</h1>
+<p>For this module we will be using Google&#39;s Chrome as our chosen Web Browser, it should be on all pc&#39;s in the IT building and if you are using your laptop you can download it here</p>
+<ul>
+<li><a href="http://www.google.com/chrome/">http://www.google.com/chrome/</a></li>
+</ul>
+<p>Open your Chrome web browser, it should be on the desktop or in the programs menu.</p>
+<p>To open a file in Chrome you press Ctrl+o , this is the shortcut using the letter &#39;o&#39; for Open. 
+An Open dialog box appears, using this you navigate to your HCI and Web Design, go to the Week01/Lab00 folder and click on the index.html file. Click Open.</p>
+<p>Your web page in the Chrome browser should look like this:</p>
+<p><img src="./img/17.png" alt=""></p>
+<p>Success! you have got the page loaded in the browser, although the results are a little..uh..unsatisfying. But that&#39;s just because all you&#39;ve done so far is go through the mechanics of creating a page and viewing it in the browser. So far you have only typed the content of the web page.</p>
+<p>HTML gives you a way to tell the browser about the structure of your page. What&#39;s structure? It is a way of marking up your text so that the browser knows what&#39;s a heading, what text is a paragraph, what text is a subheading and so on. Once the browser knows a little about the structure, it can display your page in a more meaningful and readable manner.</p>
+<p>So let&#39;s add some structure:</p>
+<p><img src="./img/18.png" alt=""></p>
+<p>The tags shown in the image above are used to place structure to the content we typed. So we want to identify which content is a heading, which is a subheading and which is a paragraph.</p>
+<p>If we first identify the heading, it is clearly the first line in our content. Starbuzz Coffee Beverages.
+Next a subheading could be House Blend, or Mocha Cafe Latte and so on.
+Next a paragraph could be A smooth, mild blend of coffees from Mexico, Bolivia and Guatemala.</p>
+<p><img src="./img/19.png" alt=""></p>
+<p>Using the tags we surround each piece of content with an opening tag \<h1\> and a closing tag \</h1\></p>
+<p><img src="./img/20.png" alt=""></p>
+<p>Save your work in Notepad, click on File and Save.</p>
+<p>Now lets open/refresh our web page in Chrome.</p>
+<p>If you closed Chrome since you viewed your web page then open it again, press Ctrl+o and choose the index.html file again.</p>
+<p>If you still have the index.html file open in Chrome then simply press the refresh button on Chrome or press F5 (Windows)</p>
+<p><img src="./img/21.png" alt=""></p>
+<p>It is nice to be able to see your html code in Notepad and see the web browser window at the same time. You can do this by spliting your screen. In Windows while you have the Notepad window open press the Windows button and the left hand arrow button on the keyboard. This will move the Notepad window to the left hand side of your screen. Now go to the Chrome page and press the Windows button and the right hand arrow button on the keyboard. This will put the Chrome window to the right half of your screen. Something like this:</p>
+<p><img src="./img/22.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>More HTML</h1>
+<p>You now have an HTML file with markup - does that make a web page? Almost. 
+You will be introduced to the following tags in the lectures
+<code>&lt;html</code>&gt; <code>&lt;head</code>&gt; <code>&lt;title</code>&gt;  and <code>&lt;body</code>&gt;</p>
+<p>For the moment we need to use these tags to make this a proper HTML page...</p>
+<p>The content we have included so far should all be contained within the open <code>&lt;body</code>&gt; tag and the close <code>&lt;/body</code>&gt; tag.</p>
+<p>We must add a little extra into the <code>&lt;head</code>&gt; and <code>&lt;title</code>&gt; tags</p>
+<p><img src="./img/23.png" alt=""></p>
+<p>Save your work in Notepad, click on File and Save.</p>
+<p>Your index.html code should look like this:</p>
+<p><img src="./img/24.png" alt=""></p>
+<p>Now refresh the Chrome browser to see the changes.</p>
+<p><img src="./img/25.png" alt=""></p>
+<p>You can see the title of the tab in Chrome now says Starbuzz Coffee</p>
+<p>Congratulations! You have now completed your first web page. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Choosing a text editor</h1>
+<p>There are several options when it comes to choosing a text editor, many of which make it easier to write your HTML code. It&#39;s up to you which one you choose - try out a few of the options that are installed on the PCs in the lab you are in now. Copy in the HTML that you have written so far and see how it looks.</p>
+<ul>
+<li>Brackets</li>
+<li>Notepad++</li>
+<li>Sublime Text</li>
+</ul>
+<p>You can download and install any of these on your computer to try at home. </p>
+<h2>Save your work, often!</h2>
+<p>It is important to regularly save your work, this might seem obvious but everyone loses work at some point in the semester and you&#39;d be surprised how many say &quot;I just forgot to save it!&quot;</p>
+<p>In sublime if you go to close your files it will prompt you to see if you want to save your work, however better practice is to always save after first creating a new file so that you name it correctly and then as you edit your code you should continually save your work.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Queries and Questions</h1>
+<p>There is a lot to take in and become familiar with while learning web development. You will always have questions, so please do ask your tutor; there is never a stupid question. </p>
+<p>For additional support you can use the Internet although there are so many sites the ones we recommend are:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference">https://developer.mozilla.org/en-US/docs/Web/HTML/Reference</a></li>
+<li><a href="https://www.w3schools.com/html/">https://www.w3schools.com/html/</a></li>
+</ul>
+<h1>Exercise 1:</h1>
+<p>Explore this reference site here:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/Web/HTML">https://developer.mozilla.org/en-US/Web/HTML</a></li>
+</ul>
+<p>In particular, locate the <code>&lt;tags</code>&gt; you have used in this lab in the Element Reference section:</p>
+<ul>
+<li>&lt;<a href="https://developer.mozilla.org/en-US/Web/HTML/Element">https://developer.mozilla.org/en-US/Web/HTML/Element</a></li>
+</ul>
+<p>For example this is the <code>&lt;p</code>&gt; element:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/Web/HTML/Element/p">https://developer.mozilla.org/en-US/Web/HTML/Element/p</a></li>
+</ul>
+<p>The text is very technical - but some of it will start to make sense over the next few weeks.</p>
+<h1>Exercise 2:</h1>
+<p>At the end of this page:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/Web/HTML/Element/p">https://developer.mozilla.org/en-US/Web/HTML/Element/p</a></li>
+</ul>
+<p>is a See Also section, which suggests two elements:</p>
+<ul>
+<li><code>&lt;hr</code>&gt;</li>
+<li><code>&lt;br</code>&gt;</li>
+</ul>
+<p>Look up these in the reference, and try them out on the page you have designed.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

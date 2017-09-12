@@ -1,0 +1,479 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      HTML Basics
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Formatting text">
+      Formatting text
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Formatting text">
+        <h1>Objectives</h1>
+<p>This lab will introduce you to the HTML elements that allow you to format how text appears on your web pages.</p>
+<h2>Contents</h2>
+<p>Paragraphs and Headings
+- <a href="#/01">Paragraph break</a>
+- <a href="#/01">Headings</a></p>
+<p>Bold and Italic text
+- <a href="#/02">Bold Text</a>
+- <a href="#/02">Italicised Text</a></p>
+<p>Other types of text formatting
+- <a href="#/03">Blockquote</a>
+- <a href="#/03">Citation</a>
+- <a href="#/03">Quotation</a>
+- <a href="#/03">Abbreviation</a>
+- <a href="#/03">Pre</a>
+- <a href="#/03">Address</a></p>
+<p>Comments
+- <a href="#/04">HTML Comments</a></p>
+<p>Symbols
+- <a href="#/05">Symbols/Special Characters</a></p>
+<p>Line breaks and Horizontal rules
+- <a href="#/06">Line breaks</a>
+- <a href="#/06">Horizontal rules</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Formatting</h1>
+<p>This section will introduce tags used to format text on a web page. First up: paragraphs and headings.</p>
+<h2>Paragraph Break</h2>
+<p>A paragraph break adds a carriage return and leaves a blank line.</p>
+<p>HTML Code</p>
+<pre><code>&lt;p&gt;This is an example of a paragraph break. &lt;/p&gt; &lt;p&gt;As you can see the text continues at the beginning of the next line with a blank line in between.&lt;/p&gt;</code></pre>
+<p><a href="archives/examples/example1.htm" target="_blank">Paragraph Break Example</a></p>
+<h2>Header Tags</h2>
+<p>Headers are usually used for headings. They range in size from 1-6, with one being largest and 6 being smallest. The header tag automatically issues an invisible paragraph tag. Therefore, you cannot have two different header sizes on one line.</p>
+<p><code>&lt;h#&gt;</code> TEXT <code>&lt;/h#&gt;</code> where # is a number (1-6)</p>
+<p>HTML Code</p>
+<pre><code>&lt;h1&gt; Welcome &lt;/h1&gt;
+&lt;h2&gt; Welcome &lt;/h2&gt;
+&lt;h3&gt; Welcome &lt;/h3&gt;
+&lt;h4&gt; Welcome &lt;/h4&gt;
+&lt;h5&gt; Welcome &lt;/h5&gt;
+&lt;h6&gt; Welcome &lt;/h6&gt;</code></pre>
+<p><a href="archives/examples/Headings.htm" target="_blank">Header Tags Example</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h2>Bold Text</h2>
+<p>There are 2 ways to make text bold in most browsers: using the using the <code>&lt;strong&gt;</code> tag or using the <code>&lt;b&gt;</code> tag.
+The <code>&lt;strong&gt;</code> tag represents &quot;strong importance for its content&quot;. The <code>&lt;b&gt;</code> tag represents a section of text that is &quot;stylistically offset from the normal prose without conveying any extra importance&quot;. You can use <code>&lt;b&gt;</code> for key words, or the lead sentence in an article.</p>
+<p>HTML Code</p>
+<pre><code>&lt;p&gt;If you want to write semantic code &lt;strong&gt;it is important that you understand the differences&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;It was nearly one o clock &lt;/b&gt;when Sherlock Holmes returned from his excursion.&lt;/p&gt;</code></pre>
+<p><a href="archives/examples/example3.htm" target="_blank">Bold Text Example</a></p>
+<p>Note:Use <code>&lt;b&gt;</code> when you want the text to have a different style without contextual importance, but use <code>&lt;strong&gt;</code> when you want the text to have extra importance from a content perspective.</p>
+<h2>Italicized Text</h2>
+<p>The HTML <code>&lt;em&gt;</code> tag is used for indicating emphasis. The <code>&lt;em&gt;</code> tag surrounds the word/term being emphasised. Can be used for words or sentences you would pronounce differently. The HTML <code>&lt;i&gt;</code> tag represents text that&#39;s in an alternate voice or mood, or otherwise offset from the normal prose. You could use the <code>&lt;i&gt;</code> tag for foreign words, or technical terms.</p>
+<p>HTML Code</p>
+<pre><code>&lt;p&gt;The HTML5 spec really &lt;em&gt; is &lt;/em&gt; hard to understand.&lt;/p&gt;
+&lt;p&gt;A foreign word, &lt;i&gt;smuk&lt;/i&gt;, means beautiful in Danish.&lt;/p&gt;</code></pre>
+<p><a href="archives/examples/example4.htm" target="_blank">Italicized Text Example</a></p>
+<p>Note:Use <code>&lt;i&gt;</code> to offset the mood of text, but use <code>&lt;em&gt;</code> to make text emphatic.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h2>Blockquote</h2>
+<pre><code>&lt;blockquote&gt; ...&lt;/blockquote&gt;</code></pre>
+<p>The <code>&lt;blockquote&gt;</code> tag defines a long quotation.</p>
+<p>HTML Code</p>
+<pre><code>Here comes a long quotation:
+&lt;blockquote&gt;
+This is a long quotation. This is a long quotation. This is a long quotation. This is a long quotation. This is a long quotation. 
+&lt;/blockquote&gt;</code></pre>
+<p>It inserts margins for the blockquote element.</p>
+<p><a href="archives/examples/Blockquote.htm" target="_blank">Blockquote Example</a></p>
+<p>Note: A blockquote exists to hold a quote inside, not because some bit of text needs to be indented.</p>
+<h2>Citation</h2>
+<pre><code>&lt;cite&gt; ...&lt;/cite&gt;</code></pre>
+<p>The <code>&lt;cite&gt;</code> tag represents the cited title of a work; for example, the title of a book mentioned within the main text flow of a document. For example, the title of a book, paper, essay, poem, score, song, script, film, TV show, game, sculpture, painting, theatre production, play, opera, musical, exhibition, legal case report, or other such work.</p>
+<p>HTML Code</p>
+<pre><code>&lt;cite&gt;Aladdin&lt;/cite&gt; is a great movie, even after 73 viewings. Aren’t kids great?</code></pre>
+<p><a href="archives/examples/example7.htm" target="_blank">Citation Example</a></p>
+<h2>Quotation</h2>
+<p>The <code>&lt;q&gt;</code> tag is for quoting something inline within a section of prose. The browser will insert quotation marks around the quotation.</p>
+<p>HTML Code</p>
+<pre><code>Luke continued, &lt;q&gt; And then she called him a &lt;q&gt; scruffy-looking nerf-herder &lt;/q&gt; ! I think I’ve got a chance! &lt;/q&gt; The poor naive fool</code></pre>
+<p><a href="archives/examples/example8.htm" target="_blank">Quotation Example</a></p>
+<h2>Abbreviation</h2>
+<pre><code>&lt;abbr&gt; ...&lt;/abbr&gt;</code></pre>
+<p>abbr can be used for abbreviations - a shortened form of a word or phrase. The <code>&lt;abbr&gt;</code> tag describes an abbreviated phrase.</p>
+<p>By marking up abbreviations you can give useful information to browsers, spellcheckers, screen readers, translation systems and search-engines.</p>
+<p>HTML Code</p>
+<pre><code>The &lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; was founded in 1948.</code></pre>
+<p><a href="archives/examples/example9.htm" target="_blank">Abbreviation Example</a></p>
+<h2>Pre</h2>
+<pre><code>&lt;pre&gt; ...&lt;/pre&gt;</code></pre>
+<p>pre (preformatted) is most commonly used to mark up blocks of computer code. It will leave in spaces, carriage returns, etc.</p>
+<p>HTML Code</p>
+<pre><code>&lt;pre&gt;One word 
+then another&lt;/pre&gt;</code></pre>
+<p><a href="archives/examples/example10.htm" target="_blank">Preformatting Example</a></p>
+<p><a href="archives/examples/preformatting.htm" target="_blank">Another Preformatting Example</a></p>
+<h2>Address</h2>
+<pre><code>&lt;address&gt; ...&lt;/address&gt;</code></pre>
+<p>The <code>&lt;address&gt;</code> tag provides contact information for a document or part of a document. Information provided by address may include the names of the document’s maintainers, links to the maintainers’ Web pages, e-mail addresses for feedback, postal addresses, phone numbers, and so on. The text in the <code>&lt;address&gt;</code> element usually renders in italic. Most browsers will add a line break before and after the address element.</p>
+<p>HTML Code</p>
+<pre><code>Address given: &lt;address&gt;
+Author: Jhon Rocket&lt;br&gt; 512 E Riverside Dr # 134&lt;br&gt; Austin, TX&lt;br&gt; (512) 411-7433 &lt;/address&gt;</code></pre>
+<p><a href="archives/examples/example11.htm" target="_blank">Address Example</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h2>Comments</h2>
+<pre><code>&lt; !-- ... --&gt;</code></pre>
+<p>Comments are a way for programmers to write notes to themselves or to others that might be looking at the code. It is much like the REM (Remark) statement in a basic program. There are times (especially if there are new commands) that it is a good idea to leave instruction as to the location of a file or the techniques used to obtain a rather difficult command. Again, the comments do not show up when being displayed.</p>
+<p>The comments are not displayed in the browser.</p>
+<p>Comment Example</p>
+<pre><code>&lt; !-- Comments should be written as follows: Left-angle bracket, exclamation point and two dashes to start; two dashes and right-angle bracket to end. Comments are ignored by the browser. --&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h2>Symbols</h2>
+<p>Occasionally, you may need to include the greater than (&gt;) or less than (&lt;) symbols in the text of your web pages. The problem is that these symbols are also used to denote tags in HTML. To solve this problem, we use special little codes called entities in our text instead of these symbols. For example, the entity for the &quot;greater than&quot; symbol is <code>&amp;gt;</code>.</p>
+<h3>Some common entites:</h3>
+<ul>
+<li>Greater than symbol (&gt;): <code>&amp;gt;</code> </li>
+<li>Less than symbol (&lt;): <code>&amp;lt;</code></li>
+<li>Euro symbol (€): <code>&amp;euro;</code></li>
+<li>Copyright symbol (©): <code>&amp;copy;</code> </li>
+<li>Trademark symbol (™): <code>&amp;trade;</code> </li>
+</ul>
+<h3>Entity reference:</h3>
+<p>To find out the entity code for any symbol, use this reference:</p>
+<p><a href="https://dev.w3.org/html5/html-author/charref" target="_blank"><code>https://dev.w3.org/html5/html-author/charref</code></a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h2>Line Break</h2>
+<p>The <code>&lt;br&gt;</code> tag adds a carriage return. The text continues on the next line.</p>
+<p>HTML Code</p>
+<pre><code>This is an example of a line break at the end of the line. &lt;br&gt; As you can see the text continues at the beginning of the next line with no extra space</code></pre>
+<p><a href="archives/examples/example5.htm" target="_blank">Line Break Example</a></p>
+<p>Note:The break tag is an empty tag which means that it has no end tag.</p>
+<h2>Lines (Horizontal Rules)</h2>
+<p>Lines can be used to separate thoughts or ideas. You can add a horizontal line (also called a horizontal rule) to a page using the <code>&lt;hr&gt;</code> tag.</p>
+<p>Note: The <code>&lt;hr&gt;</code> tag is an empty tag and thus has no closing tag.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h2>Formatting text: Exercise</h2>
+<p>Create a folder called &#39;Lab01&#39; in your HCI and Web Design/Week01 folder. </p>
+<p>Next, copy the code below into your text editor. Save the file as index.html.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Exercise One&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Formatting Exercise
+We can format words using the &amp;lt;b&amp;gt; tag for bold or the &amp;lt;i&amp;gt; tag for italic.
+We can even nest the tags like so &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;...&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt; - now do you see? But
+be careful always close the inner tag first.
+
+The original context of the saying O tempora, o mores is the following:
+
+O tempora, o mores!
+Senatus haec intellegit. consul videt; hic tamen vivit.
+Vivit? immo vero etiam in senatum venit, fit publici consilii particeps,
+notat et designat oculis ad caedem unum quemque nostrum.
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Now, carry out the following formatting instructions. Add HTML tags in the correct places throughout the code.</p>
+<ul>
+<li>Mark up Formatting Exercise as an h3 heading. </li>
+<li>Mark up the first two paragraphs using the p tag.</li>
+<li>In the first paragraph, boldface the word bold, and italicise the word italic. </li>
+<li>Also, in the first paragraph, boldface and italicise the words – now do you see?</li>
+<li>In the second paragraph boldface the words O tempora, o mores.</li>
+<li>The third paragraph (i.e. the latin sentence O tempora, o mores! Senatus …) needs to be marked up as a blockquote.</li>
+<li>Save and Preview.</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
