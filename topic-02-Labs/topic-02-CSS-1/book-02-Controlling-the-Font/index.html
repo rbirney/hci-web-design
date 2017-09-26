@@ -1,0 +1,511 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       CSS Part One
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Controlling the Font">
+      Controlling the Font
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Controlling the Font">
+        <h1>Objectives</h1>
+<p>This lab explains how to set the Font properties.  </p>
+<ul>
+<li><a href="#01">Font Style</a></li>
+<li><a href="#02">Font Weight</a></li>
+<li><a href="#03">Font Size</a></li>
+<li><a href="#04">Font Family</a></li>
+<li><a href="#05">Shorthand Properties</a></li>
+<li><a href="#06">Line Height</a></li>
+</ul>
+<p>This lab also provides you with a <a href="#07">Worked Example</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Font styles</h1>
+<p>The font-style property sets the style of a font.</p>
+<pre><code>font-style: normal|italic|oblique</code></pre>
+<p>Italic forms are generally cursive in nature while oblique faces are typically sloped versions of the regular face. However, if the font being used does not have italic or oblique faces available, in most cases there is little, if any, difference between italic and oblique.</p>
+<p>See the <strong>font-style</strong> property in the following <a href="archives/Class Htmls/fontstyle.htm" target= "_blank">example</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Font weight</h1>
+<p>The font-weight property sets how thick or thin characters in text should be displayed. The font-weight property sets the weight, or thickness, 
+of a font and is dependent either on available font faces within a font family or weights defined by the browser.</p>
+<pre><code>font-weight: normal|bold|bolder|lighter|100|200|300|400|500|600|700|800|900</code></pre>
+<p>The weight of any font can be altered. The first four options are relative while the numbered values give absolute weights. Most web browsers do not properly support font weights other than normal and bold.<br>The keyword value <strong>normal</strong> maps to the numeric value <strong>400</strong> and the value <strong>bold</strong> maps to <strong>700</strong>. In order to see any effect using values other than 400 or 700, the font being used must have built-in faces that match those specified weights.</p>
+<p>See the <strong>font-weight</strong> property in the following <a href="archives/Class Htmls/fontweight.htm" target= "_blank">example</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Font size</h1>
+<pre><code>font-size:[xx-small|x-small|small|medium|large|x-large|xx-large]|[smaller|larger]|&lt;length&gt;|&lt;percentage&gt;</code></pre>
+<p>The font-size property sets the size of the text. Being able to manage the text size is important in web design. However,
+you should not use font size adjustments to make paragraphs look like headings, or headings look like paragraphs.</p>
+<p><strong>Always use the proper HTML tags, like &lt;h1&gt; - &lt;h6&gt; for headings and &lt;p&gt; for paragraphs.</strong></p>
+<p>The font-size value can be an <strong>absolute</strong>, or <strong>relative</strong> size.</p>
+<h2>Absolute size:</h2>
+<ol>
+<li>Sets the text to a specified size.</li>
+<li>Does not allow a user to change the text size in all browsers (bad for accessibility reasons).</li>
+<li>Absolute size is useful when the physical size of the output is known.</li>
+</ol>
+<h3>Pixels (px)</h3>
+<p>Setting the font size in pixel values (px) is a good choice when you need pixel accuracy. A px value is static.This is an OS-independent and cross-browser
+way of literally telling the browsers to render the letters at exactly the number of pixels in height that you specified.</p>
+<h3>Other absolute units</h3>
+<ul>
+<li>mm: millimeters, e.g. 10mm.</li>
+<li>cm: centimeters, e.g. 1cm ( = 10mm).</li>
+<li>in: inches, e.g. 0.39in ( ~= 10mm).</li>
+<li>pt: point, where 1pt is generally assumed to be 1/72 inch e.g. 12pt.</li>
+<li>pc: pica, where 1pc is 12pt</li>
+</ul>
+<h2>Relative size:</h2>
+<ol>
+<li>Sets the size relative to surrounding elements.</li>
+<li>Allows a user to change the text size in browsers.</li>
+</ol>
+<h3>Ems</h3>
+<p>The size of an em value is dynamic. When defining the font-size property, an em is equal
+to the size of the font that applies to the parent of the element in question. If you haven&#39;t set the font size anywhere on the page,
+then it is the browser default, which is probably 16px. So, by default 1em = 16px, and 2em = 32px. If you set a font-size of 20px on the body element,
+then 1em = 20px and 2em = 40px. Note that the value 2 is essentially a multiplier of the current em size.
+em units is always relative to font-size. Ems are becoming increasingly popular in web documents due to scalability and their mobile-device-friendly nature.</p>
+<p>There is another unit called <strong>rem (relative em)</strong>. REMs are relative to a base font-size whereas EMs are relative to their parent&#39;s font size.</p>
+<h3>Percent (%)</h3>
+<p>Again, the size of an percent value is dynamic. The font-size is calculated as a percent of the parent element.</p>
+<h3>Use a Combination of Percent and Em</h3>
+<p>The solution that works in all browsers, is to set a default font-size in percent for the &lt;body&gt; element:</p>
+<pre><code>body {
+    font-size: 100%; //16px
+}
+
+h1 {
+    font-size: 2.5em; //40px
+}
+
+h2 {
+    font-size: 1.875em;//30px
+}
+
+p {
+    font-size: 0.875em; //14px
+}</code></pre>
+<p>It is recommended that  <strong>em</strong> is used when setting font-size, padding, and margins as this will keep things balanced on different browsers and screen resolutions.
+Use <strong>%</strong> for defining the widths of elements such as divisions and structural elements.</p>
+<h3>Another Relative Unit</h3>
+<ul>
+<li>ex: 1ex is equivalent to the height of the letter <code>x</code> in the current font.</li>
+</ul>
+<p>See the <strong>font-size</strong> property in the following <a href="archives/Class Htmls/fontsize.htm" target= "_blank">example</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h2>Font family</h2>
+<p>The font-family property is a prioritized list of font family names and/or generic family names for an element. The browser will use the first value it recognizes.</p>
+<pre><code>font-family:&lt;family name&gt;[&lt;generic family&gt;]</code></pre>
+<p>It is likely that your favourite font won&#39;t be available on all browsers. To
+get around this, you are allowed to list several fonts in preference order.
+You list the font that you want first, then any fonts that might fill in for the first if it is unavailable, and you should end the list with a generic font, of
+which there are five: <strong>serif</strong> (normal fonts with serifs), <strong>sans-serif</strong> (normal fonts without serifs), <strong>monospace</strong>  (fixed-width fonts), <strong>cursive</strong> (fonts that emulate handwriting), and <strong>fantasy</strong> (decorative fonts).<br>For instance:</p>
+<pre><code>h1,h2 { 
+   font-family: Garamond, &quot;Times New Roman&quot;, serif;
+}
+p { 
+   font-family: Verdana, sans-serif;
+}</code></pre>
+<p>In this example, important headings would preferably be shown in Garamond,
+failing that in Times New Roman, and if that is unavailable in the browsers
+default serif font. Paragraph text would appear in Verdana or if that is
+unavailable in the browser&#39;s default sans-serif font.</p>
+<p>Notice some of the fonts are in quotes and some are not. If the font name involves
+2 or more words then we need to use quotes.</p>
+<p>The legibility of different fonts generally depends more on the height of
+lower case letters than on the font size itself. Fonts like Verdana are much
+more legible than ones like &quot;Times New Roman&quot; and are therefore recommended for
+paragraph text.</p>
+<p>See the <strong>font-family</strong> property in the following <a href="archives/Class Htmls/fontfamily.htm" target= "_blank">example</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Shorthand properties</h1>
+<p>A <strong>shorthand</strong> property in CSS lets you specify multiple properties in one property, for conciseness purposes. 
+Instead of specifying each &quot;font-&quot; property separately, you can bundle them up in one &quot;font&quot; property.</p>
+<pre><code>blockquote {
+       font-weight:bold;
+       font-style:italic;
+       font-size:120%;
+       font-family:Verdana;
+}</code></pre>
+<p>The previous four rules can be written as:</p>
+<pre><code>blockquote {
+       font: bold italic 120% Verdana;
+}</code></pre>
+<p>You need to supply at least font-size and font-family for the shorthand to work, otherwise it&#39;ll just be a syntax error and do nothing.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Line Height</h1>
+<p>The line-height property sets the distance between lines. You can change it like follows:</p>
+<pre><code>p {
+   line-height: 1.2em;
+}
+
+p {
+   line-height: 150%;
+}
+
+p {
+   line-height: 25px;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Worked Example Continued...</h1>
+<p>Now, we will add more style to our <a href="archives/Class Htmls/class1a.htm"  target = "_blank">example</a> page. We will modify the selector (body) to include properties such that the font of choice is Verdana. If this font is not available then use any serif font.</p>
+<pre><code>body {
+   color: #0000FF;
+   background-color:#FFFFE0;
+   font-family:Verdana, serif;
+}</code></pre>
+<p>Now, see how the <a href="archives/Class Htmls/class1b.htm" target= "_blank">web page</a> has changed.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>Controlling the Font Exercise</h1>
+<ul>
+<li>Download, extract and open the <a href="archives/lab02.zip">lab02</a> folder.</li>
+<li>In the lab02 folder, create a sub folder called css.</li>
+<li>Open your text editor and create a blank document. Save the file as exercise.css in the css sub folder.</li>
+<li>In the lab01 folder open <strong>index.html</strong> and add a link tag in the &lt;head&gt; section that links the .css file.</li>
+<li>Add the following rules to the .css file:<ul>
+<li>body: background colour: hex E0FFFF; color: navy; font family: Garamond or serif.</li>
+<li>h3: background colour: blue; color: white; font size: 18px.</li>
+<li>p: font family: Verdana or Helvetica or sans-serif; font size: 14px; colour: hex 000080;</li>
+<li>Increase the size of the address element by 10%.</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

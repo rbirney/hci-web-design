@@ -1,0 +1,354 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       CSS Part One
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="CSS Introduction">
+      CSS Introduction
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="CSS Introduction">
+        <h1>Objectives</h1>
+<p>This lab will introduce you to the concepts of Cascading Style Sheets</p>
+<p><a href="#/01">What is CSS?</a></p>
+<p><a href="#/02">How It Works</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>What is CSS?</h1>
+<p>We need Cascading Style Sheets (CSS) to add colour, size, columns, and layout; we need CSS to beautify our typography; we need CSS to add background textures and images. If good HTML is the key to an organized, accessible web, then CSS is the key to a beautiful web. CSS puts the design in Web Design.</p>
+<p>CSS is a formatting language, used to provide more customised web pages and
+make it easier to make multiple pages use the same style.</p>
+<p>CSS allows you to change elements such as text size, colour, bolding, background colours,
+border styles, and even the position of elements on the page.</p>
+<p>The word cascading describes many of the features of CSS. It means
+that many stylesheets can be used and will be merged by the browser to provide a
+computed style for each element.</p>
+<p>If styles defined for one element oppose each
+other, the later one will be used, unless another one more specifically refers
+to the element (for example, if all body elements are red, but paragraph elements
+are blue, the blue will override the red for all
+paragraphs, as it more specifically refers to the desired element).</p>
+<p>Cascading also means that each object inherits some styles from its parent
+object or parent class.  The objects are referred to by their element
+tag. The highest object in the structure is the body. If any elements do not
+have their own CSS defined but the body does, then the cascading behaviour means
+they will inherit from the body. So, if in the body we define the text colour to
+be white, then any tables will also have white writing in them.</p>
+<ul>
+<li><strong>CSS</strong> stands for <strong>C</strong>ascading  <strong>S</strong>tyle  <strong>S</strong>heets</li>
+<li>Styles define <strong>how to display</strong> HTML elements</li>
+<li>Styles are normally stored in <strong>Style Sheets</strong> </li>
+<li>Styles were added to HTML 4.0 <strong>to solve a problem</strong></li>
+<li><strong>External Style Sheets</strong> can save you a lot of work</li>
+<li>External Style Sheets are stored in <strong>CSS files</strong></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>How It Works</h1>
+<p>Cascading Style Sheets contain CSS style rules. For example, let us imagine we had paragraph (&lt;p&gt;)  elements on a page, and we wanted to each paragraph have a background colour of red. Here is the code we would add:</p>
+<pre><code>p {
+    background-color:red;
+}</code></pre>
+<p>Our CSS Rule begins with <em>p</em> which is our CSS selector. The selector tells the web browser which HTML element we wish to style.</p>
+<p>Next, the word <em>background-color</em> is a <strong>property</strong> and <em>red</em> is its <strong>value</strong>.</p>
+<p>A property and value pair together is called a <strong>declaration</strong>. We create complex style rules by stringing together multiple declarations, which are separated by semicolons. This entire piece of code, including the selector and declarations, is known as a <strong>CSS Rule</strong>.
+<br><br>Finally, directly preceding, and directly following the declarations we enclose our Rule in curly brackets.</p>
+<p><img src="img/cssrule.png" alt=""></p>
+<p>You may have as many properties and values as you like in each CSS rule, as in the following example:</p>
+<pre><code>body {
+      color: #0000FF;
+      background-color:#FFFFE0;
+}</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
