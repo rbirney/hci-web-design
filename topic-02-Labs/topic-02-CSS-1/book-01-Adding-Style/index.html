@@ -1,0 +1,436 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       CSS Part One
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Adding Style">
+      Adding Style
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Adding Style">
+        <h1>Objectives</h1>
+<p>This lab will introduce you to the methods of adding CSS style rules to a web page</p>
+<h2>Adding Style</h2>
+<p>There are 3 common ways of including style on a web page:</p>
+<ul>
+<li><a href="#/01">Inline</a></li>
+<li><a href="#/02">Embedded</a></li>
+<li><a href="#/03">External Style Sheet</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Inline Styles</h1>
+<p>In Word or other similiar packages you will have adding formatting to words, paragraphs etc...The
+same effect can be achieved in HTML using a little bit of inline CSS. This is what it looks like:</p>
+<pre><code>&lt;p style=&quot;color:red;&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+<p>In this example, we use a <em>style</em> attribute inside the opening &lt;p&gt; tag.</p>
+<p>The <em>style</em> attribute can contain one or more <strong>declaration</strong> between is quotation marks. A declaration
+is made of two parts:</p>
+<ul>
+<li>the <em>property</em> (in the example, &#39;color&#39;), which specifies what aspect of the layout is being set;</li>
+<li>and the <em>value</em> (&#39;red&#39;), which gives the value for the style property.</li>
+</ul>
+<p>As another example, we will make the sentence appear <strong>boldface</strong>.</p>
+<pre><code>&lt;p style=&quot;color:red;font-weight:bold;&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+<p>The disadvantage of using <em>Inline Styles</em> is that every time you want to style an element such as a paragraph (&lt;p&gt;), you must apply the style
+to the necessary element tag.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Embedded Styles</h1>
+<p>An embedded style allows you to add to the start of a web page a section that sets out all the styles that will be used on that page.
+To do this, you need to use the <em>style</em> element inside the <em>head</em>.</p>
+<pre><code>&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Bubble Under - The diving club for the south-west UK&lt;/title&gt;
+  &lt;style&gt;
+    p {
+       font-weight:bold;
+       }
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+<p>The embedded style starts with a &lt;style&gt; tag and ends
+with a &lt;/style&gt; tag.</p>
+<p>As stated previously, to add style we require <em>CSS rules</em>. Each rule has three parts:</p>
+<ol>
+<li><p>the <em>selector</em> (in the example: p), which
+tells the browser which part of the document is affected by the rule;</p>
+</li>
+<li><p>the <em>property</em>;</p>
+</li>
+<li><p>and the <em>value</em>.</p>
+</li>
+</ol>
+<p>In this case, our style sheet contains one rule: &quot;Please style all the paragraphs on this page so that
+the text appears in a bold font.&quot;</p>
+<p>Another Example:</p>
+<pre><code>&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Bubble Under - The diving club for the south-west UK&lt;/title&gt;
+  &lt;style&gt;
+    p {
+       font-weight:bold;
+       color: blue;
+      }
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+<p>You can add the attribute <strong><em>type = &quot;text/css&quot; </em></strong> to the style tag, as in previous versions of HTML.</p>
+<p>This method is better than using the previous method(<em>Inline Styles</em>) as you can all style elements together (such as all paragraphs (&lt;p&gt;)). However, in a website if you use this method then the style element
+must be included in all web pages, which makes maintenace of websites difficult.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>External Style Sheets</h1>
+<p>An external style sheet provides a location in which you can place styles that can be applied
+on all of your web pages. This is where the true power of CSS lies.</p>
+<p>CSS gives you the power to set styling rules in one place. When you want to make changes to the style of
+your web site, you can make changes in one place, and your whole web site changes automatically to reflect those new styles.</p>
+<h2>Creating an External CSS File</h2>
+<p>If you are to make use of all the benefits that an external style sheet can provide, you&#39;ll
+first need to create a CSS file that can be shared among all the pages of your web site.</p>
+<p>The style rules will be input into a separate (<strong>.css</strong>) file. This file should be saved in a sub folder (usually called <strong>css</strong>) of the website folder.</p>
+<h2>Linking CSS to a Web Page</h2>
+<p>Before your CSS can have any effect, you need to link it to the web page, or pages, to which you want the styles to
+apply. To do this, you need to add a <em>link</em> element to the <em>head</em> of each and every web page that will be
+styled with CSS.</p>
+<pre><code>&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Bubble Under - The diving club for the south-west UK&lt;/title&gt;
+  &lt;link rel =&quot;stylesheet&quot; href=&quot;css/mystyle.css&quot;&gt;
+&lt;/head&gt;</code></pre>
+<p>The <em>href</em> attribute tells the web browser where the style sheet file (in this example we called it <em>mystyle.css</em>) can be found (i.e in the CSS sub folder).</p>
+<p>The <em>rel = &quot;stylesheet&quot;</em>  attribute of the link tag tell the browser what kind of file is being linked to, and
+how the browser should handle the content.</p>
+<p>This method is the best method as all style rules are in an external file which should be linked to all web pages. Any changes to be made to any style rules
+are done once in the external file and (through the links) applied to all web pages in the website.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>CSS Adding Style Exercise</h1>
+<ul>
+<li>Download the following zipped file into Week2 of your Website Development 1 folder: <a href="archives/lab01.zip">lab01</a>.</li>
+<li>Extract/unzip the file (if you right-click on the file, you will usually see an &#39;extract here&#39; option which is the easiest way to do this! If you&#39;re unsure, please ask your tutor.)</li>
+<li>In the lab01 folder, create a sub folder called css.</li>
+<li>Open your text editor and create a blank document. Save the file as <em>style.css</em> in the css sub folder.</li>
+<li>In the lab01 folder open <strong>index.html</strong> and add a link tag in the <head> section that links the .css file as follows:<pre><code> &lt;link rel=&quot;stylesheet&quot; href = &quot;css/style.css&quot;&gt;</code></pre>
+</li>
+<li>Save the file.</li>
+<li>Open <strong>about.html</strong> and <strong>contact.html</strong> and add a link tag (as above) in the <head> section that links the .css file. Save both files.</li>
+<li>Add the following rule to the .css file:<ul>
+<li>body: background colour: hex e2edff;  colour: hex 000080; </li>
+</ul>
+</li>
+<li>Save the file, and preview the web pages.</li>
+</ul>
+<h2>Adding an Embedded Style</h2>
+<ul>
+<li>In the lab01 folder open <strong>index.html</strong> and add a style tag in the <head> section  as follows:<pre><code> &lt;style&gt;
+  p {
+   color:green;
+  }
+ &lt;/style&gt;</code></pre>
+</li>
+<li>Save the file, and preview the web pages.</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
