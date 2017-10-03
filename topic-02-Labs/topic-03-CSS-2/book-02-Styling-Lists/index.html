@@ -1,0 +1,501 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      CSS Part Two
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Styling Lists">
+      Styling Lists
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Styling Lists">
+        <h1>Objective</h1>
+<p>This lab explores how to style lists.</p>
+<p>There are 3 styling properties in CSS that apply only to lists:</p>
+<ul>
+<li>list-style-type<ul>
+<li><a href="#01">Unordered List</a></li>
+<li><a href="#02">Ordered List</a></li>
+</ul>
+</li>
+<li><a href="#03">list-style-position</a></li>
+<li><a href="#04">list-style-image</a></li>
+</ul>
+<p>Now, we will look at further <a href="#05">example</a> of styling links.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Unordered List</h1>
+<p>The list-style-type property defines the kind of marker that is to be associated with each
+item in the list.</p>
+<table width = 50%>
+<tr align = left><th>Constant Value<th>Meaning
+<tr><td>circle<td>open circle
+<tr><td>disc<td>filled circle (bullet)
+<tr><td>square<td>filled square
+</table>
+
+<p><br>By default, an unordered list displays with an item marker of a bullet (disc). In nested unordered lists,
+the item marker changes to an open circle for the first level of indentation, and a square for the second level.</p>
+<p><a href = "archives/class htmls/unordered.htm" target= "_blank">Example (default bullets)</a></p>
+<p>What if you prefer to have the item marker be a square for the outermost list,
+a bullet for the next one, and an open circle for the third?</p>
+<pre><code>ul {
+  list-style-type: square;
+}
+ul ul {
+  list-style-type: disc;
+}
+ul ul ul {
+  list-style-type: circle;
+}</code></pre>
+<p><a href = "archives/class htmls/unordered1.htm" target= "_blank">Example (not default bullets)</a></p></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Ordered List</h1>
+<table width = 50%>
+<tr align = left><th>Constant Value<th>Meaning
+<tr><td>decimal<td>1, 2, 3 ...
+<tr><td>decimal-leading-zero<td>01, 02, 03 ...
+<tr><td>lower-alpha<td>a, b, c ...
+<tr><td>lower-roman<td>i, ii, iii ...
+<tr><td>upper-alpha<td>A, B, C ...
+<tr><td>upper-roman<td>I, II, III ...
+</table>
+
+<p><br>This <a href = "archives/class htmls/ordered.htm" target= "_blank">Example</a> illustrates an ordered list using roman type.</p>
+<p><strong>NOTE:</strong> The list-style-type property can also be set to <b>none</b> so there is no bullet or numeric value beside
+the list item.</p>
+<p><a href = "archives/class htmls/listnobullet.htm" target= "_blank">Example (no bullets)</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>The list-style-position Property</h1>
+<p>Both ordered and unordered lists are displayed so that their item markers align vertically,
+and the text associated with each item is indented from the marker. This gives a neat,
+orderly appearance and is almost always the right design choice.</p>
+<p>CSS permits you to define a list in such a way that the item markers line up vertically, but the
+text in the line items wraps under each item marker as it returns to the left margin. To create
+this effect, use the <i>list style-position</i> property and give it a value of <i>inside</i>.
+The following example shows 2 lists, one of which uses the default <i>list-style-position</i> value of <i>outside</i>, while the second has a value of <i>inside</i>.</p>
+<ul style="list-style-position:outside;">
+<li>This list uses the default <i>outside</i> setting for the <i>list style-position</i> property. Thus, the item marker is outdented from the text, and appears to be outside
+the text area.Thus, the item marker is outdented from the text, and appears to be outside
+the text area.</li>
+<li>This list uses the default <i>outside</i> setting for the <i>list style-position</i> property. Thus, the item marker is outdented from the text, and appears to be outside
+the text area.</li>
+</ul>
+<ul style="list-style-position:inside;">
+<li>This list uses the <i>inside</i> setting for the <i>list style-position</i> property. As you can see, wrapped list item text appears immediately under the item marker. As you can see, wrapped list item text appears immediately under the item marker.</li>
+<li>This list uses the <i>inside</i> setting for the <i>list style-position</i> property. As you can see, wrapped list item text appears immediately under the item marker.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>The list-style-image Property</h1>
+<p>You can replace the bullets in front of list items with any graphic image that the browser is capable of rendering.<br>The list-style-image property takes as a value a full or relative URL that points to the
+image you wish to use.</p>
+<pre><code>#navlist {
+   list-style-image: url(images/arrow.gif);
+}</code></pre>
+<p>The following <a href = "archives/Class Htmls/listexample.htm" target= "_blank">Example</a> illustrates an example of
+a simple list with an image used as the list style property.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Another List Example</h1>
+<p>This <a href = "archives/Class Htmls/listexample2.htm" target= "_blank">example</a> illustrates how links inside of lists can be further styled.</p>
+<pre><code>ul {
+    list-style-type: none;
+    padding: 0;
+    width: 9em
+}
+
+ul li {
+    background: orange;
+    margin: .5em 0em;
+    padding: .3em;
+    border-right: 1em solid black;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+ul a:link {
+    color: blue;
+}
+
+ul a:visited {
+    color: purple;
+}
+
+ul a:hover {
+     color: black;
+}
+
+ul a:active {
+     color: red;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>CSS Recap Exercise</h1>
+<ol>
+<li>For this Exercise you need to download <a href="archives/Lab03.zip">Lab03</a>.    </li>
+<li>Create a sub folder called css.</li>
+<li>Open your text editor and create a blank document. Save the file as <em>witstyle.css</em> in the css sub folder.</li>
+<li>Add the following rules to the .css file (witstyle.css in the css sub folder):<ol>
+<li>Add a body selector: background colour :  hexFFFFE0; font colour : hex 0066cc (can be shortened to hex 06c); font family : Verdana or Geneva or Arial or Helvetica or sans-serif.</li>
+<li>Add an h1 and h2 group selector: font family : Georgia or &quot;Times New Roman&quot; or Times or serif; font colour: hex 666666 (can be shortened to hex 666).</li>
+<li>Add an individual h1 selector: font size : 1.5em.</li>
+<li>Add an individual h2 selector: font size : 1.25em.</li>
+<li>Add an ul selector: list style type : none; width : 18%.</li>
+<li>Add an li selector: margin : 1em 0; background colour : hex B0C4DE; padding: .5em; border left : solid black 5px;  border right : solid black 5px. </li>
+<li>Add an a selector:  font weight : bold; text align : center.</li>
+<li>Add an a:link and a:visited group selector: font colour: navy; text decoration : none; </li>
+<li>Add an a:hover pseudo class selector: text decoration : underline.</li>
+<li>Add an a:active pseudo class selector: font colour : aqua.</li>
+<li>Add a descendant selector p a:link and p a:visited group selector: text decoration : underline.</li>
+<li>Add a descendant selector p a:hover:  text decoration : none.</li>
+<li>Add an img selector: float: right;  margin left:1%.</li>
+<li>Add a class p.news: font family:Cursive. </li>
+</ol>
+</li>
+<li>Modify the existing .html files as follows:<ol>
+<li>Add a link to the stylesheet in the head section of the 3 files: <strong>index.html</strong>; <strong>aboutwit.html</strong>; and <strong>director.html</strong>.</li>
+<li>Modify the second paragraph in the index.html page to incorporate the p.news class.</li>
+<li>Modify the third paragraph in aboutwit.html to incorporate the p.news class.</li>
+<li>Modify the fourth and fifth paragraphs in director.html to incorporate the p.news class.</li>
+</ol>
+</li>
+</ol>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

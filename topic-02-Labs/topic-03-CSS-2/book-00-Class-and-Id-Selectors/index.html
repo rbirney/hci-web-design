@@ -1,0 +1,472 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      CSS Part Two
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Id and Class Selectors">
+      Id and Class Selectors
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Id and Class Selectors">
+        <h1>Objective</h1>
+<p>This lab looks at <strong>Class</strong> and <strong>Id</strong> <em>selectors</em>.</p>
+<ul>
+<li><a href="#01">Class Selectors</a></li>
+<li><a href="#02">Id Selectors</a></li>
+<li><a href="#03">Worked Example Continued...</a></li>
+<li><a href="#04">class vs id</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Class Selectors</h1>
+<p>The class selector is used to target all elements that have a specific class name specified. The class selector is most often used on several elements.
+This allows you to set a particular style for many HTML elements with the same class.</p>
+<p>The class selector uses the HTML <em>class</em> attribute, and is defined with a &quot;.&quot; (dot or period symbol).</p>
+<p>Imagine you want to transform some (but not all) paragraph&#39;s font colour to red and transfom the text to uppercase for any <em>p</em> element that has a <em>class</em> attribute
+with the value <em>important</em>.</p>
+<pre><code>p.important {
+  text-transform: uppercase;
+  color:red;
+}</code></pre>
+<p>To use/apply the class selector to a web page element, use</p>
+<pre><code>&lt;p class= &quot;important&quot;&gt;</code></pre>
+<p>This applies a red font colour and transforms the text to uppercase for any paragraphs with a class selector equal to <em>important</em> 
+as in the following <a href = "archives/Class Htmls/classsample.htm" target = "_blank">Class Selector</a> Example.</p></p>
+<p>By prefixing our normal class selector with an element name, we&#39;re telling the browser to apply
+the specified declarations to that element-and-class combination only. It&#39;s as simple as <em>element.class</em>,
+but make sure you don&#39;t leave any spaces!</p>
+<p>Classes can be applied to a single type of element, or may be <em>anonymous</em> and hence
+applicable to any element. Sometimes you want to apply a piece of formatting to many different elements within a page but not
+necessarily to the entire page. CSS provides a way of defining styles within reusable classes.</p>
+<pre><code>.warning {
+  color: orange;
+  font-weight: bold;
+}</code></pre>
+<p>See the <a href = "archives/Class Htmls/classsample2.htm" target = "_blank">Class Selector</a> Example.</p></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Id Selectors</h1>
+<p>The id selector is used to specify a style for a <strong>single, unique</strong> element.
+The id selector uses the <em>id</em> attribute of the HTML element, and is defined with a &quot;#&quot; (hash symbol). The #id selector styles the element with the specified id. For example when we have a style rule as follows:</p>
+<pre><code>#firstname {
+   background-color:yellow;
+}</code></pre>
+<p>This rule selects the element with id=&quot;firstname&quot; and styles the background colour to yellow.</p>
+<p>To use/apply the id selector to a web page element, use</p>
+<pre><code>&lt;p id = &quot;firstname&quot;&gt;</code></pre>
+<p>This applies a yellow background colour to the paragraph with the id selector equal to <em>firstname</em> as in the following 
+<a href = "archives/Class Htmls/idexample.htm" target = "_blank">Id Selector</a> Example.</p></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Worked Example Continued...</h1>
+<p>Now, we will add more style to our example page:</p>
+<ol>
+<li>We will add a class called p.colourchange such that the background-color is red and the text is black.<pre><code>p.colourchange {
+background-color:red; 
+color:black;
+}</code></pre>
+</li>
+<li>We will modify the third paragraph to incorporate the p.colourchange class.<pre><code>&lt;p class = &quot;colourchange&quot;&gt;</code></pre>
+</li>
+<li>Save and preview the <a href="archives/Class Htmls/class1c.htm" target="_blank">web page.</a></li>
+<li>Add a class called p.fontchange such that the font size is 150%, the font is Arial and the font weight is bold.<pre><code>p.fontchange {
+font-size:150%;
+font-family:Arial;
+font-weight:bold;
+}</code></pre>
+</li>
+<li>We will modify the fourth paragraph to incorporate the p.fontchange class.<pre><code>&lt;p class = &quot;fontchange&quot;&gt;</code></pre>
+</li>
+<li>Save and preview the <a href="archives/Class Htmls/class1d.htm" target="_blank">web page.</a></li>
+</ol>
+<p>Now, we will add more style to our example page to illustrate anonymous classes:</p>
+<ol>
+<li>We will add a style element for the heading style h1 such that it is centered.<pre><code>h1 {
+text-align:center;
+}</code></pre>
+</li>
+<li>Save and preview the <a href="archives/Class Htmls/class1e.htm" target="_blank">web page.</a></li>
+<li>We will add an anonymous class called .changecase such that it is converted to uppercase.<pre><code>.changecase{
+text-transform:uppercase;
+}</code></pre>
+</li>
+<li>We will modify the h1 heading and the second paragraph to incorporate the .changecase class.<pre><code>&lt;h1 class = &quot;changecase&quot;&gt;
+&lt;p class = &quot;changecase&quot;&gt;</code></pre>
+</li>
+<li>Save and preview the <a href="archives/Class Htmls/class1f.htm" target="_blank">web page.</a></li>
+</ol>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>class vs id</h1>
+<p>We have seen both <em>class</em> selectors and <em>id</em> selectors. Both these selectors
+are very similiar <strong>but</strong> there is one important difference:<strong>a specific id can only
+be applied to one HTML element. A class, on the other hand, can appear as many times as required.</strong></p>
+<h2>Styling partial Text Using <em>span</em></h2>
+<p>A class can be applied in many different places-perhaps to a specific paragraph, or to a div that holds
+many different types of content. But what would you do if you wanted to apply the style to a very
+small section of text-maybe just a couple of words, or even just a couple of letters, within a paragraph? For this, you need the <em>span</em> element as in the following
+<a href="archives/Class Htmls/span.htm" target="_blank">web page.</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>Class and Id Exercises</h1>
+<p>In these exercises, we are working with classes, and ids. For this you need to download <a href="archives/Lab01.zip">Lab01</a>. </p>
+<p>Remember to download the zipped file into your Week3 folder in your Website Development 1 folder.</p>
+<p>You can validate your CSS code at <a href="http://jigsaw.w3.org/css-validator" target="_blank">W3C CSS Validation Service</a>.</p>
+<h1>Class Selector Exercise 1:</h1>
+<ol>
+<li>Open <em>exercise1.html</em>.</li>
+<li>In the style section, add the following: <ol>
+<li>Add a class (p.gray) such that the background colour is gray, and the font weight is bold. Apply the class to the second paragraph.</li>
+<li>Add a class (p.red) such that the background colour is red, and the font style is italic. Again, apply the class to the third paragraph.</li>
+<li>Add a class (p.purple) such that the background colour is purple, and font colour is white. Again, apply the class to the fourth paragraph.</li>
+</ol>
+</li>
+</ol>
+<h1>Class Selector Exercise 2:</h1>
+<ol>
+<li>Open <em>exercise1.html</em>.</li>
+<li>In the style section, add the following:<ol>
+<li>Add an anonymous class (.important) such that the font size is increased to 250%.</li>
+<li>Apply the class to the second h1 heading.</li>
+<li>Apply the class to the last paragraph.</li>
+</ol>
+</li>
+</ol>
+<h1>ID Selector Exercise:</h1>
+<ol>
+<li>Open <em>exercise2.html</em>.</li>
+<li>In the style section, add the following:<ol>
+<li>Add an id (p#exampleID1) such that the background colour is fuchsia. Apply the class to the second paragraph.</li>
+<li>Add an id (p#exampleID2) such that text is transformed to uppercase. Apply the class to the third paragraph.</li>
+</ol>
+</li>
+</ol>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
