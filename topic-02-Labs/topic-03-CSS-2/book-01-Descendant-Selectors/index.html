@@ -1,0 +1,476 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      CSS Part Two
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Descendant Selectors">
+      Descendant Selectors
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Descendant Selectors">
+        <h1>Objective</h1>
+<p>This lab looks at <strong>descendant</strong> <em>selectors</em>.</p>
+<ul>
+<li><a href="#01">What are Descendant Selectors?</a></li>
+<li><a href="#02">Child Selector</a></li>
+<li><a href="#03">Sibling Selector</a></li>
+<li><a href="#04">Adjacent Sibling Selector</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>What are Descendant Selectors?</h1>
+<p>Descendant selectors are used to select elements that are descendants of another element in 
+the document tree.</p>
+<p>For example, you may wish to target a specific  <em>em</em> element on the page, but not all  <em>em</em>  elements. A sample document could contain the following code:</p>
+<pre><code>&lt;body&gt;
+ &lt;h1&gt;Heading&lt;em&gt;here&lt;/em&gt;&lt;/h1&gt;
+ &lt;p&gt;Lorem ipsum dolor&lt;em&gt;sit&lt;/em&gt;amet.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+<p>The document tree diagram (with the  <em>em</em>  element to be targeted) would be:</p>
+<p><img src="img/tree_desc_select.gif" alt=""> </p>
+<p>If you use a type selector like the example below, you will select all  <em>em</em>  elements on the page:</p>
+<pre><code>em  {color: blue; }</code></pre>
+<p>However, if you use a descendant selector, you can refine the  <em>em</em>  elements that you select. The rule below will only select  <em>em</em> elements that are descendants of  <em>p</em>  elements.
+If this rule is applied, the  <em>em</em>   element within the <em>p</em> element will be coloured blue, and the  <em>em</em>   element within the <em>h1</em> element will not be coloured blue.</p>
+<pre><code>p em  {color: blue; }</code></pre>
+<p>You can also jump levels in the document tree structure to select descendants. For example, the following code:</p>
+<pre><code>&lt;body&gt;
+ &lt;p&gt;Lorem ipsum dolor&lt;em&gt;sit&lt;/em&gt;amet.&lt;/p&gt;
+ &lt;ul&gt;
+  &lt;li&gt;item 1&lt;/li&gt;
+  &lt;li&gt;item 2&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;item 3&lt;/em&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/body&gt;</code></pre>
+<p>The document tree (with a third-level  <em>em</em>   element highlighted) would be:</p>
+<p><img src="img/tree_desc_select2.gif" alt=""> </p>
+<p>Using the following rule you can isolate any  <em>em</em>   element inside a  <em>ul</em>   element, without having to describe the  <em>li</em>   element. If this rule is applied, any  <em>em</em>   element within a  <em>ul</em>  element will be coloured blue. However, the  <em>em</em>   element within the  <em>p</em>   will not be coloured blue:</p>
+<pre><code>ul em  {color: blue; }</code></pre>
+<p>Composed of two or more selectors separated by whitespace, descendant selectors apply styles to elements that are contained within other elements.</p>
+<p>In the following <a href = "archives/Class Htmls/contextualsample.htm" target = "_blank">example</a> a tan background is displayed behind text when there is an  <em>i</em> tag nested within the  <em>p</em>  tag.<br>Likewise, a yellow background is displayed behind text when there is a <em>strong</em> tag within an <em>i</em> tag that is within a <em>p</em> tag.</p>
+<pre><code>/* two selector example */
+p i {background: tan;}
+
+/* three selector example */
+p i strong {background: yellow;}</code></pre>
+<p>See another <a href = "archives/Class Htmls/contextualsample2.htm" target = "_blank">Example</a>. There is a gray division defined
+in the body. When a  <em>h1</em>  tag appears within this division, it assumes a yellow font colour. Likewise, when
+a  <em>p</em> tag appears within this division, it assumes a red font colour and is displayed in bold.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Child Selector</h1>
+<p>A descendant doesn&#39;t need to be the direct child</p>
+<p>With this selector type, you should be aware that not only direct children are targeted - also children of the child (grandchildren) and so on will be targeted, all the way down through the hierarchy.</p>
+<pre><code>div.highlighted b {
+        color: blue;
+}
+...
+&lt;div class=&quot;highlighted&quot;&gt;
+        &lt;b&gt;Level 0...&lt;/b&gt;
+        &lt;div&gt;
+                &lt;b&gt;Level 1...&lt;/b&gt;
+                &lt;div&gt;
+                        &lt;b&gt;Level 2...&lt;/b&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>In this <a href = "archives/Class Htmls/desc2.htm" target = "_blank">Example</a>, we target bold elements which are descendants of a div tag with the class &quot;highlighted&quot;. If you try the example, you will notice that even though we wrap the last set of bold tags in several layers of div tags, it is still affected by the rule about blue bold tags.</p>
+<p>We have seen just how powerful the descendant selector can be, because it allows you to target ALL children and grandchildren (and so on) of one or several elements. However, sometimes this can be TOO powerful - sometimes you only want to target the direct children of an element. Fortunately for us, CSS has a selector for this as well!
+The syntax for using the direct child selector looks like this:</p>
+<pre><code>parent &gt; child</code></pre>
+<pre><code>&lt;style&gt;
+div.highlighted &gt; b {
+        color: blue;
+}
+&lt;/style&gt;</code></pre>
+<p>In this <a href = "archives/Class Htmls/desc3.htm" target = "_blank">Example</a>, only direct children of the parent are now affected.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Sibling Selector</h1>
+<p>What if you want to target siblings instead? CSS has a couple of selector types for that as well, here we&#39;ll check out the general sibling selector.</p>
+<p>With the general sibling CSS selector, which takes a selector, followed by a tilde character (~) and then the selector you wish to target, you can target elements by requiring the presence of another element within the same parent element. Another requirement is that the first part of the selector needs to be present in the markup BEFORE the targeted element, even though they are all children of the same parent.</p>
+<pre><code>&lt;style&gt;
+h2 ~ p {
+        font-style: italic;
+}
+&lt;/style&gt;
+...
+ &lt;h1&gt;Hello, world!&lt;/h1&gt;
+ &lt;p&gt;Some text here&lt;/p&gt;
+ &lt;h2&gt;Hello, world!&lt;/h2&gt;
+ &lt;p&gt;Some text here&lt;/p&gt;
+ &lt;p&gt;More text here&lt;/p&gt;</code></pre>
+<p>In this <a href = "archives/Class Htmls/desc4.htm" target = "_blank">Example</a>, all of 
+the text elements are children of the same element (body). We then specify that 
+paragraph elements which are siblings to an H2 element should be in the <code>italic</code> style. 
+As you can see,  this means that the last two paragraph tags will be in italic, but not t
+he first, because it comes before the H2 element in the markup.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Adjacent Sibling Selector</h1>
+<p>We have just looked at the sibling selector, which allows us to select all elements which 
+follows another element within the same parent. However, using the Adjacent sibling selector, 
+you can limit this to only include the first element which comes directly after the first 
+element in the markup.</p>
+<pre><code>&lt;style&gt;
+h2 + p {
+        font-style: italic;
+}
+&lt;/style&gt;
+...
+ &lt;h1&gt;Hello, world!&lt;/h1&gt;
+ &lt;p&gt;Some text here&lt;/p&gt;
+ &lt;h2&gt;Hello, world!&lt;/h2&gt;
+ &lt;p&gt;Some text here&lt;/p&gt;
+ &lt;p&gt;More text here&lt;/p&gt;
+ &lt;h2&gt;Hello, world!&lt;/h2&gt;
+ &lt;p&gt;Text here as well...&lt;/p&gt;
+ &lt;p&gt;But no more!&lt;/p&gt;</code></pre>
+<p>In this <a href = "archives/Class Htmls/desc5.htm" target = "_blank">Example</a>, with the adjacent sibling selector, we have just specified that the first paragraph element after all H2 elements should use italic text.</p>
+<p>The syntax for the adjacent sibling selector is - the two selector parts are simply joined by a plus character (+).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>Descendant Selector Exercises</h1>
+<p>In this exercise, we are working with descendant selectors. For this you need to download <a href="archives/Lab02.zip">Lab02</a>.</p>
+<p>Remember, you can validate your CSS code at <a href="http://jigsaw.w3.org/css-validator" target="_blank">W3C CSS Validation Service</a>.</p>
+<h1>Descendant Selector Exercise 1:</h1>
+<ol>
+<li>Open <em>index.html</em>.</li>
+<li>In the style section, add a style rule that will capitalize the first letter of each word if the strong tag is a descendant of the blockquote tag.</li>
+<li>In the style section, add a style rule that will change the font colour to red if the em tag is a descendant of the blockquote tag.</li>
+<li>In the style section, add a style rule that will add an underline and overline if the em tag is a descendant of the strong tag and the strong tag is a descendant of the blockquote tag.</li>
+</ol>
+<h1>Descendant Selector Exercise 2:</h1>
+<ol>
+<li>Open <em>index.html</em>.</li>
+<li>In the style section, modify the style rule added in number 3 above so only direct em children of the blockquote are selected.</li>
+</ol>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
