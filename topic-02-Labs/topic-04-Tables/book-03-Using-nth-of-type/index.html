@@ -1,0 +1,449 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       HTML Tables
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Using nth-of-type">
+      Using nth-of-type
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Using nth-of-type">
+        <h1>Objective</h1>
+<p>This lab demonstrates how to select specific table rows by using the <strong>nth-of-type</strong> selector. </p>
+<p>The <strong>nth-of-type</strong> selector finds every <strong>nth</strong> element of a specific type using either <strong>keywords</strong> or a <strong>formula</strong>.</p>
+<ul>
+<li><a href="#01">Keywords</a></li>
+<li><a href="#02">Formula</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Keywords</h1>
+<p>We want to stripe every other row of the table with a different colour, and the easiest way to do that is to find every <strong>even</strong> row of the table and give it a background colour. We then
+do the same thing with every <strong>odd</strong> row. CSS3 has <strong><em>even</em></strong> and <strong><em>odd</em></strong> keywords that support this exact situation as in the 
+following <a href = "archives/Class Htmls/rowstyle.htm" target="_blank">(Even and Odd rows coloured) example</a>.</p>
+<pre><code>tbody tr:nth-of-type(odd) {
+  background-color: #ddd;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}</code></pre>
+<p>So, the first selector says &quot;Find me every odd table row in the table body and give it a background colour&quot;. The second selector says &quot;Find me every even table row in the table body give it a background colour too&quot;.</p></p>
+<p>The <strong><em>first-of-type</em></strong>  or <strong><em>last-of-type</em></strong> selectors can be used to select the first (or last) row using <strong><em>tr:first-of-type</em></strong>
+or  <strong><em>tr:last-of-type</em></strong> respectively. </p>
+<p>Likewise we can use them as follows to select the
+first (or last) column using <strong><em>td:first-of-type</em></strong> or  <strong><em>td:last-of-type</em></strong> respectively as in the following 
+<a href = "archives/Class Htmls/rowstyle1.htm" target="_blank">(First Column bolded) example</a>.</p>
+<p>To further enhance the rows, we could add the <strong><em>:hover</em></strong> pseudoclass to change the background colour and/or font colour when the mouse moves over the table to highlight the 
+current row as in the following <a href = "archives/Class Htmls/rowstyle2.htm" target="_blank">(Use of hover) example</a>.</p>
+<pre><code>tbody tr:hover {
+  cursor:pointer;
+  background-color: gray;
+  color: white;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Formula</h1>
+<p>The formula is <strong><em>an + b</em></strong>,  where <strong>b</strong> is the offset, and <strong>a</strong> is a multiple.</p>
+<p>Examples:</p>
+<style>
+table.mine {
+    border-collapse:collapse;
+    border: 1px solid black;
+  }
+  th.mine, td.mine {
+    border: 1px solid black;
+    padding: 0.2em;
+  }
+
+ th.mine {
+    background-color:#00ff00;
+}
+
+ td.mine1 {
+    background-color:#00ff00;
+}
+ th.mine2, td.mine2 {
+    border: 1px solid black;
+    padding: 0.2em;
+  }
+
+ th.mine2 {
+    text-align:left;
+}
+</style>
+
+<p><table class = "mine"></p>
+<p><tr><th class = "mine2" >Formula</th><th class = "mine2" >Explanation</th></tr></p>
+<p><tr><td class = "mine2">table tr:nth-of-type(n)</td><td class = "mine2">Selects all table rows.</td></tr></p>
+<p><tr><td class = "mine2">table tr:nth-of-type(n+2)</td><td class = "mine2">Selects all table rows except the first row (starting with the second row).</td></tr></p>
+<p><tr><td class = "mine2">table tr:nth-of-type(2n)</td><td class = "mine2">Selects every other row of our table.</td></tr></p>
+<p><tr><td class = "mine2">table tr:nth-of-type(3n)</td><td class = "mine2">Selects every third row of our table.</td></tr></p>
+<p><tr><td class = "mine2">table tr:nth-of-type(2n+4)</td><td class = "mine2">Selects every other row of our table, starting with the fourth row.</td></tr></p>
+<p><tr><td class = "mine2">table td:nth-of-type(2)</td><td class = "mine2">Selects the second column.</td></tr></p>
+<p><tr><td class = "mine2">table td:nth-of-type(2n)</td><td class = "mine2">Selects every other column of our table.</td></tr></p>
+<p><tr><td class = "mine2">table td:nth-of-type(-n+3)</td><td class = "mine2">Selects first three columns of our table.</td></tr>
+</table>
+<br>
+In this <a href = "archives/Class Htmls/nthtype1.htm" target="_blank">example</a>, every second column is selected; and in this 
+<a href = "archives/Class Htmls/nthtype2.htm" target="_blank">example</a>, the first two columns are selected.
+<br><br>Likewise the <strong><em>nth-last-of-type</em></strong> selector works exactly the same way, except that it counts backwards through the children, starting at the last child first.<br><br>
+Examples:</p>
+<p><table class = "mine"></p>
+<p><tr><th class = "mine2" >Formula</th><th class = "mine2" >Explanation</th></tr></p>
+<p><tr><td class = "mine2">table tr:nth-last-of-type(2)</td><td class = "mine2">Selects the second last row.</td></tr></p>
+<p><tr><td class = "mine2">table tr:nth-last-of-type(-n+3)</td><td class = "mine2">Selects the bottom 3 rows in the table.</td></tr>
+</table>
+<br>
+In this <a href = "archives/Class Htmls/mytable.htm" target="_blank">example</a>, we enhance the table by selecting and modifying:</p>
+<ul>
+<li>each row (tbody tr);</li>
+<li>each even row (tbody tr:nth-of-type(even));</li>
+<li>each odd row (tbody tr:nth-of-type(odd));</li>
+<li>all columns starting with the second column (tbody td:nth-of-type(n+2));</li>
+<li>the last row and column (tbody tr:last-of-type,  tbody td:last-of-type).</li>
+<li>the second last row tbody tr:nth-last-of-type(2)); and</li>
+<li>the table data inside the last 3 rows (
+tbody tr:nth-last-of-type(-n+3) td).</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

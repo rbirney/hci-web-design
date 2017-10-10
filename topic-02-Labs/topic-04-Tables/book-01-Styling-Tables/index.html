@@ -1,0 +1,433 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       HTML Tables
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Table Styling">
+      Table Styling
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab=" Exercise">
+       Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Table Styling">
+        <h1>Objective</h1>
+<p>This lab looks at styling tables.</p>
+<ul>
+<li><a href="#01">Styling the Table</a></li>
+<li><a href="#02">Caption Alignment</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Styling the Table</h1>
+<p>How can we jazz the table up? CSS - of course.</p>
+<h2>Spacing and Alignment</h2>
+<p>In the following <a href="archives/Class Htmls/table2.htm" target="_blank">example</a>, we<br>- Add a border to  the &lt;table&gt;, &lt;th&gt; and&lt;td&gt; elements.<br>- Specify a table width property as a table will only take up as much space as the data requires.<br>- Center the table. To do this - the table must have a width set, and then you must set the left and right margins of the table to auto.</p>
+<pre><code>table,th,td {
+   border:solid black 2px;
+}
+
+table {
+   width:300px;
+   margin:0 auto;
+}</code></pre>
+<h2>Border-Collapse</h2>
+<p>As you can see there is spacing between the cells. To turn off cell spacing, we use the <strong>border-collapse</strong> property. We add this to the style rule for the table as in the following 
+<a href="archives/Class Htmls/table3.htm" target="_blank">example</a>.</p>
+<p>The border-collapse property sets whether the table borders are collapsed into a single border or detached as in standard HTML.</p>
+<p>Possible Values:<br>- <strong>separate</strong>: Borders are detached (default).<br>- <strong>collapse</strong>: Borders are collapsed into a single border.</p>
+<p>We can also add a little more decoration to the table.
+We will set the table headings to align to the left of the cell and add a background and text colour; and we have added padding to the table cells (&lt;th&gt; and &lt;td&gt;) as in the following <a href="archives/Class Htmls/example1.htm" target="_blank">example</a>:</p>
+<pre><code>table, th, td {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse:collapse;
+  width:50%;
+}
+
+th{
+  text-align: left;
+  background-color: gray;
+  color: white;
+  padding: 0.2em;
+}
+
+td {
+  padding: 0.2em;
+}</code></pre>
+<p>The same table with <strong>border-collapse</strong> set to <strong>separate</strong> would look like: <a href="archives/Class Htmls/example2.htm" target="_blank">Border-Collapse Example (separate)</a>.</p>
+<p>If you wish to separate your cells (&lt;td&gt;) <u>and</u> add spacing between the cells you can do so using: <strong>border-spacing</strong> property. Include it with the
+<strong>border-collapse: separate;</strong> property and value as in the following <a href="archives/Class Htmls/example2a.htm" target="_blank">example</a>: </p>
+<pre><code>table {
+   border-collapse:separate;//default so you need not specify this property and value.
+   border-spacing:.4em;
+   width:50%;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Caption Alignment</h1>
+<p>We will now adjust the caption alignment. We can use <strong>caption-side</strong> property to align the
+caption to either the top (default value) or bottom as in the following <a href="archives/Class Htmls/example3.htm" target="_blank">example</a>:</p>
+<pre><code>caption {
+  caption-side:bottom;
+}</code></pre>
+<p>Remember, the default caption alignment is top and center. We can also align the text to the left or right using <em>text-align</em> property 
+in the following <a href="archives/Class Htmls/example4.htm" target="_blank">example</a>:</p>
+<pre><code>caption {
+  caption-side:bottom;
+  text-align:left;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab=" Exercise">
+        <h1>Table Exercise</h1>
+<p>In these exercises, we are working with HTML Tables (creation and styling). For this you need to download <a href="archives/Lab01.zip">Lab01</a>. </p>
+<p>Remember to download the zipped file into your Week4 folder in your Website Development 1 folder.</p>
+<p>Add 2 tables to the web page (index.html) as follows:
+<img src="img/screen.png" alt=""></p>
+<p><strong>Note:</strong><br>-  The tables have a bottom margin of 2em.<br>-  The tables, table headings, and table data have a border as follows:  solid black 1px.<br>-  The table headings and table data have padding (top and bottom) of 0.1em, and (left and right) 1em (i.e: padding: 0.1em 1em;)<br>-  The cells that display the animal categories (Cats,  Dogs,  Lemurs)  are table headings (th). All other cells are table data (td).  </p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
