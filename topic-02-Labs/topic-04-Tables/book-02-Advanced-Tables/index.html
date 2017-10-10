@@ -1,0 +1,553 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       HTML Tables
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Advanced Tables">
+      Advanced Tables
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Advanced Tables">
+        <h1>Objective</h1>
+<p>This lab looks at merging table cells.</p>
+<ul>
+<li><a href="#01">Column Span</a></li>
+<li><a href="#02">Row Span</a></li>
+<li><a href="#03">Nested Tables</a></li>
+<li><a href="#04">Controlling Word Wrap Within Cells</a></li>
+<li><a href="#05">Grouping Rows</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Column Span</h1>
+<p>There will be times that you need a data to span two or more columns.  To accomplish this use the <strong>colspan=#</strong> command 
+within the <strong>&lt;th&gt;</strong> or <strong>&lt;td&gt;</strong> tags as in the 
+following <a href="archives/Class Htmls/example5.htm" target="_blank">Column Span Example</a>:</p>
+<pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th colspan=&quot;4&quot;&gt;heading&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;2&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;4&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&quot;3&quot;&gt;under 123&lt;/td&gt;
+    &lt;td&gt;under 4 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+<p>The total number of cells has to be the same in all rows, where any cells that span <em>n</em> columns are counted as <em>n</em> cells.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Row Span</h1>
+<p>Similarly, there may be instances that you need a data to span two or
+more rows.  To accomplish this use the <strong>rowspan=#</strong> command within the <strong>&lt;th&gt;</strong> or <strong>&lt;td&gt;</strong> tags as in the 
+following <a href="archives/Class Htmls/example6.htm" target="_blank">Row Span Example</a>:</p>
+<pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;th rowspan=&quot;2&quot;&gt;heading&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+<p>You have to ensure that the cell count comes out the same for all rows (you include any cell from a previous row that spans into another row as part of that row&#39;s cell count).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Nested Tables</h1>
+<p>What about displaying two (or more) values in one cell? as in the 
+following <a href="archives/Class Htmls/nestedexample.htm" target="_blank">Nested Table Example</a>:</p>
+<pre><code>&lt;table&gt;
+&lt;caption&gt;Ratings&lt;/caption&gt;
+&lt;tr&gt;&lt;th&gt;Month&lt;/th&gt;&lt;th&gt;Date&lt;/th&gt;&lt;th&gt;Rating&lt;/th&gt;&lt;/tr&gt;
+     &lt;tr&gt;
+            &lt;td&gt;August&lt;/td&gt;
+            &lt;td&gt;15&lt;/td&gt;
+            &lt;td&gt;3.5/5&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+            &lt;td&gt;August&lt;/td&gt;
+            &lt;td&gt;20&lt;/td&gt;
+            &lt;td&gt;4.5/5&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+            &lt;td&gt;August&lt;/td&gt;
+            &lt;td&gt;24&lt;/td&gt;
+            &lt;td&gt;
+              &lt;table&gt;
+              &lt;tr&gt;&lt;th&gt;Tess&lt;/th&gt;&lt;td&gt;4/5&lt;/td&gt;&lt;/tr&gt;
+              &lt;tr&gt;&lt;th&gt;Jim&lt;/th&gt;&lt;td&gt;3/5&lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/td&gt;
+     &lt;/tr&gt;
+  &lt;/table&gt;</code></pre>
+<p>It looks like a table within a table, we can do this by placing a &lt;table&gt; inside a &lt;td&gt; or &lt;th&gt; cell.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Controlling Word Wrap Within Cells</h1>
+<p>A browser may choose to wrap the text in your table cells while it is adjusting the content to fit the column widths as in the 
+following  <a href="archives/Class Htmls/nonowrap.htm" target="_blank">example</a>. </p>
+<p>If you find that your text is breaking between words you would rather see stay together, you can prevent the wrapping in a couple ways.</p>
+<ol>
+<li>You can put non-breaking spaces between words that you do not want to wrap. This will force the browser to leave the column containing that text content wider, since it won&#39;t be able to break those words apart.</li>
+<li>You can use the CSS <strong>white-space:nowrap</strong> declaration and apply it to a cell or its content (a paragraph or span, for example) to prevent wrapping of that text as in the following <a href="archives/Class Htmls/nowrap.htm" target="_blank">example</a>:</li>
+</ol>
+<pre><code>table,th,td {
+   border:solid black 2px;
+}
+
+table {
+   width:60%;
+   margin:0 auto;
+   border-collapse:collapse;
+}
+
+.nowrap {
+   white-space:nowrap;
+}
+...
+
+ &lt;tr&gt;
+  &lt;td class=&quot;nowrap&quot;&gt;Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.&lt;/td&gt;
+  &lt;td&gt;Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Grouping Rows</h1>
+<p>You can group together rows and split a table into a header, footer, and body by organising rows into <strong>thead</strong>, <strong>tfoot</strong>, and <strong>tbody</strong> elements.</p>
+<p>Grouping rows can also provide a handy block to latch CSS on to, for example, if you wanted to change the background colour of a block of rows in a table.</p>
+<p>You can have one or more <em>tbody</em> elements but only one <em>thead</em> and <em>tfoot</em> elements as in the 
+following <a href = "archives/Class Htmls/rowgr.htm" target="_blank">Grouping Rows Example</a>:</p>
+<pre><code>...
+&lt;style&gt;
+...
+thead {
+    background:gray;
+}
+
+tfoot{
+    font-style:italic
+}
+...
+&lt;/style&gt;
+...
+&lt;table summary=&quot;Interest Rates&quot;&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Recommended for you: &#39;Young Saver&#39;&lt;/td&gt;
+      &lt;td&gt;Interest from: 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<p>When specifying the <strong>thead</strong>, <strong>tfoot</strong>, and <strong>tbody</strong> elements, note that <strong>thead</strong> and <strong>tfoot</strong> are specified before any
+<strong>tbody</strong> elements.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>Advanced Table Exercise</h1>
+<p>In this exercise, we are looking at merging cells. For this you need to download <a href="archives/Lab02.zip">Lab02</a>. </p>
+<p>Remember to download the zipped file into your Week4 folder in your Website Development 1 folder.</p>
+<p>In <strong>index.html</strong>, add tables as specified below.</p>
+<p>Add CSS rules as follows:</p>
+<ol>
+<li>Add a border of 1px solid navy for the <strong>table</strong>, <strong>th</strong>, and <strong>td</strong> elements.</li>
+<li>Style the table as follows:<ul>
+<li>border spacing of 1em; </li>
+<li>width = 50%; </li>
+<li>margin=3% 0;  </li>
+<li>colour =  #003399; and </li>
+<li>the text is centered.</li>
+</ul>
+</li>
+</ol>
+<p><img src="img/screen1.png" alt=""> </p>
+<p><img src="img/screen2.png" alt=""></p>
+<p><img src="img/screen3.png" alt=""></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
