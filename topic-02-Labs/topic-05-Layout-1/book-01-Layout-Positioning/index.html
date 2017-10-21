@@ -1,0 +1,814 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Layout and Images: Part One
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Layout and Positioning">
+      Layout and Positioning
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Layout and Positioning">
+        <h1>Objectives</h1>
+<p>In this lab, you will learn more about the CSS properties used for layout, including positioning, floating elements, and how to handle overlapping elements.</p>
+<ul>
+<li><a href="#01">The display property</a></li>
+<li><a href="#02">Positioning</a></li>
+<li><a href="#03">Overlapping elements</a></li>
+<li><a href="#04">Floating elements</a></li>
+<li><a href="#05">Inline-block elements</a></li>
+<li><a href="#06">Collapsed parent elements</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>The display element</h1>
+<p>HTML elements can be displayed in many ways but the two most common are block or inline.</p>
+<ul>
+<li><strong>Block:</strong> Takes up the full width available, with a new line before and after (display:block;)</li>
+<li><strong>Inline:</strong> Takes up only as much width as it needs, and does not force new lines (display:inline;)</li>
+<li><strong>Not displayed:</strong> If you do not want the item displayed (i.e. not visible), we can use display:none;</li>
+</ul>
+<h2>Block</h2>
+<p>A block level element will naturally span the entire available width, without concern about how much horizontal space it actually needs. As a result of that, a block level element will automatically push the following content to a new line, so by default, two block level elements can&#39;t stand next to each other - the first will push the second one to the next line.</p>
+<p>Examples of elements that default to be displayed as block include:</p>
+<ul>
+<li>h1...h6</li>
+<li>p</li>
+<li>div</li>
+<li>ul, ol, dl</li>
+<li>li, dt, dd</li>
+<li>blockquote</li>
+<li>table</li>
+</ul>
+<h2>Inline</h2>
+<p>An inline element does not break the current flow. An inline element only takes up the space it needs to render its content and after that, more inline elements can be displayed.
+So here I’ve got a paragraph going on, and I’m going to add a <code>&lt;span&gt;</code> tag that has a <span style="font-style:italic;
+   background-color:yellow;">yellow background and italic text.</span> See how it just fits right in with the flow of the text?</p>
+<p>More elements that are naturally inline-style include:</p>
+<ul>
+<li>a (links)</li>
+<li>img</li>
+<li>form elements</li>
+</ul>
+<p>A good way to remember the difference (between block and inline elements) is to think of an inline element as a line of text/sentence and a block level element as a paragraph - the sentence can stand together with other sentences to form an entire paragraph, but the paragraph breaks the natural flow to create space around it.</p>
+<h3>Block vs. Inline Example</h3>
+<p>You can change the display property of any element. Although each HTML element has its natural display style, you can over-ride these in CSS. This can be very useful when you want your page to look a particular way while using semantically-correct HTML.</p>
+<p>Say you want to provide a list of items, but you don’t want a big bulleted list. You just want to say that you’re going to the store to buy: some fizzy drinks, a chainsaw, and some nylon stockings. Or maybe you want a nice toolbar, which is strictly a list (of links) and so should be marked up as a <code>&lt;ul&gt;</code>. Here’s the code:</p>
+<pre><code class="lang-html">&lt;nav&gt;
+&lt;ul&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About us&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+<p>This will look like this: <a href="archives/examples/blocklist.htm" target="_blank">Block displayed list</a></p>
+<p>Now we will add style for the list items so that they are now displayed inline rather than block:</p>
+<pre><code class="lang-css">nav ul li{
+  display:inline;
+  background-color:#eee;
+  border:1px solid;
+  border-color:#f3f3f3 #bbb #bbb #f3f3f3;
+  padding:.5em;
+}</code></pre>
+<p>Now, it looks like this: <a href="archives/examples/inlinelist.htm" target="_blank">Inline displayed list</a></p>
+<p><strong>Note:</strong> the width and height properties are ignored for inline elements. Instead, you can use the line-height property to make an inline element smaller or bigger, as the space between each line grows or shrinks.</p>
+<h2>Visibility versus Display</h2>
+<p>So far, all the elements we have worked with has been visible, which is probably what you want most of the time. However, CSS does contain a couple of visibility related properties, which can come in handy in a lot of situations. For instance, you want to hide a part of the text until a user clicks a &quot;Show more&quot; button.</p>
+<p>CSS has two properties used to control visibility: The visibility property and the display property. They are used in different situations and act differently in several ways. In this section, we&#39;ll look into both of them and see just how they differ.</p>
+<h3>The visibility property</h3>
+<p>The initial value of the visibility property is visible, simply meaning that the element is visible unless you change it - that makes sense.</p>
+<pre><code class="lang-css">.box {
+        width: 100px;
+        height: 100px;
+        background-color: CornflowerBlue;
+}</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;box&quot;&gt;Box 1&lt;/div&gt;
+&lt;div class=&quot;box&quot; style=&quot;visibility: hidden;&quot;&gt;Box 2&lt;/div&gt;
+&lt;div class=&quot;box&quot;&gt;Box 3&lt;/div&gt;</code></pre>
+<p><a href="archives/examples/visibility1.htm" target="_blank">Visibility Example</a></p>
+<p>In this example, there are three boxes but the middle one has been made invisible by setting the visibility property to hidden. If you try the example, you will notice one very important thing: While the second box is not there, it does leave a pretty big hole in the page. Or in other words: The element can&#39;t be seen, but the browser still reserves the space for it!</p>
+<p>This is one of the most important differences between the visibility property and the display property - elements hidden with the visibility property still affects layout as if it was visible, sort of like a completely transparent element, while elements hidden by the display property doesn&#39;t (the browser will treat it as if it wasn&#39;t there).</p>
+<h3>The display property</h3>
+<p>Let&#39;s try the above example, but instead of the visibility property, we&#39;ll use the display property, so that you may see the difference:</p>
+<pre><code class="lang-css">.box {
+        width: 100px;
+        height: 100px;
+        background-color: CornflowerBlue;
+}</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;box&quot;&gt;Box 1&lt;/div&gt;
+&lt;div class=&quot;box&quot; style=&quot;display: none;&quot;&gt;Box 2&lt;/div&gt;
+&lt;div class=&quot;box&quot;&gt;Box 3&lt;/div&gt;</code></pre>
+<p><a href="archives/examples/visibility2.htm" target="_blank">Display Example</a></p>
+<p>If you try the examples, you&#39;ll immediately notice the difference: The second box has vanished without a trace, when we used the none value for the display property.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Positioning</h1>
+<p>The positioning of elements on a webpage is very fluid. Unlike printing, you don&#39;t have a fixed size that you can adjust everything to, because websites are visited from screens in all sizes, from small cell phones to huge desktop monitors, all running in different resolutions. For that reason, elements in a webpage are automatically laid out right after each other, in the order in which they are specified. This positioning model is called <strong>static</strong> and all elements use it by default.</p>
+<p>In this section, we are going to see how you can position certain sections of the site in very specific areas on the screen. Positioning is controlled mainly by using the position property, which can have the following values:</p>
+<h2>Static</h2>
+<p>This is the default. An element with position: static always has the position the normal flow of the page gives it. It cannot be moved from this position; a static element ignores any top, bottom, left, or right declarations.</p>
+<h2>Relative Positioning</h2>
+<p>Like static positioning, relative positioning is in normal flow and can have four reference properties: top, right, bottom and left. With relative positioning, any value that you apply will be implemented relative to the item&#39;s original location before this positioning rule was applied. We will illustrate it with an example.</p>
+<pre><code class="lang-css">.nudged {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}</code></pre>
+<p><a href="archives/examples/relative.htm" target="_blank">Relative Positioning Example</a></p>
+<p>Notice how the markup has moved our paragraph across and down by 10 pixels so that neither the left- nor right-hand sides of that paragraph line up with the others. If this was absolute rather than relative it would be 10 pixels left and down from the browser&#39;s viewport.</p>
+<p>When a browser meets a relatively positioned element, it will simply push it in the direction you instruct it to (by using top/left or bottom/right properties) as illustrated in this <a href="archives/examples/relative2.htm" target="_blank">example</a>, but it will still just allocate the space that the element was originally meant to take up.</p>
+<h2>Absolute Positioning</h2>
+<p>Absolute positioning is not in normal flow. Position: absolute has four reference properties: top, right, bottom and left. If no parent elements have their position defined, that is, they are all static, then top is 0 and left is 0, the top left references for body. However, if a parent element has a position: relative property, then position: absolute takes its reference from the parent.</p>
+<p>In the following example, we use top and left to position a div 200 pixels from the top of the browser viewport, and 200 pixels from the left edge.</p>
+<pre><code class="lang-css">#redblock {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  color: white;
+  background-color: red;
+  width: 90px;
+  height: 90px;
+  padding: 5px;
+}</code></pre>
+<p>This <a href="archives/examples/absolute1.htm" target="_blank">example</a> shows how the red block appears on the screen.</p>
+<p>The body is the containing block so it is positioned 200 pixels from the top and 200 pixels from the left of the browser body.</p>
+<p>We will now position another block (yellow) inside the red block.The following is the CSS code for both box elements.</p>
+<pre><code class="lang-css">#redblock {
+  position: relative;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+#yellowblock {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: yellow;
+  color: red;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}</code></pre>
+<p>If we use the following html code, then the yellow block appears inside the red block. The body is the containing block for the red block so it is positioned as specified. The red block is the containing block for the yellow block so it is positioned 20 pixels from the top and 20 pixels from the left of the red block.</p>
+<pre><code class="lang-html">&lt;div id=&quot;redblock&quot;&gt;
+    &lt;div id=&quot;yellowblock&quot;&gt;Yellow!
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>See how this looks: <a href="archives/examples/absolute2.htm" target="_blank">Example</a></p>
+<p>Now if we use the use the following html code instead, then the yellow block does not appear inside the red block. The body is the containing block for both boxes. The body is also the containing block for the yellow block so it is positioned 20 pixels from the top and 20 pixels from the left of the body (the top left of the page).</p>
+<pre><code class="lang-html">&lt;div id=&quot;redblock&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;yellowblock&quot;&gt;Yellow!&lt;/div&gt;</code></pre>
+<p>See how it looks this way: <a href="archives/examples/absolute3.htm" target="_blank">Example</a></p>
+<h2>Fixed</h2>
+<p>Fixed positioning works pretty much like absolute positioning, with one important difference: An element with a fixed position stays in the designated place, even if you scroll up or down. This allows you to make &quot;sticky elements&quot;, like menus, which are always at the top, bottom, left or right of the viewport, no matter how far you scroll. Fixed positioning is not in normal flow either.</p>
+<p>Another important difference is that while you may have an absolute positioned element be positioned relative to its parent element, this is not possible with a fixed element - it&#39;s always placed in relation to the viewport (usually the browser window).</p>
+<pre><code class="lang-css">nav {
+  left: 0px;
+  width: 15em;
+  position: fixed;
+}
+
+#content {
+  margin-left: 15em;
+}</code></pre>
+<p><a href="archives/examples/fixed.htm" target="_blank">Fixed Positioning Example</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Overlapping Elements</h1>
+<p>When elements are positioned outside the normal flow, they can overlap other elements as illustrated in the following <a href="archives/examples/overlap.htm" target="_blank">example</a>.</p>
+<p>Here is the code:</p>
+<pre><code class="lang-css">.box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+}</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;box&quot; style=&quot;background-color: #5f8426;&quot;&gt;Box 1&lt;/div&gt;
+&lt;div class=&quot;box&quot; style=&quot;background-color: #6495ed;&quot;&gt;Box 2&lt;/div&gt;
+&lt;div class=&quot;box&quot; style=&quot;background-color: #68968a;&quot;&gt;Box 3&lt;/div&gt;</code></pre>
+<p>We can only see see box number 3. Why? Because they all have the same positions (default values for top and left), so the last declared element takes precedence and is placed on top of the other.</p>
+<h2>The z-index property</h2>
+<p>This might not be what you want though and as luck would have it, CSS has a property for controlling this: The z-index property.</p>
+<p>Look at the changes in this code:</p>
+<pre><code>.box {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+}</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;box&quot; style=&quot;background-color: #5f8426; top: 10px; left: 10px; z-index: 3;&quot;&gt;Box 1&lt;/div&gt;
+&lt;div class=&quot;box&quot; style=&quot;background-color: #6495ed; top: 60px; left: 60px; z-index: 1;&quot;&gt;Box 2&lt;/div&gt;
+&lt;div class=&quot;box&quot; style=&quot;background-color: #68968a; top: 100px; left: 100px; z-index: 2;&quot;&gt;Box 3&lt;/div&gt;</code></pre>
+<p>With the z-index property, we take full control of which elements are on top. It holds a numeric value, which defaults to 0, and the higher z-index value an element has, the more on top it will be, as illustrated by this <a href="archives/examples/overlap2.htm" target="_blank">example</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Floating</h1>
+<p>A very powerful positioning technique is floating. It allows you to take a block level element out of the normal order and let other elements float around it. You can float to the left or right. Let&#39;s look at some examples:</p>
+<p>This example illustrates a navigation area floated to the left: <a href="archives/examples/floated1.htm" target="_blank">Float Left Example</a></p>
+<pre><code class="lang-css">nav {
+  float: left;
+  width: 300px;
+  background-color: yellow;
+}</code></pre>
+<p>The next example illustrates a floated navigation area to the right: <a href="archives/examples/floated2.htm" target="_blank">Float Right Example</a></p>
+<pre><code class="lang-css">nav {
+  float: right;
+  width: 300px;
+  background-color: yellow;
+}</code></pre>
+<p><strong>Note:</strong> Elements to be floated must be specified/coded first in your HTML code - like the <code>&lt;nav&gt;</code> element in the examples above.</p>
+<p>To improve the the look of navigation and content areas, we could add a margin for our content area: This <a href="archives/examples/floated3.htm" target="_blank">example</a> illustrates a navigation area floated to the left; the content area is beside the navigation area.</p>
+<pre><code class="lang-css">nav {
+  float: left;
+  width: 20%;
+  background-color: yellow;
+}
+
+.contentconstrained {
+  margin-left:23%;
+}</code></pre>
+<h2>Floating Elements Next to Each Other</h2>
+<p>If you place several floating elements after each other, they will float next to each other if there is room. Here we have made an image gallery using the float property:</p>
+<pre><code class="lang-css">.thumbnail {
+  float:left;
+  width:110px;
+  height:90px;
+  margin:5px;
+}</code></pre>
+<p><a href="archives/examples/floated4.htm" target="_blank">Floating Images Example</a></p>
+<h2>Floats and &quot;clear&quot;</h2>
+<p>When you start floating your elements, you will very likely soon run into a common problem: When you have a floating element, all content after it will move up next to it, if there&#39;s enough space.</p>
+<p>In this <a href="archives/examples/clear1.htm" target="_blank">example</a>, we want the footer element to take up all the space after the image of the text, but because the text doesn&#39;t take up enough room, the footer is moved up right below the text and then partly overlapped by the image.</p>
+<pre><code class="lang-css">.container {
+        width: 300px;
+        background-color: Gainsboro;
+        padding: 10px;
+        text-align: justify;
+}
+
+.image {
+        float: left;
+        margin: 0 10px 10px 0;
+}
+
+.footer {
+        background-color: Azure;
+        text-align: center;
+}</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;container&quot;&gt;
+        &lt;img src=&quot;http://www.css3-tutorial.net/images/logo.png&quot; class=&quot;image&quot;&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor placerat metus,
+        sit amet egestas dui rutrum sed.
+        &lt;div class=&quot;footer&quot;&gt;Footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>The solution to this problem comes from the <strong>clear</strong> property. It&#39;s specifically designed to clear existing floats, so that elements are once again laid out like you would expect from HTML and CSS.</p>
+<p>The clear property takes one of three different values: <strong>left</strong>, <strong>right</strong>, or <strong>both</strong>. This tells the browser if you want to clear only floats from the left or the right or if you want to clear floats from both directions.</p>
+<p>In this <a href="archives/examples/clear2.htm" target="_blank">example</a>, we utilise the clear property right before the content which you want to stay away from the floated content. In this case, we can simply apply it to the footer element, because it holds the content that we want out of the floated area.</p>
+<pre><code class="lang-css">.container {
+        width: 300px;
+        background-color: Gainsboro;
+        padding: 10px;
+        text-align: justify;
+}
+
+.image {
+        float: left;
+        margin: 0 10px 10px 0;
+}
+
+.footer {
+        background-color: Azure;
+        text-align: center;
+        clear:both;
+}</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;container&quot;&gt;
+        &lt;img src=&quot;http://www.css3-tutorial.net/images/logo.png&quot; class=&quot;image&quot;&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor placerat metus,
+        sit amet egestas dui rutrum sed.
+        &lt;div class=&quot;footer&quot;&gt;Footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Inline-block elements</h1>
+<p>Recall that you can adjust the width and height properties for block elements but you cannot adjust these properties for inline elements. If you wish to have elements displayed as inline but still want control over the width and height properties, then you can use the <strong>inline-block</strong> display property.</p>
+<h2>Inline-block display</h2>
+<p>An <a href="archives/examples/display.htm" target="_blank">inline-block</a> element is placed as an inline element (on the same line as adjacent content), but it behaves as a block element.</p>
+<p>The following <a href="archives/examples/inlineblock.htm" target="_blank">example</a> has 5 div elements displayed as inline and behaving like a block element.</p>
+<pre><code class="lang-css">.floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+}</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;floating-box&quot;&gt;Box - 150px wide and height 75px&lt;/div&gt;
+&lt;div class=&quot;floating-box&quot;&gt;Box - 150px wide and height 75px&lt;/div&gt;
+&lt;div class=&quot;floating-box&quot;&gt;Box - 150px wide and height 75px&lt;/div&gt;
+&lt;div class=&quot;floating-box&quot;&gt;Box - 150px wide and height 75px&lt;/div&gt;
+&lt;div class=&quot;floating-box&quot;&gt;Box - 150px wide and height 75px&lt;/div&gt;</code></pre>
+<p>Our previous inline <a href="archives/examples/inlinelist.htm" target="_blank">example</a> displayed list items (links). But as you can see the list items are of different width sizes because of the size of the link (text) inside them. To improve on this design we can use inline-block.</p>
+<p>The following <a href="archives/examples/inlinelist2.htm" target="_blank">example</a> leaves the list items as inline and then applies inline-block to the link items inside the list items. Links are inline by default, so inline-block will give control over the width.</p>
+<pre><code class="lang-css"> nav ul li{
+    display:inline;
+    background-color:#eee;
+    border:1px solid;
+    border-color:#f3f3f3 #bbb #bbb #f3f3f3;
+    padding:.5em 0;
+ }
+
+ a {
+    display:inline-block;
+    text-align:center;
+    font-weight:bold;
+    padding:.5em 0;
+    width:8em;
+ }</code></pre>
+<pre><code class="lang-html">&lt;nav&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About us&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Managing Collapsed Parent elements</h1>
+<p>In this <a href="archives/examples/clear3.htm" target="_blank">example</a>, the parent element is not visible at all! You should have been able to see it because of the gray background color, but instead, the three floating elements just sit there as if they had no parent.</p>
+<pre><code class="lang-css">.parent {
+        background-color: Gainsboro;
+}
+
+.child {
+        float: left;
+        margin: 10px;
+        background-color: CornflowerBlue;
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+}</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;parent&quot;&gt;
+        &lt;div class=&quot;child&quot;&gt;Box&lt;/div&gt;
+        &lt;div class=&quot;child&quot;&gt;Box&lt;/div&gt;
+        &lt;div class=&quot;child&quot;&gt;Box&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>Why? Because floating elements does not reserve any space in its parent element and since there are only floating element inside the parent div, it collapses as if it was empty. If you add a word below the three child divs, you will actually be able to see the parent element, but it now only reserves space for this word (the only non-floating element), meaning that the parent will only be as high as a single line of text, with the three boxes hanging out of the bottom.</p>
+<h2>Solutions</h2>
+<p>There are 2 possible solutions.</p>
+<h3>Solution 1</h3>
+<p>In this <a href="archives/examples/clear4.htm" target="_blank">solution</a>, by clearing all floats before the end of the container, the browser is forced to reserve space inside of it right down to the clearing element.</p>
+<p>Notice how we just added the empty clearing div at the bottom of the parent element to fix this problem. It simply uses the CSS clear property to clear floats from both directions.</p>
+<pre><code class="lang-css">.parent {
+        background-color: Gainsboro;
+}
+
+.child {
+        float: left;
+        margin: 10px;
+        background-color: CornflowerBlue;
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+}
+
+.clear {
+        clear: both;
+}</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;parent&quot;&gt;
+        &lt;div class=&quot;child&quot;&gt;Box&lt;/div&gt;
+        &lt;div class=&quot;child&quot;&gt;Box&lt;/div&gt;
+        &lt;div class=&quot;child&quot;&gt;Box&lt;/div&gt;
+        &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h3>Solution 2</h3>
+<p>In this <a href="archives/examples/clear5.htm" target="_blank">solution</a>, we add the overflow property (with its value set to auto) to the containing element (in this example, the div that has the parent class applied).</p>
+<pre><code class="lang-css">.parent {
+        background-color: Gainsboro;
+        overflow:auto;
+}
+
+.child {
+        float: left;
+        margin: 10px;
+        background-color: CornflowerBlue;
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+}</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;parent&quot;&gt;
+        &lt;div class=&quot;child&quot;&gt;Box&lt;/div&gt;
+        &lt;div class=&quot;child&quot;&gt;Box&lt;/div&gt;
+        &lt;div class=&quot;child&quot;&gt;Box&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>Exercises</h1>
+<h2>Exercise One: Using Absolute Positioning</h2>
+<ul>
+<li>Download and unzip <a href="archives/lab02.zip">lab02.zip</a>.</li>
+<li>Your objective for this HTML &amp; CSS exercise is to add code to the .css file (teststyle.css) to position the 4 divisions (positiona, positionb, positionc, and positiond) as in the screenshot below.</li>
+<li>You will need to use position:absolute for each division style and specify values for left or right; and top or  bottom.</li>
+</ul>
+<p><img src="./img/ex1.png" alt=""></p>
+<h2>Exercise Two: Using Float</h2>
+<ul>
+<li>Download and unzip <a href="archives/lab03.zip">lab03.zip</a>.</li>
+<li>Your objective for this HTML &amp; CSS exercise is to add code to the .css file (floatexercise.css) to position the first three paragraphs side by side using the float properly. The next (fourth) paragraph is to be positioned underneath the previous three, as shown below.</li>
+<li>Note: The floated paragraphs will also require the following properties:<ul>
+<li>width:25%;</li>
+<li>margin:1% 3%;</li>
+</ul>
+</li>
+</ul>
+<p><img src="./img/ex2.png" alt=""></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

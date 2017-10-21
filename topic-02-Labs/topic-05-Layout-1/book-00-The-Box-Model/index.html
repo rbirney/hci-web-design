@@ -1,0 +1,674 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Layout and Images: Part One
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="The Box Model">
+      The Box Model
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="The Box Model">
+        <h1>Objectives</h1>
+<p>In this lab, we introduce the box model and examine related properties: padding, margin, border, outline, width, height and overflow. We also look at the <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements in more detail.</p>
+<ul>
+<li><a href="#01">The Box Model, padding and margins</a></li>
+<li><a href="#02">Borders</a></li>
+<li><a href="#03">Outlines</a></li>
+<li><a href="#04">The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements</a></li>
+<li><a href="#05">Width and height</a></li>
+<li><a href="#06">The overflow property</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>The Box Model, padding and margins</h1>
+<p>CSS has the concept of a box model that essentially is a box that wraps around HTML elements. Each box has a content area (e.g. text, an image, a heading) and optional surrounding padding, border, and margin areas. This allows us to place a border around elements and space elements in relation to other elements. From the inside out it is ordered like so:</p>
+<p>content -&gt; padding -&gt; border -&gt; margin </p>
+<p><img src="./img/01.png" alt=""></p>
+<p>So in our case anything in between our tags is the &#39;content&#39;. Right after that comes the padding. Then there is a border and, finally, a margin. Margin and padding may seem like the same thing but if you think about it, you can see how being able to control the space before the border (padding) and after the border (margins) can really effect your layouts.</p>
+<h2>Padding</h2>
+<p>The CSS padding properties define the space between the element border and the element content. Padding is an inner, invisible border around your element.</p>
+<p><a href='archives/examples/padding.htm' target='_blank'>Padding Example</a></p>
+<h2>Margins</h2>
+<p>The CSS margin properties define the space around elements. The margin clears an area around an element (outside the border). The margin is an outer, invisible border around your element. The default value for the margin properties is auto.</p>
+<p><a href="archives/examples/margins.htm" target="_blank">Margin Example</a></p>
+<p><img src="./img/02.png" alt=""></p>
+<h2>Specifying the Measurements</h2>
+<h3>Which Unit is Best?</h3>
+<p>Question: Should we use pixels, ems or percentages?</p>
+<p>Answer: It depends on how you want the design to behave.</p>
+<ul>
+<li>If you want the design to change with the browser window, then percentages is the way to go. The bigger the browser window; the bigger the padding or margin will become.</li>
+<li>If you want the design to scale well with different font sizes, then you should use ems, because the measurements will be based on the font size in their browsers.</li>
+<li>If you&#39;re after a precise design with graphical elements that line up exactly regardless of a browser window size or font setting, then setting sizes in pixels is the most reliable method of all. A pixel will always represent a single dot on the user&#39;s screen.</li>
+</ul>
+<h3>Specifying the Properties</h3>
+<p>We can use individual values such as padding-left; padding-right; padding-top; padding-bottom; margin-top; margin-bottom; margin-left; margin-right. Or we can specify the properties using the shorthand method (e.g: margin:2em;). We can specify 1 value, 2 values, 3 values or 4 values.</p>
+<pre><code class="lang-css">h1 {
+  padding: 10px;
+}
+/*The padding will be 10px on all four sides.*/
+
+
+h1 {
+  margin: 10px 5px;
+}
+/*Top and bottom margin will be 10px, left and right margin will be 5px.*/
+
+
+h1 {
+  padding: 10px 5px 15px;
+}
+/*Top padding will be 10px, left and right padding will be 5px, bottom padding will be 15px.*/
+
+
+h1 {
+  border-width: 10px 5px 15px 20px;
+}
+/*Top border will be 10px, right border will be 5px, bottom border will be 15px, left border will be 20px.*/</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Borders</h1>
+<p>By default most HTML elements don&#39;t have a border but CSS gives you plenty of options to define one. You can place borders around any element you wish such as paragraphs, navigation areas, etc.</p>
+<p>Border effects include:</p>
+<ul>
+<li>Various border styles.</li>
+<li>Different border thicknesses.</li>
+<li>A range of border colours.</li>
+</ul>
+<p>The CSS properties we can use to achieve these effects are:</p>
+<ul>
+<li>border-style</li>
+<li>border-width</li>
+<li>border-color</li>
+</ul>
+<h2>Specifying a border</h2>
+<h3>Setting the properties separately</h3>
+<p>When specifying a border, there are three properties that we can set: border-width, border-style and border-color. To specify these properties separately, the following CSS would be used:</p>
+<pre><code class="lang-css">.simpleblackborder {
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+}</code></pre>
+<h3>Setting properties together (the shorthand approach)</h3>
+<p>As we have seen, there are three CSS properties required for styling a border (border-style, border-width, and border-color). We can set up a border using just one property, instead of all three. The CSS for this would look as follows:</p>
+<pre><code class="lang-css">.container {
+  border: 5px solid black;
+}</code></pre>
+<p>Note: The default border is no border at all, so you need to specify the border-style property at all times. The values for border-style are:
+solid, inset, outset, ridge, groove, dotted, dashed, double. This <a href="archives/examples/borders.htm" target="_blank">example</a> shows how each individual border appears on the screen.</p>
+<h3>Styling Individual Sides of an Element</h3>
+<p>You can style individual edges of the element using border-top, border-bottom, border-left, and border-right. Here&#39;s an example of a block that has different styles applied to each of its sides:</p>
+<pre><code class="lang-css">.multiborder {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: red;
+  border-bottom-width: 3px;
+  border-bottom-style: dotted;
+  border-bottom-color: blue;
+  border-left-width: 5px;
+  border-left-style: dashed;
+  border-left-color: yellow;
+  border-right-width: 7px;
+  border-right-style: double;
+  border-right-color: fuchsia;
+}</code></pre>
+<p><a href="archives/examples/multiborder.htm" target="_blank">Individual borders example</a></p>
+<h3>Border Radius</h3>
+<p>As an addition to CSS3, the ability to define border radius was added, effectively giving developers the possibility to make rounded corners on their elements. The CSS3 border-radius property allows web developers to easily utilise rounder corners in their design elements, without the need for corner images or the use of multiple div tags, and is perhaps one of the most talked about aspects of CSS3.</p>
+<p>The border-radius property enjoys widespread browser support (although with some discrepancies) and, with relative ease of use, web developers have been quick to make the most of this emerging technology.</p>
+<pre><code class="lang-css"># example1 {
+  background-color:black;
+  color:white;
+  border-radius:15px;
+  width:50%;
+  padding:1em;
+}</code></pre>
+<pre><code class="lang-html">&lt;div id =&quot;example1&quot;&gt;
+  Here is an example of the border-radius property
+&lt;/div&gt;</code></pre>
+<p><a href="archives/examples/borderradius.htm" target="_blank">Border Radius Example</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Outlines</h1>
+<p>We previously had a look at the border properties, which allows you to draw a border around an element. With the outline properties, you can get an extra border, for extra visual attention for your element. Take a look at the following <a href="archives/examples/outline1.htm" target="_blank">Outline Example</a>.</p>
+<h2>Differences between border and outline</h2>
+<p>From our first example, the border and outline properties may look identical, but there are actually a couple of pretty important differences:</p>
+<ul>
+<li>You cannot apply a different outline width, style and color for the four sides of an element, like you can with the border - the values provided will be used for all four sides of the element.</li>
+<li>The outline is not a part of the element&#39;s dimensions, like the border is, meaning that no matter how thick an outline you apply to the element, the dimensions of the element won&#39;t change. This also means that the browser won&#39;t reserve the required space for your outline - you will need to make sure that it can fit it, without overlapping other elements.</li>
+</ul>
+<p>The outline property is a shorthand property, which translates into the outline-width, outline-style and outline-color properties.</p>
+<p>As well as the solid outline style, there are quite a few <a href="archives/examples/outline2.htm" target="_ blank">Outline Styles</a> to choose from (just like for borders): hidden, dotted, dashed, double, groove, ridge, inset and outset.</p>
+<h2>Outline offset</h2>
+<p>A cool thing about outlines is that you can create a distance between it and the border, if you want to, by using the outline-offset property. It takes a CSS length unit and the empty space between the border (if there is any) and the outline will be transparent and thereby take the background colour of the parent element.</p>
+<pre><code class="lang-css">body {
+        background-color:slategray;
+}
+
+.box {
+        background-color: #eee;
+        outline: 3px solid LightCoral;
+        outline-offset: 10px;
+        border: 3px solid black;
+        padding: 5px 10px;
+        width:80%;
+        margin:1em auto;
+}</code></pre>
+<p><a href="archives/examples/outline3.htm" target="_ blank">Outline Example (with an offset)</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements</h1>
+<p>The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements are both used for grouping other elements. They don&#39;t have any inherent meaning in themselves and don&#39;t immediately make your HTML page look any different. However, by using these elements, we can group other elements together for the purposes of layout and/or styling.</p>
+<h2>The <code>&lt;div&gt;</code> element</h2>
+<p>The <code>&lt;div&gt;</code> tag is a <strong>block</strong> element (i.e. it is automatically placed on a new line by the browser) and is used to group content such as paragraphs, headings, images and tables. It can be thought of as a <strong>container</strong> for other content.</p>
+<p>The HTML and CSS to create and style a <code>&lt;div&gt;</code> would be something like the following:</p>
+<p><img src="./img/03.png" alt=""></p>
+<p>This is how the code for the HTML page would look:</p>
+<p><img src="./img/04.png" alt=""></p>
+<p>And the CSS would look like this:</p>
+<p><img src="./img/05.png" alt=""></p>
+<h2>The <code>&lt;span&gt;</code> element</h2>
+<p>The <code>&lt;span&gt;</code> element is an <strong>inline</strong> element (i.e. does not start a new line) and is used to group inline elements in a document. The <code>&lt;span&gt;</code> tag provides no visual change by itself, but provides a way to add some styles to a part of a text or a part of a document.</p>
+<p>Span example:</p>
+<pre><code class="lang-html">&lt;p&gt;My mother has
+    &lt;span style=&quot;color:blue;font-weight:bold&quot;&gt;blue&lt;/span&gt;
+    eyes and my father has
+    &lt;span style=&quot;color:darkolivegreen;font-weight:bold&quot;&gt;dark green&lt;/span&gt;
+    eyes.
+&lt;/p&gt;</code></pre>
+<p>Result of the above code:
+<img src="./img/06.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Width and height</h1>
+<p>All elements on a webpage have dimensions. Sure, you don&#39;t have to specify them, thanks to the fluid layout model used by default - elements take up the space they need, and if there&#39;s not enough room for them, they are automatically pushed into a direction with more available space. This all happens thanks to the fact that the width and height properties of an element is set to &quot;auto&quot; by default, meaning that the element will automatically expand or subtract depending on the content within it.</p>
+<p>You should be aware of the difference between inline and block elements, when it comes to dimensions, because they will behave differently: By default, an inline element will only consume the vertical and horizontal space needed to fit the content. A block element, on the other hand, will use all of the available horizontal space but only the vertical space needed to fit the content. Therefore, only block level elements can have custom widths and heights specified as illustrated in the following <a href="archives/examples/dimension1.htm" target="_blank">example</a>.</p>
+<p><img src="./img/08.png" alt=""></p>
+<p>If you try out this example, you can see how the first box uses all available horizontal space, while the second box only use the 100 pixels we assign it in both directions. Div elements are by default block level elements. Note that I have only specified width and height for box1 as auto to illustrate the difference - these are already the default values, so they may be omitted.</p>
+<p>The last element is a span tag, which is by default an inline element and as you can see, it only uses the space actually required. You could try assigning a width and a height to it, but the browser would ignore it - only block level elements can have custom widths/heights.</p>
+<h2>Relative and absolute width/height</h2>
+<p>We already saw how we could define widths and heights as an absolute value, in pixels, but that is just one of many options. The width and height properties can take either a length or a percentage value, meaning that you can use both absolute values (as we did with pixels) or relative values, either as a percentage of the available space or relative e.g. to a font size (i.e. the em unit ).</p>
+<p>In this <a href="archives/examples/dimension2.htm" target="_blank">example</a>, we will see how we can use percentage values to take up a relative share of the available space.</p>
+<pre><code class="lang-css">#parent-box {
+        width: 300px;
+        height: 300px;
+}
+
+#box1 {
+        width: 25%;
+        height: 75%;
+}
+
+#box2 {
+        width: 75%;
+        height: 25%;
+}</code></pre>
+<pre><code class="lang-html">&lt;div id=&quot;parent-box&quot; style=&quot;background-color: CornflowerBlue;&quot;&gt;
+
+        &lt;div id=&quot;box1&quot; style=&quot;background-color: GreenYellow;&quot;&gt;
+                Box 1&lt;br&gt;
+                Some content....
+        &lt;/div&gt;
+
+        &lt;div id=&quot;box2&quot; style=&quot;background-color: Salmon;&quot;&gt;
+                Box 2&lt;br&gt;
+                Long text is automatically wrapped, if needed...
+        &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>In this example, we have a box with an absolute size acting as a parent box, and inside of it, we have two smaller boxes, which uses a relative amount of the available parent space, just to show you how easy it is to do.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>The overflow property</h1>
+<p>A block level element in CSS will, by default, take up all the horizontal space as well as all the vertical space it needs to fit the content inside of it. However, what happens if we define a vertical size that is not enough to contain the content?</p>
+<p>Look at the following <a href="archives/examples/dimension5.htm" target="_blank">example</a> and you will soon realise an important thing: whenever you decide to set a fixed height on an element, you are responsible for making the content fit, and if it doesn&#39;t, it will simply &quot;fall out&quot; of its container. Obviously, you wouldn&#39;t notice it in this example if it wasn&#39;t for the distinct background colors (the green box on the white background), but it&#39;s still a very real problem that you will likely face as soon as you try to limit the size of your elements.</p>
+<pre><code class="lang-css">#box1 {
+        width: 100px;
+        height: 100px;
+}</code></pre>
+<pre><code class="lang-html">&lt;div id=&quot;box1&quot; style=&quot;background-color: GreenYellow;&quot;&gt;
+        Some content....
+        More content...
+        There&#39;s probably not enough room for it in this tiny box...
+&lt;/div&gt;</code></pre>
+<p>With a little help from the overflow property, you can control what happens when an element has larger content than it can actually fit. There are several possible values and each of them will make your element behave differently when deciding what to do with overflowing content.
+The overflow has, per the current specification, four possible values:</p>
+<ul>
+<li>visible</li>
+<li>hidden</li>
+<li>scroll</li>
+<li>auto</li>
+</ul>
+<p>Now look at the following <a href="archives/examples/dimension6.htm" target="_blank">example</a>.</p>
+<p>The default is visible, which is the behaviour we saw in the previous example - the content simply just expands beyond the border of the container.</p>
+<p>For the second box, we use the hidden value. This will cause content which expands beyond the borders to simply be hidden, making it invisible to the end-user. This can be practical in some cases, but in the case of a long text not fitting into an absolutely sized element, you would likely prefer the auto or scroll value.</p>
+<p>The auto value, used on the third box, leaves it up to the browser how to handle the problem. Most browsers, at least desktop browsers, will handle overflow by adding scrollbar(s) if necessary. This is very often the value you will prefer, because it allows you to have an absolutely sized element and then only have scrollbars rendered if the content actually overflows.</p>
+<p>At last, we have the scroll value. Most desktop browsers will handle this value by adding vertical and/or horizontal scrollbars to the element, if content overflows. Scrollbars are often what you desire, but with this value, most browsers will force scrollbars upon your element, no matter if the content overflows or not - for this reason, the auto value is usually preferred.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>Exercise</h1>
+<p>The goal is to create a webpage that looks like the screenshot below. It will involve using borders, margin, padding, width, height, and overflow. Download <a href="archives/lab01.zip">lab01.zip</a> and unzip it into your Week 7 folder.</p>
+<p><img src="./img/07.png" alt=""></p>
+<h2>On the index.html page:</h2>
+<p>Create a div for all of the page content and assign it an id called &#39;container&#39; (i.e. <code>&lt;div id=&quot;container&quot;&gt;</code>).</p>
+<h2>In the style.css file</h2>
+<h3>container div styles</h3>
+<ul>
+<li>Centre the container div in the middle of the page.</li>
+<li>The container div should be 60% wide.</li>
+<li>Background colour is light yellow.</li>
+<li>Border is solid brown and 3px.</li>
+<li>Padding of 1em on all sides.</li>
+<li>The border radius is 5% on all sides.</li>
+</ul>
+<h3>image styles</h3>
+<ul>
+<li>The picture has a width of 99%.</li>
+<li>Height is auto.</li>
+<li>Border is inset orange and 4px.</li>
+</ul>
+<h3>text div styles</h3>
+<ul>
+<li>80% wide.</li>
+<li>200px high.</li>
+<li>Centered inside the parent div.</li>
+<li>Background colour is light yellow.</li>
+<li>Top margin of 1em.</li>
+<li>Padding (Top and Bottom: 0; Left and Right: 1em;)</li>
+<li>Border is dashed orange and 6px.</li>
+<li>Text is justified.</li>
+<li>Overflow is handled automatically.</li>
+</ul>
+<h3>important span styles</h3>
+<ul>
+<li>Font weight is bold.</li>
+<li>Font style is italic.</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

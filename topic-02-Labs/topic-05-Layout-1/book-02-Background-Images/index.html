@@ -1,0 +1,648 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Layout and Images: Part One
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Background Images">
+      Background Images
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Background Images">
+        <h1>Objectives</h1>
+<p>In this lab, you will learn how to add background images to your webpages and control their appearance. You will also apply a gradient background to a webpage.</p>
+<ul>
+<li><a href="#01">Adding a background image</a></li>
+<li><a href="#02">The background-repeat property</a></li>
+<li><a href="#03">The background-size property</a></li>
+<li><a href="#04">Other background properties</a></li>
+<li><a href="#05">Background gradients</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Adding a background image</h1>
+<p>Images can be used as decorative backgrounds for your webpages. When you add a background image, you should also add a background colour also that complements the image colour (and be used if the image doesn&#39;t appear, for some reason).</p>
+<p>To add a background image you need to specify the file name, and its relative location.</p>
+<p><strong>Note</strong> the ../ in the image path below, before images/clouds.jpg; this is very important to include. It tells the browser how to get from your css folder, where this CSS code is, to the images folder where the background image is stored. Using &quot;../&quot; tells the browser to go up a folder to the main website folder; &quot;images/&quot; tells it to go into the images folder; and, lastly, &quot;clouds.jpg&quot; tells it to look for that image file.</p>
+<pre><code class="lang-css">body {
+      background-image: url(../images/clouds.jpg);
+      background-color: lightblue;
+}</code></pre>
+<p>There are several other properties that you can set for background images, including:</p>
+<ul>
+<li>background-repeat</li>
+<li>background-size</li>
+<li>background-position</li>
+<li>background-attachment</li>
+</ul>
+<p>We will now discuss each of these properties.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>The background-repeat property</h1>
+<h2>Repeated Image Patterns</h2>
+<p>An image pattern can keep repeating, repeat horizontally, and repeat vertically. The default is that an image will repeat to fill the background unless styled otherwise.</p>
+<p>For example, <a href="archives/examples/bgimage1.htm" target="_blank">this page</a> shows the image clouds.jpg repeating on the web page.</p>
+<pre><code class="lang-css">#repeatedclouds {
+      border:1px solid black;
+      background-color: #aebbdb;
+      background-image: url(../images/clouds.jpg);
+      padding:.5em;
+}</code></pre>
+<p>This <a href="archives/examples/bgimage2.htm" target="_blank">example</a> shows what happens if an image is not available.</p>
+<h2>Horizontal Repeats</h2>
+<p>You can set a background to repeat from left-to-right (horizontally).</p>
+<p>For Example:</p>
+<pre><code class="lang-css">#verticalfade {
+      border:1px solid black;
+      background-color: #e3e3e3;
+      background-image: url(../images/vert-fade.gif);
+      background-repeat: repeat-x;
+      padding:1em;
+      padding-top:2em;
+}</code></pre>
+<p>This <a href="archives/examples/bgimage3.htm" target="_blank">example</a> shows the image vert-fade.gif repeating from left-to-right on the web page.</p>
+<h2>Vertical Repeats</h2>
+<p>You can also set a background to repeat from top-to-bottom (vertically).</p>
+<p>For Example:</p>
+<pre><code class="lang-css">#horizontalfade {
+      border:1px solid black;
+      background-color: white;
+      background-image: url(../images/hori-fade.gif);
+      background-repeat: repeat-y;
+      padding-left:12em;
+}</code></pre>
+<p>This <a href="archives/examples/bgimage4.htm" target="_blank">example</a> shows the image hori-fade.gif repeating from top-to-bottom on the web page.</p>
+<h2>Non-repeating Images</h2>
+<p>You may simply want to display a background images once, and only once.</p>
+<p>For Example:</p>
+<pre><code class="lang-css">#palmtree {
+      border:1px solid black;
+      background-color: white;
+      background-image: url(../images/palm-trees.jpg);
+      background-repeat: no-repeat;
+      background-position:top right;
+      padding:.3em 13em .3em 1em;
+}</code></pre>
+<p>This <a href="archives/examples/bgimage5.htm" target="_blank">example</a> shows the one image palm-trees.jpg that is not repeated on the web page.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>The background-size property</h1>
+<p>The background-size property specifies the size of the background image.</p>
+<p><em>background-size: length|percentage|cover|contain; </em></p>
+<ul>
+<li><strong>length:</strong> Sets the height and width of the background image. The first value sets the width, the second value sets the height. If only one value is given, the second is set to &quot;auto&quot;.</li>
+<li><strong>percentage:</strong> Sets the height and width of the background image in percent of the parent element. The first value sets the width, the second value sets the height. If only one value is given, the second is set to &quot;auto&quot;.</li>
+<li><strong>cover:</strong> Scales the image to the smallest size such that both its width and its height can fit inside the content area. cover tells the browser to make sure the image always covers the entire container, even if it has to stretch the image or cut a little bit off one of the edges.</li>
+<li><strong>contain:</strong> Scales the image to the largest size such that both its width and its height can fit inside the content area. contain tells the browser to always show the whole image, even if that leaves a little space to the sides or bottom.</li>
+</ul>
+<p><strong>Note:</strong> Where one value is a defined length or percentage and the other value is auto (or blank), the background image will be scaled according to the specified length or percentage in such a manner that its intrisic proportions (ratio) are maintained.</p>
+<h2>Examples</h2>
+<p>View the following examples of the background-size property set to different values. You can right-click to &#39;View page source&#39; and select the CSS file to see the code for each example.</p>
+<ul>
+<li><p><a href="archives/examples/bgimage7.htm" target="_blank">Example One</a> shows an image with the background size set to 100px width and height.</p>
+</li>
+<li><p><a href="archives/examples/bgimage8.htm" target="_blank">Example Two</a> shows three images with the background size set to 100% width and height, but with different sizes for the parent container.</p>
+</li>
+<li><p><a href="archives/examples/bgimage9.htm" target="_blank">Example Three</a> shows an image with the background size set to 25% width and height set to auto.</p>
+</li>
+<li><p><a href="archives/examples/bgimage9a.htm" target="_blank">Example Four</a> shows an image with the background size set to 120px width and height set to auto.</p>
+</li>
+<li><p><a href="archives/examples/bgimage10.htm" target="_blank">Example Five</a> shows three images with the background size set to cover. The image is scaled to fit the entire container but, if that has a different aspect ratio, the image will be cropped.</p>
+</li>
+<li><p><a href="archives/examples/bgimage11.htm" target="_blank">Example Six</a> shows three images with the background size set to contain. The image will grow or shrink proportionally but the width and height will not exceed the container’s dimensions.</p>
+</li>
+<li><p><a href="archives/examples/bgimage6.htm" target="_blank">Example Seven</a> shows a small parent container that contains a background image with no background size applied.</p>
+</li>
+<li><p><a href="archives/examples/bgimage6a.htm" target="_blank">Example Eight</a> shows a small parent container that contains a background image with a background size applied (100% 100%). There is no padding applied for the text.</p>
+</li>
+<li><p><a href="archives/examples/bgimage6b.htm" target="_blank">Example Nine</a> shows a small parent container that contains a background image with a background size applied. There is padding applied for the text.</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Other background properties</h1>
+<h2>Background Position</h2>
+<p>The background-position property sets the starting position of a background image. The background-position property requires two values: the vertical position (top, center, or bottom) and the horizontal position (left, center, or right).</p>
+<p>Remember the following example?</p>
+<pre><code class="lang-css">#palmtree {
+      border:1px solid black;
+      background-color: white;
+      background-image: url(../images/palm-trees.jpg);
+      background-repeat: no-repeat;
+      background-position:top right;
+      padding:.3em 13em .3em 1em;
+}</code></pre>
+<p>This <a href="archives/examples/bgimage5.htm" target="_blank">example</a> showed a palm tree image which was fixed at the top right of the page.</p>
+<h2>Background Attachment</h2>
+<p>The background-attachment property sets whether a background image is fixed or scrolls with the rest of the page. The values are <strong>scroll</strong> or <strong>fixed</strong>.</p>
+<p>This <a href="archives/examples/fixedattachment.htm" target="_blank">example</a> shows the image chrome.gif fixed on the page even if the user needs to scroll.</p>
+<pre><code class="lang-css">body
+{
+background-image:url(&#39;../images/chrome.gif&#39;);
+background-repeat:no-repeat;
+background-attachment:fixed;
+}</code></pre>
+<h2>Shorthand Backgrounds</h2>
+<p>We can also set the color, image, etc. using the background shorthand property.</p>
+<p>For example, here you can see the background colour is set to white, a background image is added, no-repeat is specified, and a position is given: all in one go. Values should be separated by spaces.</p>
+<pre><code class="lang-css">#palmtree {
+      border:1px solid black;
+      background: white url(../images/palm-trees.jpg)
+                  no-repeat top right;
+      padding:.3em 13em .3em 1em;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Background gradients</h1>
+<p>CSS3 gradients let you display smooth transitions between two or more specified colors.</p>
+<p>Earlier, you had to use images for these effects. However, by using CSS3 gradients you can reduce download time and bandwidth usage. In addition, elements with gradients look better when zoomed, because the gradient is generated by the browser.</p>
+<p>CSS3 defines two types of gradients:</p>
+<ul>
+<li>Linear Gradients (goes down/up/left/right/diagonally)</li>
+<li>Radial Gradients (defined by their center)</li>
+</ul>
+<h2>Linear Gradients</h2>
+<p>Syntax: <em>background: linear-gradient(direction, color-stop1, color-stop2, ...);</em></p>
+<p>Linear gradients create a smooth blend of colour in a linear direction. We can specify the direction of the gradient and the colours that are part of the blend. We need to specify at least two colours, and can use more than two if we wish. Colours can be specified using the colour name or the hexadecimal colour code. <strong>Note:</strong> We should also provide a background-color as some older browsers may not support the linear-gradient property.</p>
+<p>Here are <a href="archives/examples/gradient1.html" target="_blank">some examples</a> of linear gradients.</p>
+<h3>Example 1</h3>
+<p>This gradient is red to yellow. Note that when we don&#39;t specify a direction, it uses the default: top to bottom.</p>
+<pre><code class="lang-css">#grad1 {
+    height: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background: linear-gradient(red, yellow);
+}</code></pre>
+<pre><code class="lang-html">&lt;h3&gt;Linear Gradient - Top to Bottom&lt;/h3&gt;
+&lt;p&gt;This linear gradient starts at the top. It starts red, transitioning to yellow.&lt;/p&gt;
+
+&lt;div id=&quot;grad1&quot;&gt;&lt;/div&gt;</code></pre>
+<h3>Example 2</h3>
+<p>This gradient is blue to green. We have also specified &quot;to right&quot;, which means the gradient will go from left to right.</p>
+<pre><code class="lang-css">#grad2 {
+    height: 200px;
+    background-color: blue; /* For browsers that do not support gradients */
+    background: linear-gradient(to right, blue, green);
+}</code></pre>
+<pre><code class="lang-html">&lt;h3&gt;Linear Gradient - Left to Right&lt;/h3&gt;
+&lt;p&gt;This linear gradient starts at the left and goes to the right. It starts blue, transitioning to green.&lt;/p&gt;
+
+&lt;div id=&quot;grad2&quot;&gt;&lt;/div&gt;</code></pre>
+<h3>Example 3</h3>
+<p>This gradient is rainbow-coloured. We can specify as many colours as we want in a gradient; just separate them with commas. We have also specified &quot;to bottom right&quot;, which means the gradient will go from the top-left to the bottom-right.</p>
+<pre><code class="lang-css">#grad3 {
+    height: 200px;
+    background-color: green; /* For browsers that do not support gradients */
+    background: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
+}</code></pre>
+<pre><code class="lang-html">&lt;h3&gt;Linear Gradient - Top left to Bottom right&lt;/h3&gt;
+&lt;p&gt;This linear gradient starts at the top left and goes towards the bottom right. It has multiple colour stops: red, orange, yellow, green, blue, indigo, and violet - all the colours of the rainbow!&lt;/p&gt;
+
+&lt;div id=&quot;grad3&quot;&gt;&lt;/div&gt;</code></pre>
+<h2>Radial Gradients</h2>
+<p>Syntax: <em>background: radial-gradient(shape, color-stop1, color-stop2, ...);</em></p>
+<p>Radial gradients create a smooth blend of colour in a elliptical or circular shape, from the centre outwards. We can specify the shape that should be used: ellipse (which is the default) and circle. We need to specify at least two colours and, as with linear gradients, we can use more than two if we wish. <strong>Note:</strong> Don&#39;t forget to include a background-color for older browsers that don&#39;t support the gradient property.</p>
+<p>Here are <a href="archives/examples/gradient2.html" target="_blank">some examples</a> of radial gradients.</p>
+<h3>Example 1</h3>
+<p>This gradient is red to yellow. It uses the default shape of an ellipse.</p>
+<pre><code class="lang-css">#grad1 {
+    height: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background: radial-gradient(red, yellow);
+}</code></pre>
+<pre><code class="lang-html">&lt;h3&gt;Radial Gradient - Ellipse&lt;/h3&gt;
+&lt;p&gt;This radial gradient uses the default shape: an ellipse. It starts red in the centre, transitioning outwards to yellow.&lt;/p&gt;
+
+&lt;div id=&quot;grad1&quot;&gt;&lt;/div&gt;</code></pre>
+<h3>Example 2</h3>
+<p>This gradient is blue to green. We have also specified circle as the shape for the gradient.</p>
+<pre><code class="lang-css">#grad2 {
+    height: 200px;
+    background-color: blue; /* For browsers that do not support gradients */
+    background: radial-gradient(circle, blue, green);
+}</code></pre>
+<pre><code class="lang-html">&lt;h3&gt;Radial Gradient - Circle&lt;/h3&gt;
+&lt;p&gt;This radial gradient uses the circle shape. It starts blue, transitioning outwards to green.&lt;/p&gt;
+
+&lt;div id=&quot;grad2&quot;&gt;&lt;/div&gt;</code></pre>
+<h3>Example 3</h3>
+<p>This gradient is rainbow-coloured and uses the circle shape. As we saw with the linear gradient, we can use multiple colours by separating them with commas.</p>
+<pre><code class="lang-css">#grad3 {
+    height: 200px;
+    background-color: green; /* For browsers that do not support gradients */
+    background: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet);
+}</code></pre>
+<pre><code class="lang-html">&lt;h3&gt;Radial Gradient - Circle, multiple colours&lt;/h3&gt;
+&lt;p&gt;This radial gradient also uses the circle shape. It has multiple colour stops: red, orange, yellow, green, blue, indigo, and violet - all the colours of the rainbow!&lt;/p&gt;
+
+&lt;div id=&quot;grad3&quot;&gt;&lt;/div&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>Exercises</h1>
+<h2>Exercise One: Adding background images</h2>
+<ul>
+<li>Download and unzip <a href="archives/lab04.zip">lab04.zip</a>.</li>
+<li>Open index.htm.</li>
+<li>In the header structural element, remove the h1 tag and content.</li>
+<li>Repeat the above step for the other 2 files, aboutwit.htm,  and director.htm.</li>
+<li>Open mycss.css in the css subfolder.</li>
+<li>Replace the header selector with the following:</li>
+</ul>
+<pre><code class="lang-css">    header {
+         height:140px;
+    }</code></pre>
+<ul>
+<li>Add css rules to the header selector that will add a background image of banner.jpg and size it within the header structural element.</li>
+<li>Add a background image (lblue.gif) to the body selector also.</li>
+<li>Your finished pages should look like this:</li>
+</ul>
+<p><img src="./img/ex1.png" alt=""></p>
+<h2>Exercise Two: Adding a background gradient</h2>
+<ul>
+<li>Continue with the files you used in Exercise One above.</li>
+<li>Replace the background image on the body selector with a linear gradient.</li>
+<li>Use the following colour stops: #092b60 and #bec5d1.</li>
+<li>Set the direction of the gradient to go towards the bottom right.</li>
+<li>Don&#39;t forget to specify a plain background colour for browsers that don&#39;t support gradients: use #092b60.</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
