@@ -1,0 +1,496 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Layout and Images: Part Two
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Figures and captions">
+      Figures and captions
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab=" Exercise">
+       Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-00-Semantic-Layout/index.html">
+          Semantic Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-01-Figures-and-captions/index.html">
+          Figures and captions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-02-Navigation/index.html">
+          Navigation
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Figures and captions">
+        <h1>Objectives</h1>
+<p>In this lab, you will use the figure and figcaption tags to style images and their captions.</p>
+<ul>
+<li><a href="#01">Figure and figcaption</a></li>
+<li><a href="#02">Image gallery example</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h2>Adding an Image</h2>
+<p>As we have seen previously, to add an image to a web page we use the <code>&lt;img&gt;</code> tag. For Example:</p>
+<pre><code class="lang-html">&lt;img src=&quot;images/atitlan.jpg&quot; alt=&quot;Lake Atitlan, Guatemala&quot; width=&quot;300&quot; height=&quot;240&quot;&gt;</code></pre>
+<h2>Figure and Figcaption</h2>
+<p>HTML5 introduces two elements that work in tandem to add captions and other text details to diagrams, illustrations, photos, code examples, and pretty much any other visual element that you can think of.</p>
+<p>The <code>&lt;figure&gt;</code> element encloses both the image and caption, if you include one. The <code>&lt;figcaption&gt;</code> element is optional, so you can have an image without one. Only one <code>&lt;figcaption&gt;</code> element may be nested within a <code>&lt;figure&gt;</code>, although the <code>&lt;figure&gt;</code> element itself may contain other child elements, such as <code>&lt;img&gt;</code> or <code>&lt;code&gt;</code>, and can appear before or after the content within the <code>&lt;figure&gt;</code>.</p>
+<p>This <a href="archives/examples/caption.htm" target="_ blank">example</a> illustrates an image with a caption.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Example</h1>
+<p>In this <a href="archives/bubbleunder/gallery.htm" target="_ blank">example</a>, you can see an image gallery has been added to the Bubble Under site. This example makes use of the figure and figcaption elements.</p>
+<p>The HTML for the figures, images and captions looks like this:</p>
+<pre><code class="lang-html">&lt;figure&gt;
+  &lt;img src=&quot;gallery/turtle-bite.jpg&quot; width=&quot;400&quot; height=&quot;258&quot; alt=&quot;A turtle swims comfortably among the coral, despite its old injury - a large shark bite on one side&quot; class=&quot;border&quot;&gt;
+  &lt;figcaption&gt;This turtle was spotted swimming around the Great Barrier Reef (Queensland, Australia) quite gracefully despite having had a large chunk taken out of its right side, presumably in a shark attack.&lt;br&gt;
+    &lt;span&gt;[Photographer: Ian Lloyd]&lt;/span&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;gallery/jellyfish.jpg&quot; width=&quot;400&quot; height=&quot;300&quot; alt=&quot;A jellyfish flanked by smaller fish&quot; class = &quot;border&quot;&gt;
+  &lt;figcaption&gt;Jill was just snorkelling when she took this picture - the jellyfish was only a couple of feet under the surface, hence the light is excellent. Jill assures us that the jellyfish hadno &quot;nasty, stingy, dangly bits&quot;! &lt;br&gt;
+  &lt;span&gt;[Photographer: Jill Smith]&lt;/span&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;gallery/turtle-face.jpg&quot; width=&quot;400&quot; height=&quot;300&quot; alt=&quot;A close-up, straight-on shot of a turtle feeding on the
+  coral&quot; class = &quot;border&quot;&gt;
+  &lt;figcaption&gt;&quot;I was right next to him as he bit chunks of coral off for dinner - what a sound!&quot; So describes club member Paul who took this shot in Fiji.&lt;br&gt;
+    &lt;span&gt;[Photographer: Paul Spencer]&lt;/span&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;gallery/what-a-star.jpg&quot; width=&quot;400&quot; height=&quot;318&quot; alt=&quot;Black and white patterned starfish&quot; class = &quot;border&quot;&gt;
+  &lt;figcaption&gt;You&#39;re a star - and don&#39;t let anyone tell you any different!&lt;br&gt;
+    &lt;span&gt; [Photographer: Helen Cranfield]&lt;/span&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;gallery/reef2.jpg&quot; width=&quot;400&quot; height=&quot;285&quot; alt=&quot;Another beautiful example of the Great Barrier Reef&quot; class = &quot;border&quot;&gt;
+  &lt;figcaption&gt;Another cracking shot of the reef from Mark.&lt;br&gt;
+    &lt;span&gt;[Photographer: Mark Williams]&lt;/span&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+<p>The CSS for the figure, images, figcaption, and span inside the figcaption looks as follows:</p>
+<pre><code class="lang-css">img.border {
+  border: 15px solid white;
+}
+
+figure {
+  border-bottom: 1px solid navy;
+  margin-bottom: 2%;
+}
+
+figcaption {
+  color:navy;
+  font-size: 75%;
+  font-weight: bold;
+  margin-top: 0;
+  width: 70%;
+  line-height: 1.4em;
+}
+
+figcaption span {
+  font-weight: normal;
+  color: gray;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab=" Exercise">
+        <h2>Exercise: Moon&#39;s Nest Inn</h2>
+<p>Download <a href="archives/lab03.zip">lab03.zip</a> and extract it into the Week 8 folder.</p>
+<p>The Moon’s Nest Inn website contains four pages: index.htm (the home page), reserve.htm, rooms.htm and services.htm. We are going to add an image gallery to rooms.htm and also add a background image that will appear on each page in the site.</p>
+<h3>Add image gallery to rooms.htm</h3>
+<ul>
+<li>Add a <code>&lt;figcaption&gt;</code> tag after each room image. Use the text in the image&#39;s alt tag as the caption for the image (e.g. Monterey for the first image).</li>
+<li>Enclose each room image and <code>&lt;figcaption&gt;</code> inside a <code>&lt;figure&gt;</code> tag.</li>
+<li>Add css styling for the <code>&lt;figure&gt;</code> tag in the mycss.css file as follows:<ul>
+<li>Text alignment is centered.</li>
+<li>Width is 7em.</li>
+<li>Float the figure to the left.</li>
+</ul>
+</li>
+<li>Add css styling for the <code>&lt;figcaption&gt;</code> tag in the mycss.css file as follows:<ul>
+<li>Font style is italic.</li>
+<li>Font size is 90%.</li>
+</ul>
+</li>
+<li>The result should look like this:</li>
+</ul>
+<p><img src="./img/ex3a.png" alt=""></p>
+<h2>Add a background image to appear on all pages in the site</h2>
+<ul>
+<li>Add a background image (moon.jpg) to the web site; place it in the top left corner; and ensure that it is fixed.</li>
+<li>The result should look as follows:</li>
+</ul>
+<p><img src="./img/ex3.png" alt=""></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

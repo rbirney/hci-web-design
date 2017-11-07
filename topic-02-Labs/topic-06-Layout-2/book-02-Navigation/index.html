@@ -1,0 +1,507 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Layout and Images: Part Two
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Navigation">
+      Navigation
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-00-Semantic-Layout/index.html">
+          Semantic Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-01-Figures-and-captions/index.html">
+          Figures and captions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-02-Navigation/index.html">
+          Navigation
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Navigation">
+        <h1>Objectives</h1>
+<p>In this lab, you will learn how to create a horizontal navigation menu. Complete the first exercise detailed in steps 1, 2 and 3 (WIT website); then, complete the additional exercise at the end (Tresidder Union).</p>
+<ul>
+<li><a href="#01">WIT Website: Adding the HTML</a></li>
+<li><a href="#02">WIT Website: Adding the CSS</a></li>
+<li><a href="#03">WIT Website: Styling the nav links</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h2>WIT Website: Adding the HTML</h2>
+<p>In this lab we will add and style structural elements to create another look for our WIT website: a horizontal navigation menu that looks as follows:</p>
+<p><img src="./img/ex1.png" alt=""></p>
+<p>Download <a href="archives/lab04.zip">lab04.zip</a> and extract it into your Week 8 folder. (Don&#39;t continue with the same WIT website files that you worked with in Lab 01; instead, download lab04.zip and start fresh. We want to create a totally different layout for the site in this lab.)</p>
+<p>Modify the .htm files as follows:</p>
+<ul>
+<li>After the opening <code>&lt;body&gt;</code> tag add a div called container (i.e. <code>&lt;div id = &quot;container&quot;&gt;</code>).</li>
+<li>Within the container div, add a header element. The opening header tag should be before the opening <code>&lt;h1&gt;</code> tag and the closing header tag should be after the closing <code>&lt;/h1&gt;</code> tag.</li>
+<li>Add <code>&lt;nav&gt;</code> tags around the <code>&lt;ul&gt;</code> (the unordered list contains a list of links which are the navigation for the site.)</li>
+<li>After the closing <code>&lt;/nav&gt;</code> tag, put a <code>&lt;main&gt;</code> tag. The main element should surround the rest of the content on the page (the h2 heading and two paragraphs).</li>
+<li>At the end of the page (before the closing <code>&lt;body&gt;</code> tag) including the closing tags for the main element and the container div (i.e.<code>&lt;/main&gt;&lt;/div&gt;</code>)</li>
+<li>You will need to add these structural tags to all three of the HTML pages in the site: index.htm, director.htm and aboutwit.htm.</li>
+<li>The finished HTML code should look like this:</li>
+</ul>
+<p><img src="./img/step1.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h2>WIT Website: Adding the CSS</h2>
+<p>Add the following selectors to the .css file (mycss.css):</p>
+<ul>
+<li><p>All the web site content will reside in the container division; here we add a background colour, margin, and a width of 90%.</p>
+<pre><code class="lang-css">#container {
+background-color:#9fB6CD;
+width:90%;
+margin:2% auto;
+}</code></pre>
+</li>
+<li><p>The header structural element will have padding of 2em.</p>
+<pre><code class="lang-css">header {
+padding:2em;
+}</code></pre>
+</li>
+<li><p>The navigation structural element has a background colour of #616e7d.</p>
+<pre><code class="lang-css">nav {
+background-color:#616e7d;
+}</code></pre>
+</li>
+<li><p>The main structural element has padding of 0.5m (top and bottom), 2em (left and right), and the text is justified.</p>
+<pre><code class="lang-css">main {
+padding:.5em 2em;
+text-align:justify;
+}</code></pre>
+</li>
+</ul>
+<p>After adding these CSS styles, your website should look as follows:</p>
+<p><img src="./img/step2.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h2>WIT Website: Styling the nav links</h2>
+<p>We will now add the styles for the navigation links. As you can see in the HTML files, the navigation for the site is an unordered list that contains a number of links. Add the following styles to mycss.css:</p>
+<ul>
+<li><p>Add padding of 0.5em to the unordered list; use nav ul to target only the unordered list in the nav section (so that any other lists on the website won&#39;t be affected by these styles)</p>
+<pre><code class="lang-css">nav ul {
+padding:0.5em;
+}</code></pre>
+</li>
+<li><p>Each list item will have a margin of 0 on the top and bottom and 2% on the left and right. The display is inline; this is the part that makes the nav links horizontal, all appearing on the same line.</p>
+<pre><code class="lang-css">nav ul li {
+display:inline;
+margin:0 2%;
+}</code></pre>
+</li>
+<li><p>The a:link and a:visited states are styled white, with no underline, the hover state is gray with a lightgray background, and the active state is yellow. Note that we use descendant selectors (e.g. nav ul li a:link) to ensure that only the navigation links are affected, and not other links on our site.
+```css
+nav ul li a:link, nav ul li a:visited {
+text-decoration: none;
+color: white;
+}</p>
+</li>
+</ul>
+<p>nav ul li a:hover {
+ color:gray;
+ background-color:lightgray;
+}</p>
+<p>nav ul li a:active {
+ color: yellow;
+}</p>
+<pre><code>
+- Lastly, each link inside the list item uses the inline-block display type so that a width property can be applied. Background colour, padding, and text styles are also applied.
+```css
+nav ul li a{
+ display:inline-block;
+ background-color:#6C7B8B;
+ width:13em;
+ padding:0.5em 0;
+ text-align:center;
+ font-weight:bold;
+ font-size:90%;
+}</code></pre>
+<p>The website should now looks as follows:</p>
+<p><img src="./img/ex1.png" alt=""></p>
+<p>See the full website here: <a href="archives/example/index.htm" target="_ blank">WIT Website Example</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h2>Exercise: Tresidder Union</h2>
+<p>In this exercise you are to create a different layout for the Tresidder Union website. You should add structural elements to the HTML file and then add styles to the CSS file, so that the website looks as follows:</p>
+<p><img src="./img/ex2.png" alt=""></p>
+<p>Download <a href="archives/lab05.zip">lab05.zip</a> and extract it into your Week 8 folder. (Again, don&#39;t continue with the same website files that you worked on earlier; the aim is to create a different layout for the Tresidder site, starting from scratch.)</p>
+<p>The 4 different colours for the link items are red; #3333CC; green; and purple.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
