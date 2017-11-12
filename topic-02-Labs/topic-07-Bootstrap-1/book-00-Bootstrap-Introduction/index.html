@@ -1,0 +1,529 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Bootstrap-1
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Bootstrap Introduction">
+      Bootstrap Introduction
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-00-Semantic-Layout/index.html">
+          Semantic Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-01-Figures-and-captions/index.html">
+          Figures and captions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-02-Navigation/index.html">
+          Navigation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-00-Bootstrap-Introduction/index.html">
+          Bootstrap Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-01-Bootstrap-Grid-Introduction/index.html">
+          Bootstrap-Grid-Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-02-Bootstrap-Grid-Details/index.html">
+          Bootstrap-Grid-Details
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Bootstrap Introduction">
+        <h1>Objective</h1>
+<p>This lab introduces what Bootstrap 4 is and what files are required.</p>
+<ul>
+<li><a href="#01">What is Bootstrap 4?</a></li>
+<li><a href="#02">Getting Started with Bootstrap 4</a></li>
+<li><a href="#03">Bootstrap 4 Typography</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>What is Bootstrap 4?</h1>
+<p>Bootstrap is a free and open-source framework for creating websites and web applications. It&#39;s the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
+<p>As the web evolves more and more toward responsive design, it can be a real challenge for web developers to keep up. Bootstrap can make things a whole lot easier. Bootstrap enables you to create responsive websites without you needing to do the &quot;responsive&quot; bit. Bootstrap takes care of that.</p>
+<h2>One Framework, Every Device</h2>
+<p><img src="img/responsive_design.png" alt="">
+Bootstrap is promoted as being One framework, every device. This is because websites built with Bootstrap will automatically scale between devices - whether the device is a mobile phone, tablet, laptop, desktop computer, screen reader, etc.</p>
+<h2>Mobile-First</h2>
+<p>Not only is Bootstrap responsive, it is mobile-first. This means that it is primarily designed for mobile devices, then scales up from there (as opposed to being designed for desktop, then trying to scale it down to mobile devices).</p>
+<h2>Bootstrap Components</h2>
+<p>Bootstap includes components such as buttons, navbars, dropdown menus, alert boxes, and more. In most cases, you can make use of a component simply by using the appropriate class name.</p>
+<p>We&#39;ll be looking at these components in the next tutorial. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Getting Started with Bootstrap 4</h1>
+<p>Bootstrap uses its own CSS and JavaScript files, which you need to link to. You should also ensure that your page includes a few standard elements as explained below.</p>
+<h2>CSS File</h2>
+<p>Place the following stylesheet code in the document&#39;s <strong>&lt;head&gt;</strong>:</p>
+<pre><code>    &lt;link href=&quot;css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
+<h2>JavaScript Files</h2>
+<p>Place the following javascript files at the bottom of your document (just before the end <strong>&lt;body&gt;</strong> tag):</p>
+<pre><code>&lt;script src=&quot;js/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<h2>Design &amp; Development Standards</h2>
+<p>To get the most out of Bootstrap 4, make sure your pages incorporate the following.</p>
+<h3>HTML5 !DOCTYPE</h3>
+<p>Your HTML documents should begin with the HTML5 !DOCTYPE declaration. Like this:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  ...
+&lt;/html&gt;</code></pre>
+<h3>Add the Viewport &lt;meta&gt; Tag</h3>
+<p>To ensure proper rendering and touch zooming on mobile devices, add the viewport meta tag, like this:</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;</code></pre>
+<h2>Quick Start: Bootstrap 4 Template</h2>
+<p>You can use the following template as a basis for your Bootstrap 4 web pages. This template contains the necessary !DOCTYPE preamble, links to CSS and JS files, 
+as well as the viewport meta tag.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bootstrap Example Template&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;!-- Viewport Meta Tag --&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+    &lt;!-- Bootstrap CSS --&gt;
+     &lt;link href=&quot;css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- YOUR CONTENT STARTS HERE --&gt;
+
+    &lt;!-- YOUR CONTENT ENDS HERE --&gt;
+    &lt;!-- JavaScript: placed at the end of the document so the pages load faster --&gt;
+    &lt;!-- jQuery library --&gt;
+     &lt;script src=&quot;js/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Popper --&gt;
+     &lt;script src=&quot;js/popper.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Latest compiled and minified Bootstrap JavaScript --&gt;
+     &lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Bootstrap 4 Typography</h1>
+<p>Bootstrap includes styles that define text elelemnts appear.</p>
+<h2>Body Text</h2>
+<p>Bootstrap 4&#39;s global default <strong>font-size</strong> is <strong>16px</strong> applied to the <strong>&lt;html&gt;</strong> element. The <strong>&lt;body&gt;</strong> element also has a 
+<strong>font-size</strong> of <strong>1rem</strong> applied.</p>
+<p>Bootstrap uses the user&#39;s system fonts, with a fallback of &quot;Helvetica Neue&quot;, Arial, and sans-serif.</p>
+<p>All headings and <strong>&lt;p&gt;</strong> elements have their top margin removed. Headings have a bottom-margin of <strong>.5rem</strong> and <strong>&lt;p&gt;</strong> elements
+have a bottom margin of <strong>1rem</strong>.</p>
+<p><strong>Note:</strong> We can change these in our own stylesheet through CSS.</p>
+<h2>Text alignment</h2>
+<p>Easily realign text to components with text alignment classes.</p>
+<ul>
+<li>Align left</li>
+<li>Align center</li>
+<li>Align right</li>
+</ul>
+<pre><code>&lt;p class=&quot;text-left&quot;&gt;Left aligned text on all viewport sizes.&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;Center aligned text on all viewport sizes.&lt;/p&gt;
+&lt;p class=&quot;text-right&quot;&gt;Right aligned text on all viewport sizes.&lt;/p&gt;
+
+&lt;p class=&quot;text-sm-left&quot;&gt;Left aligned text on viewports sized SM (small) or wider.&lt;/p&gt;
+&lt;p class=&quot;text-md-left&quot;&gt;Left aligned text on viewports sized MD (medium) or wider.&lt;/p&gt;
+&lt;p class=&quot;text-lg-left&quot;&gt;Left aligned text on viewports sized LG (large) or wider.&lt;/p&gt;
+&lt;p class=&quot;text-xl-left&quot;&gt;Left aligned text on viewports sized XL (extra-large) or wider.&lt;/p&gt;</code></pre>
+<h2>Text transform</h2>
+<p>Transform text in components with text capitalisation classes.</p>
+<ul>
+<li>lowercased text.</li>
+<li>UPPERCASED TEXT.</li>
+<li>Capitalised Text.</li>
+</ul>
+<pre><code>&lt;p class=&quot;text-lowercase&quot;&gt;Lowercased text.&lt;/p&gt;
+&lt;p class=&quot;text-uppercase&quot;&gt;Uppercased text.&lt;/p&gt;
+&lt;p class=&quot;text-capitalize&quot;&gt;Capitalised text.&lt;/p&gt;</code></pre>
+<p><strong>Note:</strong> how text-capitalize only changes the first letter of each word, leaving the case of any other letters unaffected.</p>
+<h2>Font weight and italics</h2>
+<p>Quickly change the weight (boldness) of text or italicize text.</p>
+<ul>
+<li>Bold text.</li>
+<li>Normal weight text.</li>
+<li>Italic text.</li>
+</ul>
+<pre><code>&lt;p class=&quot;font-weight-bold&quot;&gt;Bold text.&lt;/p&gt;
+&lt;p class=&quot;font-weight-normal&quot;&gt;Normal weight text.&lt;/p&gt;
+&lt;p class=&quot;font-italic&quot;&gt;Italic text.&lt;/p&gt;</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

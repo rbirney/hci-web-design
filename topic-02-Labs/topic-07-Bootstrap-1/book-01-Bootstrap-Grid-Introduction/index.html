@@ -1,0 +1,690 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Bootstrap-1
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Bootstrap-Grid-Introduction">
+      Bootstrap-Grid-Introduction
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="Exercise-1">
+      Exercise-1
+    </a>
+    
+    <a class="item" data-tab="Exercise-2">
+      Exercise-2
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-00-Semantic-Layout/index.html">
+          Semantic Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-01-Figures-and-captions/index.html">
+          Figures and captions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-02-Navigation/index.html">
+          Navigation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-00-Bootstrap-Introduction/index.html">
+          Bootstrap Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-01-Bootstrap-Grid-Introduction/index.html">
+          Bootstrap-Grid-Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-02-Bootstrap-Grid-Details/index.html">
+          Bootstrap-Grid-Details
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Bootstrap-Grid-Introduction">
+        <h1>Objective</h1>
+<p>This lab looks at Bootstrap 4 Containers, and the Bootstrap 4 Grid System.</p>
+<ul>
+<li><a href="#01">Bootstrap 4 Containers</a></li>
+<li><a href="#02">Bootstrap 4 Grid System</a></li>
+<li><a href="#03">Grid Sizes</a></li>
+<li><a href="#04">Grid Facts</a></li>
+<li><a href="#05">Using the Grid System</a></li>
+<li><a href="#06">More on using the Grid</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Bootstrap 4 Containers</h1>
+<p>Containers provide the foundation for page layout.</p>
+<p>Bootstrap requires a containing element to wrap elements and contain its grid system (more on the grid system next). Bootstrap&#39;s container classes were created specifically for this purpose.</p>
+<p>Bootstrap containers can be either fixed or fluid.</p>
+<h2>Fixed Container</h2>
+<p>A fixed container is a (responsive) fixed width container. As you resize your browser, its width remains intact, until it passes a certain breakpoint, at which time it will resize to the new width for that break point.</p>
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre>
+<p><a href="archives/Class Htmls/ex1.html" target = "_blank">Example</a></p>
+<h2>Fluid Container</h2>
+<p>A fluid container spans the full width of the viewport. It will expand and contract fluidly as you resize the browser. This is in contrast to the fixed width container which will appear to &quot;jump&quot; to the new size as you pass a given break point.</p>
+<pre><code>&lt;div class=&quot;container-fluid&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre>
+<p><a href="archives/Class Htmls/ex2.html" target = "_blank">Example</a></p>
+<p>While you can create Bootstrap pages without containers, they are required when using the Bootstrap grid system.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Bootstrap Grid System</h1>
+<p>Grid systems enable you to create advanced layouts using rows and columns. The Bootstrap grid system can have up to 12 columns, 
+and you can specify how these columns scale for different viewport sizes.</p>
+<p>Here&#39;s an example of a Bootstrap grid:
+<img src="img/grid1.png" alt=""></p>
+<p>The numbers at the end of each class name represent the number of columns that the column spans. 
+So <strong>.col-sm-1</strong> spans one column and <strong>.col-sm-8</strong> spans eight. The <strong>sm</strong> means that the column span applies to small devices and 
+everything above. You can also use <strong>md</strong>, <strong>lg</strong>, and <strong>xl</strong> for medium, large, and extra large.</p>
+<p>Extra small devices are catered for by omitting the middle abbreviation. For example <strong>.col-8</strong> spans eight columns on 
+extra small devices and up (in other words, all devices).</p>
+<h2>Stacked to Horizontal</h2>
+<p>The following example uses the same markup, but this time we use <strong>md</strong> for <strong>medium</strong>. This means that, if the viewport is 
+smaller than <strong>medium</strong> (i.e. less than 768 pixels), the cells in the grid will be stacked on top of each other, 
+and each cell will take up the full width.</p>
+<p>If you are viewing this on a wide screen, this example might not look any different to the previous one. 
+However, if you resize your browser down, the cells will eventually shift into the stacked position (and the previous 
+example will remain intact).</p>
+<p><img src="img/grid2.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Grid Sizes</h1>
+<p>The grid tier options are as follows:</p>
+<ul>
+<li>Extra small (<strong>xs</strong>) - below 576px</li>
+<li>Small (<strong>sm</strong>) - between 576px and 768px</li>
+<li>Medium (<strong>md</strong>) - between 768px and 992px</li>
+<li>Large (<strong>lg</strong>) - between 992px and 1200px</li>
+<li>Extra Large (<strong>xl</strong>) - over 1200px</li>
+</ul>
+<p>The following table shows how different grid options work with different viewport sizes.
+<img src="img/grid3.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Grid Facts</h1>
+<h2>Containers</h2>
+<p>Grids should be placed within a container (i.e. using either <strong>.container</strong> class or the <strong>.container-fluid</strong> class) for proper 
+padding and alignment.</p>
+<h2>Rows &amp; Columns</h2>
+<p>Rows contain one or more columns. Columns contain the content. Only columns can be immediate children of rows.</p>
+<h2>Padding</h2>
+<p>Columns contain padding. However, the padding on the first and last columns is offset by a negative margin on the row. </p>
+<h2>More than 12 Columns per Row?</h2>
+<p>If more than 12 columns are placed in a row, the columns will wrap to a new line. That is, columns will wrap as a group. 
+So for example, if a row contains a <strong>col-md-10</strong> and a <strong>col-md-3</strong>, then the whole <strong>col-md-3</strong> will wrap to the new line.</p>
+<h2>Less than 12 Columns per Row?</h2>
+<p>You don&#39;t have to use up all 12 columns. You can use any number of columns up to 12 (before it will wrap to the next line).<br>For example, you could have a row where the total column count spans say, 3 columns.</p>
+<h2>Grid Classes</h2>
+<p>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, 
+and override grid classes targeted at smaller devices. So using any <strong>.col-sm-*</strong> class will affect not only small viewports, 
+but also medium, large, and extra large (unless there&#39;s also a <strong>col-md-*</strong> and/or <strong>col-lg-*</strong> and/or <strong>col-xl-*</strong> present).</p>
+<h2>Multiple Classes</h2>
+<p>You can use multiple class sizes for a given element. For example, you could use <strong>class=&quot;col-sm-10 col-md-6&quot;</strong>
+to specify 10 columns for small viewports and 6 columns for medium and large viewports.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Using the Grid System</h1>
+<p>Recall that this is how the Bootstrap grid system works:</p>
+<ul>
+<li>Rows must be placed within a container for proper alignment and padding.</li>
+<li>Use rows to create horizontal groups of columns.</li>
+<li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+<li>Predefined grid classes like <strong>.row</strong> and <strong>.col-sm-4</strong> are available for quickly making grid layouts.</li>
+<li>Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on .rows.</li>
+<li>Grid columns are created by specifying the number of twelve available columns you wish to span. </li>
+</ul>
+<h2>Example One</h2>
+<p>In the following <a href="archives/class htmls/ex3.html" target="_blank">example</a>, we have 3 columns of data on the web page. Firstly, there is a container class which has a default 
+width (and which we will customise). Then there are a row of siblings. In our case, there are three div elements that are 
+contained inside a single row. So we start a new row by adding a new div with class row. The row now has three more div tags with 
+the class <strong>col-md-4</strong>. The number 4 in the class tells us that it occupies four grids. 
+So three sibling divs with four grids each will occupy 12 grids, which is perfectly fine.</p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+   &lt;div class=&quot;col-md-4&quot;&gt;
+     &lt;h2&gt;Frontend&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md-4&quot;&gt;
+     &lt;h2&gt;Serverside&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md-4&quot;&gt;
+     &lt;h2&gt;Databases&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>A feature of the Bootstrap 4 grid is the <strong>auto-layout</strong> mode. It lets developers leave out the size of columns, 
+making them automatically distribute the space in that row. Sizeless columns share the available space equally, always filling up the entire row.</p>
+<p>Because the 3 column widths are the same you can leave out the number and just use <strong>col-md</strong> and Bootstrap will determine you want 3 columns of equal size (<strong>4</strong>) 
+as in the following <a href="archives/class htmls/ex3c.html" target="_blank">example</a>.</p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+   &lt;div class=&quot;col-md&quot;&gt;
+     &lt;h2&gt;Frontend&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md&quot;&gt;
+     &lt;h2&gt;Serverside&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md&quot;&gt;
+     &lt;h2&gt;Databases&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p><a href="archives/class htmls/grid1.html" target="_blank">Example One </a> and <a href="archives/class htmls/grid2.html" target="_blank">Example Two </a>
+are further examples of using <strong>auto-layout</strong>. View the source of each of the pages to see the column sizes.</p>
+<h2>Example Two</h2>
+<p>You can also create equal-width columns that span multiple rows by inserting a <strong>.w-100</strong> where you want the columns to break to a new line as in the 
+following <a href="archives/class htmls/grid4.html" target="_blank">example</a>.</p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md&quot;&gt;col&lt;/div&gt;
+  &lt;div class=&quot;col-md&quot;&gt;col&lt;/div&gt;
+  &lt;div class=&quot;w-100&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;col-md&quot;&gt;col&lt;/div&gt;
+  &lt;div class=&quot;col-md&quot;&gt;col&lt;/div&gt;
+  &lt;div class=&quot;w-100&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;col-md&quot;&gt;col&lt;/div&gt;
+  &lt;div class=&quot;col-md&quot;&gt;col&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h2>Example Three</h2>
+<p>If we want a column to be bigger or smaller than the other columns in a row, we can do that with a <strong>.col-md-size</strong> class. In this <a href="archives/class htmls/ex3a.html" target="_blank">example</a>, we again have 3 columns of data but each has a different size.</p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+   &lt;div class=&quot;col-md-3&quot;&gt;
+     &lt;h2&gt;Frontend&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md-4&quot;&gt;
+     &lt;h2&gt;Serverside&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md-5&quot;&gt;
+     &lt;h2&gt;Databases&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>You could leave the size out of one of the column width specifications and the browser would determine its size based on the total adding 
+up to 12.</p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+   &lt;div class=&quot;col-md-3&quot;&gt;
+     &lt;h2&gt;Frontend&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md-4&quot;&gt;
+     &lt;h2&gt;Serverside&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md&quot;&gt;
+     &lt;h2&gt;Databases&lt;/h2&gt;
+     &lt;p&gt;...&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>More on using the Grid</h1>
+<h2>Using Multiple Classes</h2>
+<p>When laying out pages you can design the page to look different on different viewports.
+You can use multiple class sizes for a given element. For example, you could use class=&quot;col-sm-10 col-md-6&quot; to specify 10 columns for small viewports and 6 columns for medium and large viewports.</p>
+<p>The following <a href="archives/class htmls/fluid/index.html" target="_blank">example</a> illustrates
+different navigation and content sizes for separate viewports.</p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+  &lt;nav class=&quot;col-md-2 col-sm-3 col-4&quot;&gt;
+     ...
+  &lt;/nav&gt;
+  &lt;section class=&quot;col-md-10 col-sm-9 col-8&quot;&gt;
+     ...
+  &lt;/section&gt;
+&lt;/div&gt;</code></pre>
+<h2>Use of Gutters</h2>
+<p>Recall that columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on .rows.</p>
+<p>The following <a href="archives/class htmls/ex9a.html" target="_blank">example</a> illustrates
+the use of gutters (space between the images).</p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+   &lt;div class=&quot;col-6 col-sm-3 kitten-box&quot;&gt;&lt;img src=&quot;images/kitten.jpg&quot; alt=&quot;kitten&quot; class=&quot;img-fluid&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;col-6 col-sm-3 kitten-box&quot;&gt;&lt;img src=&quot;images/kitten.jpg&quot; alt=&quot;kitten&quot; class=&quot;img-fluid&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;col-6 col-sm-3 kitten-box&quot;&gt;&lt;img src=&quot;images/kitten.jpg&quot; alt=&quot;kitten&quot; class=&quot;img-fluid&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;col-6 col-sm-3 kitten-box&quot;&gt;&lt;img src=&quot;images/kitten.jpg&quot; alt=&quot;kitten&quot; class=&quot;img-fluid&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>Whereas in the following <a href="archives/class htmls/ex9.html" target="_blank">example</a>, the gutters are removed and there is no padding (space between the images).</p>
+<pre><code>&lt;div class=&quot;row no-gutters&quot;&gt;
+   &lt;div class=&quot;col-6 col-sm-3 kitten-box&quot;&gt;&lt;img src=&quot;images/kitten.jpg&quot; alt=&quot;kitten&quot; class=&quot;img-fluid&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;col-6 col-sm-3 kitten-box&quot;&gt;&lt;img src=&quot;images/kitten.jpg&quot; alt=&quot;kitten&quot; class=&quot;img-fluid&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;col-6 col-sm-3 kitten-box&quot;&gt;&lt;img src=&quot;images/kitten.jpg&quot; alt=&quot;kitten&quot; class=&quot;img-fluid&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;col-6 col-sm-3 kitten-box&quot;&gt;&lt;img src=&quot;images/kitten.jpg&quot; alt=&quot;kitten&quot; class=&quot;img-fluid&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p><strong>Note:</strong> In the above examples, we have included a class <strong>class=&quot;img-fluid&quot;</strong>, this will ensure that the image is responsive and
+resize for different viewports (if required). Other classes we can use with images are:</p>
+<ul>
+<li>rounded, and</li>
+<li>rounded-circle.</li>
+</ul>
+<p>More on images later...</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise-1">
+        <h1>Grid Exercises</h1>
+<ul>
+<li>Download, extract and open the <a href="archives/lab01.zip">lab01</a> folder in Week09.</li>
+<li>A web page has been created for you, add Bootstrap 4 code that will size the screen for very small viewports (and upwards) as follows:</li>
+</ul>
+<p><img src="img/ex1.png" alt=""></p>
+<p>You will notice that when you resize the browser to small viewport size, the 4 columns of text appear
+very narrow. </p>
+<ul>
+<li>Adjust the code for the 4 columns such that the columns of text are size 6 on very small viewports, and size 3 on small screens (and upwards).</li>
+</ul>
+<p><img src="img/ex2.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise-2">
+        <h1>Grid Exercise Two</h1>
+<ul>
+<li>Download, extract and open the <a href="archives/lab02.zip">lab02</a> folder in Week09.</li>
+<li>A web page has been created for you, add 3 images from the images folder (feat1.jpg, feat2.jpg, and feat3.jpg), which are responsive and displayed as a circle.</li>
+<li>Add Bootstrap 4 code that will size the screen for very small viewports (and upwards) as follows:</li>
+</ul>
+<p><img src="img/ex3.png" alt=""></p>
+<ul>
+<li>The headings (Type 1, Type 2, and Type 3) are centered. </li>
+<li>The paragraphs are justified.</li>
+<li>In the footer, add 3 buttons (Go to <a href="https://v4-alpha.getbootstrap.com/components/buttons/#examples" target="_blank">Buttons</a>).</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
