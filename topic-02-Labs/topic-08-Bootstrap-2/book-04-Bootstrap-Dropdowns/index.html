@@ -1,0 +1,534 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Bootstrap-2
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Bootstrap 4 Dropdown Menus">
+      Bootstrap 4 Dropdown Menus
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-00-Semantic-Layout/index.html">
+          Semantic Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-01-Figures-and-captions/index.html">
+          Figures and captions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-02-Navigation/index.html">
+          Navigation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-00-Bootstrap-Introduction/index.html">
+          Bootstrap Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-01-Bootstrap-Grid-Introduction/index.html">
+          Bootstrap-Grid-Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-02-Bootstrap-Grid-Details/index.html">
+          Bootstrap-Grid-Details
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-00-Bootstrap-4-Tables/index.html">
+          Bootstrap 4 Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-01-Bootstrap-Images-and-Buttons/index.html">
+          Bootstrap 4 Images and Buttons
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-02-Bootstrap-Spacing/index.html">
+          Bootstrap 4 Spacing
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-03-Bootstrap-Navs/index.html">
+          Bootstrap 4 Navs
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-04-Bootstrap-Dropdowns/index.html">
+          Bootstrap 4 Dropdown Menus
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-05-Bootstrap-Navbars/index.html">
+          Bootstrap 4 Navbars
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Bootstrap 4 Dropdown Menus">
+        <h1>Objective</h1>
+<p>This lab looks at Dropdown menus.</p>
+<ul>
+<li><a href="#01">Dropdown Menus</a></li>
+<li><a href="#02">Dropdown Menu Options</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Dropdown Menus</h1>
+<p>Bootstrap includes a component for adding dropdown menus. The JavaScript is included with the default 
+Bootstrap JS file and you can use it simply by adding the CSS classes - no further JavaScript required.</p>
+<p>Examine the <a href="archives/Class Htmls/ex1.html" target = "_blank">example</a> of a Bootstrap 4 dropdown:</p>
+<pre><code>&lt;div class=&quot;dropdown&quot;&gt;
+ &lt;button class=&quot;btn btn-primary dropdown-toggle&quot; type=&quot;button&quot; id=&quot;about-us&quot; data-toggle=&quot;dropdown&quot; 
+  aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;About Us
+ &lt;/button&gt;
+ &lt;div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;about-us&quot;&gt;
+  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Our Story&lt;/a&gt;
+  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Our Team&lt;/a&gt;
+  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Contact Us&lt;/a&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h2>Explanation of Code</h2>
+<h3>Creating the Dropdown</h3>
+<p>The dropdown is done purely with HTML markup. Bootstrap handles the JavaScript behind the scenes.</p>
+<p>Here are the key steps for creating a Bootstrap dropdown:</p>
+<ul>
+<li>Wrap the dropdown trigger element within an element with Bootstrap&#39;s <strong>.dropdown</strong> class.</li>
+<li>Add Bootstrap&#39;s <strong>.dropdown-toggle</strong> class and add <strong>data-toggle=&quot;dropdown&quot;</strong> to the trigger element.
+(i.e. the element that users click on to expand the dropdown). In the above example, the trigger is a <strong>&lt;button&gt;</strong> element.</li>
+<li>Wrap all dropdown items in a <strong>&lt;div&gt;</strong> with <strong>.dropdown-menu</strong> applied.</li>
+<li>Each dropdown item uses the <strong>&lt;a&gt;</strong> element (but can also use the <strong>&lt;button&gt;</strong> element) with a class of <strong>.dropdown-item</strong>.</li>
+</ul>
+<h3>About the ARIA Attributes</h3>
+<p>You might also notice that the above example has some <strong>ARIA</strong> attributes. These have been added for accessibility purposes. 
+Here&#39;s an explanation of the ARIA attributes used with the above dropdown.</p>
+<dl>
+<dt><strong>aria-haspopup</strong></dt>
+<dd>Indicates that the element has a popup context menu or sub-level menu. Its value can be either true (the element has a popup) or false (the element does not have a popup).</dd>
+<dt> <strong>aria-expanded</strong></dt>
+<dd>Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed. Possible values are true, false, and undefined (default).
+</dd>
+<dt> <strong>aria-labelledby</strong></dt>
+<dd>Identifies the element (or elements) that labels the current element. It provides the user with a recognizable name of the object.
+</dl>
+
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Dropdown Menu options</h1>
+<h2>Menu Headers</h2>
+<p>Add a header to your dropdown menu by adding a Bootstrap&#39;s <strong>.dropdown-header</strong> class to a heading element (&lt;h1&gt; - &lt;h6&gt;)
+as illustrated in the following <a href="archives/Class Htmls/ex2.html" target = "_blank">example</a>.</p>
+<pre><code>&lt;div class=&quot;dropdown&quot;&gt;
+ &lt;button class=&quot;btn btn-primary dropdown-toggle&quot; type=&quot;button&quot; id=&quot;about-us&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot;
+  aria-expanded=&quot;false&quot;&gt;About Us
+ &lt;/button&gt;
+ &lt;div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;about-us&quot;&gt;
+  &lt;h6 class=&quot;dropdown-header&quot;&gt;Company Information&lt;/h6&gt;
+  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Our Story&lt;/a&gt;
+  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Our Team&lt;/a&gt;
+  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Contact Us&lt;/a&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h2>Dividers</h2>
+<p>Add dividers to your dropdown menu by adding a Bootstrap&#39;s <strong>.dropdown-divider</strong> class to a &lt;div&gt; element as
+illustrated in the following <a href="archives/Class Htmls/ex3.html" target = "_blank">example</a>.</p>
+<pre><code>&lt;div class=&quot;dropdown&quot;&gt;
+ &lt;button class=&quot;btn btn-primary dropdown-toggle&quot; type=&quot;button&quot; id=&quot;about-us&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot;
+  aria-expanded=&quot;false&quot;&gt;About Us
+ &lt;/button&gt;
+ &lt;div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;about-us&quot;&gt;
+  &lt;h6 class=&quot;dropdown-header&quot;&gt;Company Information&lt;/h6&gt;
+  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Our Story&lt;/a&gt;
+  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Our Team&lt;/a&gt;
+  &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Contact Us&lt;/a&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h2>Disabled Menu Items</h2>
+<p>Disable a menu item by applying Bootstrap&#39;s <strong>.disabled</strong> class to its &lt;a&gt; tag as
+illustrated in the following <a href="archives/Class Htmls/ex4.html" target = "_blank">example</a>.</p>
+<pre><code>&lt;div class=&quot;dropdown&quot;&gt;
+ &lt;button class=&quot;btn btn-primary dropdown-toggle&quot; type=&quot;button&quot; id=&quot;about-us&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot;
+  aria-expanded=&quot;false&quot;&gt;About Us
+ &lt;/button&gt;
+ &lt;div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;about-us&quot;&gt;
+  &lt;h6 class=&quot;dropdown-header&quot;&gt;Company Information&lt;/h6&gt;
+  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Our Story&lt;/a&gt;
+  &lt;a class=&quot;dropdown-item disabled&quot; href=&quot;#&quot;&gt;Our Team&lt;/a&gt;
+  &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+  &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Contact Us&lt;/a&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

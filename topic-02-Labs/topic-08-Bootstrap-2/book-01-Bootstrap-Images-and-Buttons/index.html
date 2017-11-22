@@ -1,0 +1,605 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Bootstrap-2
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Bootstrap 4 Images and Buttons">
+      Bootstrap 4 Images and Buttons
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercise-1">
+      Exercise-1
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-00-Semantic-Layout/index.html">
+          Semantic Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-01-Figures-and-captions/index.html">
+          Figures and captions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-02-Navigation/index.html">
+          Navigation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-00-Bootstrap-Introduction/index.html">
+          Bootstrap Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-01-Bootstrap-Grid-Introduction/index.html">
+          Bootstrap-Grid-Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-02-Bootstrap-Grid-Details/index.html">
+          Bootstrap-Grid-Details
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-00-Bootstrap-4-Tables/index.html">
+          Bootstrap 4 Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-01-Bootstrap-Images-and-Buttons/index.html">
+          Bootstrap 4 Images and Buttons
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-02-Bootstrap-Spacing/index.html">
+          Bootstrap 4 Spacing
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-03-Bootstrap-Navs/index.html">
+          Bootstrap 4 Navs
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-04-Bootstrap-Dropdowns/index.html">
+          Bootstrap 4 Dropdown Menus
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-05-Bootstrap-Navbars/index.html">
+          Bootstrap 4 Navbars
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Bootstrap 4 Images and Buttons">
+        <h1>Objective</h1>
+<p>This lab looks at the Bootstrap 4 Image and Button classes.</p>
+<ul>
+<li><a href="#01">Responsive Images</a></li>
+<li><a href="#02">Rounded Corners &amp; Thumbnails</a></li>
+<li><a href="#03">Float Images</a></li>
+<li><a href="#04">Bootstrap 4 Buttons</a></li>
+<li><a href="#05">Button Outlines and Size</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Responsive Images</h1>
+<p>Bootstrap provides classes that can be used when working with the <strong>&lt;img&gt;</strong> element.</p>
+<p>Bootstrap provides the <strong>.img-fluid</strong> class to make an image scale appropriately across devices.</p>
+<p>This class applies <strong>max-width: 100%</strong> and <strong>height: auto</strong> to the image.</p>
+<p>This ensures that the image scales to the parent element
+as seen in the following <a href="archives/Class Htmls/ex1.html" target = "_blank">example</a>.</p>
+<pre><code>    &lt;img src=&quot;images/island.jpg&quot; class=&quot;img-fluid&quot; alt=&quot;Sample photo&quot;&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Rounded Corners &amp; Thumbnails</h1>
+<p>You can use Bootstrap to render images with rounded corners or as a circle. This is achieved with the <strong>.rounded-*</strong> utility classes.</p>
+<p>You can also use the <strong>.img-thumbnail</strong> class to give it a rounded 1 pixel border.</p>
+<p>These classes can be seen in the following <a href="archives/Class Htmls/ex2.html" target = "_blank">example</a>.</p>
+<pre><code>  &lt;img src=&quot;images/bird1.jpg&quot; class=&quot;rounded&quot; alt=&quot;Sample image&quot;&gt;
+  &lt;img src=&quot;images/bird2.jpg&quot; class=&quot;rounded-circle&quot; alt=&quot;Sample image&quot;&gt;
+  &lt;img src=&quot;images/bird3.jpg&quot; class=&quot;img-thumbnail&quot; alt=&quot;Sample image&quot;&gt;
+  &lt;img src=&quot;images/bird4.jpg&quot; class=&quot;rounded-top&quot; alt=&quot;Sample image&quot;&gt;
+  &lt;img src=&quot;images/bird1.jpg&quot; class=&quot;rounded-bottom&quot; alt=&quot;Sample image&quot;&gt;</code></pre>
+<p>The utility classes can be applied to any element (not just images). The border radius classes are:</p>
+<ul>
+<li>rounded,</li>
+<li>rounded-top,</li>
+<li>rounded-right,</li>
+<li>rounded-bottom,</li>
+<li>rounded-left,</li>
+<li>rounded-circle, and</li>
+<li>rounded-0 (same as no rounded corners)</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Float Images</h1>
+<p>You can use the following Bootstrap classes to float an image to the left or right.</p>
+<ul>
+<li>.float-left,</li>
+<li>.float-right,</li>
+<li>.float-*-left, and</li>
+<li>.float-*-right   </li>
+</ul>
+<p>These classes float an element to the left or right, or disable floating, based on the current viewport size.</p>
+<p>The following <a href="archives/Class Htmls/ex3.html" target = "_blank">example</a> floats an image to the left and right.</p>
+<pre><code>  &lt;img src=&quot;images/bird1.jpg&quot; class=&quot;rounded-circle float-left&quot; alt=&quot;Sample image&quot;&gt;
+  &lt;img src=&quot;images/bird3.jpg&quot; class=&quot;rounded-circle float-right&quot; alt=&quot;Sample image&quot;&gt;</code></pre>
+<p>The responsive float classes for aligning images to the left are</p>
+<ul>
+<li>.float-left,</li>
+<li>.float-sm-left,</li>
+<li>.float-md-left,</li>
+<li>.float-lg-left, and</li>
+<li>.float-xl-left.</li>
+</ul>
+<p>The responsive float classes for aligning images to the right are</p>
+<ul>
+<li>.float-right,</li>
+<li>.float-sm-right,</li>
+<li>.float-md-right,</li>
+<li>.float-lg-right, and</li>
+<li>.float-xl-right.</li>
+</ul>
+<p>You can also use <strong>.float-none* and the various </strong>.float-<em>-none*</em> classes to disable floating.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Bootstrap 4 Buttons</h1>
+<p>Bootstrap 4 provides nine predefined styles for buttons - each serving a different semantic purpose. These are:</p>
+<ul>
+<li>Primary,</li>
+<li>Secondary,</li>
+<li>Info,</li>
+<li>Success,</li>
+<li>Warning,</li>
+<li>Danger,</li>
+<li>Light,</li>
+<li>Dark, and</li>
+<li>Link</li>
+</ul>
+<p>To style a button, use Bootstrap&#39;s <strong>.btn</strong> class, followed by the desired style. For example, <strong>class=&quot;btn btn-primary&quot;</strong>
+results in a primary button.</p>
+<p>The following <a href="archives/Class Htmls/ex4.html" target = "_blank">example</a> illustrates the 9 button classes.</p>
+<pre><code>  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-light&quot;&gt;Light&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-dark&quot;&gt;Dark&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;</code></pre>
+<p>Bootstrap 4&#39;s button styles are designed to be used with the <strong>&lt;button&gt;</strong> element, but they can also be applied
+to <strong>&lt;input&gt;</strong> and <strong>&lt;a&gt;</strong> elements.</p>
+<p>You can also apply the button styles to a <strong>&lt;label&gt;</strong> element when working with checkboxes and radio buttons.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Button Outlines and Size</h1>
+<h2>Button Outlines</h2>
+<p>Use Bootstrap 4&#39;s <strong>.btn-outline-*</strong> classes to apply the semantic colour to the outline only as illustrated in the following
+<a href="archives/Class Htmls/ex5.html" target = "_blank">example</a>.</p>
+<pre><code>  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot;&gt;Primary&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot;&gt;Secondary&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-info&quot;&gt;Info&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-success&quot;&gt;Success&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-warning&quot;&gt;Warning&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-danger&quot;&gt;Danger&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-light&quot;&gt;Light&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-dark&quot;&gt;Dark&lt;/button&gt;</code></pre>
+<h2>Button Size</h2>
+<p>You can specify the button size with Bootstrap&#39;s <strong>.btn-lg</strong> and <strong>.btn-sm</strong> classes.
+Place these in addition to the other button classes as seen in the following
+<a href="archives/Class Htmls/ex6.html" target = "_blank">example</a>.</p>
+<pre><code>  &lt;button type=&quot;button&quot; class=&quot;btn btn-success btn-sm&quot;&gt;Small&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Default&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-success btn-lg&quot;&gt;Large&lt;/button&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise-1">
+        <h1>Table and Button Exercise</h1>
+<ul>
+<li>Download, extract and open the <a href="archives/Lab01.zip">lab01</a> folder in Week10.</li>
+<li><p>A web page with a table has been created for you, add Bootstrap 4 table classes that will:</p>
+<ol>
+<li>Stripe the table.</li>
+<li>Add a hover.</li>
+<li>Add a border.</li>
+<li>Condense the table.</li>
+<li>Style the table head (dark).</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>Add 3 buttons with the classes as in the image below for each row with the respective labels: View, Edit, Delete.</li>
+</ul>
+<p><img src="img/ex1.png" alt=""></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
