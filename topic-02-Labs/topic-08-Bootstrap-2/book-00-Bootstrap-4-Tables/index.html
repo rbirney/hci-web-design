@@ -1,0 +1,558 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Bootstrap-2
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Bootstrap 4 Tables">
+      Bootstrap 4 Tables
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-00-Semantic-Layout/index.html">
+          Semantic Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-01-Figures-and-captions/index.html">
+          Figures and captions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-02-Navigation/index.html">
+          Navigation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-00-Bootstrap-Introduction/index.html">
+          Bootstrap Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-01-Bootstrap-Grid-Introduction/index.html">
+          Bootstrap-Grid-Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-02-Bootstrap-Grid-Details/index.html">
+          Bootstrap-Grid-Details
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-00-Bootstrap-4-Tables/index.html">
+          Bootstrap 4 Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-01-Bootstrap-Images-and-Buttons/index.html">
+          Bootstrap 4 Images and Buttons
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-02-Bootstrap-Spacing/index.html">
+          Bootstrap 4 Spacing
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-03-Bootstrap-Navs/index.html">
+          Bootstrap 4 Navs
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-04-Bootstrap-Dropdowns/index.html">
+          Bootstrap 4 Dropdown Menus
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-05-Bootstrap-Navbars/index.html">
+          Bootstrap 4 Navbars
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Bootstrap 4 Tables">
+        <h1>Objective</h1>
+<p>This lab looks at the many Bootstrap 4 Table classes.</p>
+<ul>
+<li><a href="#01">Basic Table</a></li>
+<li><a href="#02">Enhancing the Table</a></li>
+<li><a href="#03">Table Head Styles</a></li>
+<li><a href="#04">Contextual Classes</a></li>
+<li><a href="#05">Responsive Tables</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Basic Table</h1>
+<p>For a basic table with lightly padded cells and horizontal dividers, apply Bootstrap&#39;s <strong>.table</strong> class to the <strong>&lt;table&gt;</strong> element
+as in the following <a href="archives/Class Htmls/ex1.html" target="_blank">example</a>.</p>
+<pre><code>&lt;table class=&quot;table&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+<h2>Inverse Table</h2>
+<p>You can invert the colours of the table by using the <strong>.table-dark</strong> class as in the following <a href="archives/Class Htmls/ex2.html" target="_blank">example</a>.</p>
+<pre><code>&lt;table class=&quot;table table-dark&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Enhancing the Table</h1>
+<p>Here, we will add stripes, a border and hover effect to the table. If the table takes up too much space, it can be condensed.</p>
+<h2>Striped Table</h2>
+<p>For alternating background colors on the rows, add Bootstrap&#39;s <strong>.table-striped</strong> class as in the following <a href="archives/Class Htmls/ex3.html" target="_blank">example</a>.</p>
+<pre><code>&lt;table class=&quot;table table-striped&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+<h2>Bordered Table</h2>
+<p>For borders all around the table, use Bootstrap&#39;s <strong>table-bordered</strong>  class as in the following <a href="archives/Class Htmls/ex4.html" target="_blank">example</a>.</p>
+<pre><code>&lt;table class=&quot;table table-bordered&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+<h2>Hover Rows</h2>
+<p>To achieve that &quot;hover&quot; effect when mousing over the table rows, use Bootstrap&#39;s <strong>.table-hover</strong> class as in the following <a href="archives/Class Htmls/ex5.html" target="_blank">example</a>.</p>
+<pre><code>&lt;table class=&quot;table table-hover&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+<h2>Small/Condensed Table</h2>
+<p>If you find a table has too much padding, you can half the padding by using Bootstrap&#39;s <strong>.table-sm</strong> class as in the
+following <a href="archives/Class Htmls/ex8.html" target="_blank">example</a>.</p>
+<pre><code>&lt;table class=&quot;table table-sm&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Table Head Styles</h1>
+<p>You can add a background color to the <strong>&lt;thead&gt;</strong> element by using either <strong>.thead-light</strong> or <strong>.thead-dark</strong>.</p>
+<h2>Default</h2>
+<p>Use the <strong>.thead-light</strong> class as in the following <a href="archives/Class Htmls/ex6.html" target="_blank">example</a>.</p>
+<pre><code>&lt;table class=&quot;table table-hover&quot;&gt;
+ &lt;thead class=&quot;thead-light&quot;&gt;
+  &lt;tr&gt;
+   &lt;th&gt;Header 1&lt;/th&gt;
+   &lt;th&gt;Header 2&lt;/th&gt;
+   &lt;th&gt;Header 3&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+  ...
+&lt;/table&gt;</code></pre>
+<h2>Inverse</h2>
+<p>Use the <strong>.thead-dark</strong> class as in the following <a href="archives/Class Htmls/ex7.html" target="_blank">example</a>.</p>
+<pre><code>&lt;table class=&quot;table table-hover&quot;&gt;
+ &lt;thead class=&quot;thead-dark&quot;&gt;
+  &lt;tr&gt;
+   &lt;th&gt;Header 1&lt;/th&gt;
+   &lt;th&gt;Header 2&lt;/th&gt;
+   &lt;th&gt;Header 3&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+  ...
+&lt;/table&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Contextual Classes</h1>
+<p>You can apply color to individual rows or cells by using Bootstrap&#39;s <strong>contextual</strong> classes as seen in the
+following <a href="archives/Class Htmls/ex9.html" target="_blank">example</a>.</p>
+<p>The 5 contextual classes are:</p>
+<ul>
+<li>.table-active,</li>
+<li>.table-danger,</li>
+<li>.table-info,</li>
+<li>.table-success, and</li>
+<li>.table-warning.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Responsive Tables</h1>
+<p>Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by
+adding <strong>.table-responsive</strong> class on <strong>.table</strong>. Or, pick a maximum breakpoint with which to have a
+responsive table up to by adding <strong>.table-responsive{-sm|-md|-lg|-xl}..</strong></p>
+<p>To create a responsive table add the <strong>.table-responsive</strong> class to the <strong>&lt;table&gt;</strong> element as in the following
+<a href="archives/Class Htmls/ex10.html" target="_blank">example</a>.</p>
+<p>Our final 2 examples illustrate the usage of most of the table classes.</p>
+<p><a href="archives/Class Htmls/ex11.html" target="_blank">Example One</a> is a table utilising all of the classes, while <a href="archives/Class Htmls/ex12.html" target="_blank">Example Two</a>
+ enhances the same table by changing the striped colour and the colour of the hover.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
