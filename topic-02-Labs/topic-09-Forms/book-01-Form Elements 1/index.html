@@ -1,0 +1,658 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Forms
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="HTML5 Elements 1">
+      HTML5 Elements 1
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-00-Semantic-Layout/index.html">
+          Semantic Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-01-Figures-and-captions/index.html">
+          Figures and captions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-02-Navigation/index.html">
+          Navigation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-00-Bootstrap-Introduction/index.html">
+          Bootstrap Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-01-Bootstrap-Grid-Introduction/index.html">
+          Bootstrap-Grid-Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-02-Bootstrap-Grid-Details/index.html">
+          Bootstrap-Grid-Details
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-00-Bootstrap-4-Tables/index.html">
+          Bootstrap 4 Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-01-Bootstrap-Images-and-Buttons/index.html">
+          Bootstrap 4 Images and Buttons
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-02-Bootstrap-Spacing/index.html">
+          Bootstrap 4 Spacing
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-03-Bootstrap-Navs/index.html">
+          Bootstrap 4 Navs
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-04-Bootstrap-Dropdowns/index.html">
+          Bootstrap 4 Dropdown Menus
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-05-Bootstrap-Navbars/index.html">
+          Bootstrap 4 Navbars
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-00-Forms/index.html">
+          HTML5 Forms
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-01-Form Elements 1/index.html">
+          HTML5 Elements 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-02-Form-Elements 2/index.html">
+          HTML5 Elements 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-03-Form-Layout/index.html">
+          Form Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-04-attributes/index.html">
+          input attributes
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-05-Exercise/index.html">
+          Form Exercise
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="HTML5 Elements 1">
+        <h1>Objective</h1>
+<p>This lab introduces some of the Form elements.</p>
+<ul>
+<li><a href="#01">Text Boxes</a></li>
+<li><a href="#02">Password Boxes</a></li>
+<li><a href="#03">Email Addresses, URLs and Telephone Numbers</a></li>
+<li><a href="#04">Numbers and Ranges</a></li>
+<li><a href="#05">Checkboxes</a></li>
+<li><a href="#06">Radio buttons</a></li>
+<li><a href="#07">Select Element</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Text boxes</h1>
+<p>Text boxes are controls that allow a user to enter some text. A text box has a <strong>type</strong> of <strong>text</strong>. The name of the control is 
+set with the <strong>name</strong> attribute and the id of the control is set with the <strong>id</strong> attribute. 
+The default value is set with the <strong>value</strong> attribute. The size of the control, in characters, can be specified using the <strong>size</strong>
+attribute, and the maximum number of characters that can be entered is set using the <strong>maxlength</strong> attribute. The default size is 20.</p>
+<p><a href="archives/Class Htmls/form1.htm" target = "_blank">Text Box example</a></p>
+<pre><code>&lt;label for = &quot;name&quot;&gt;Enter your Name:&lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; size=&quot;10&quot; maxlength=&quot;20&quot;&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Password Boxes</h1>
+<p>Password boxes are identical to text boxes, except for the fact that whatever the user types is not displayed in the control. 
+Usually, asterisks or bullets are displayed in place of the characters. This type of control can be used to enter 
+passwords and other sensitive information, however remember that although the text the user enters is invisible, 
+it is not encrypted or protected in any other way. Passwords have a <strong>type</strong> of <strong>password</strong>.</p>
+<p><a href="archives/Class Htmls/form2.htm" target = "_blank">Password Box example</a></p>
+<pre><code>&lt;label for = &quot;user&quot;&gt;Username: &lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;user&quot; size=&quot;8&quot;&gt;
+&lt;p&gt;
+&lt;label for = &quot;pass&quot;&gt;Password: &lt;/label&gt;
+&lt;input type=&quot;password&quot; name=&quot;pass&quot; id=&quot;pass&quot; size=&quot;8&quot;&gt;&lt;/p&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Email Addresses, URLs and Telephone Numbers</h1>
+<h2>Email Addresses</h2>
+<p>The email input (<strong>type=&quot;email&quot;</strong>) is used for entering either a single email address (or a list of email addresses).</p>
+<p>If you attempt to submit a form with content unrecognisable as an email address, the browser will let you know that it is invalid.</p>
+<p><a href="archives/Class Htmls/form3.htm" target = "_blank">Email Address example</a></p>
+<pre><code class="lang->">&lt;label for = &quot;user&quot;&gt;Username: &lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;user&quot; size=&quot;8&quot;&gt;
+&lt;p&gt;
+&lt;label for = &quot;email&quot;&gt;Email Address: &lt;/label&gt;
+&lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; &gt;
+&lt;/p&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit Data&quot; name = &quot;Submit&quot;&gt;</code></pre>
+<h2>URLs</h2>
+<p>The url input (<strong>type = &quot;url&quot;</strong>) is used for specifying a web address.</p>
+<p>Again, if you attempt to submit a form with content unrecognisable as an URL address, the browser will let
+you know that it is invalid. Only the general format of a URL is validated, so, for example, 
+ht://example.xyz will be considered as valid, even though we know it is not valid. 
+We will use the <strong>pattern</strong> attribute to specify a valid URL (later).</p>
+<p><a href="archives/Class Htmls/form4.htm" target = "_blank">URL example</a></p>
+<pre><code>&lt;h1&gt;Form URL Example&lt;/h1&gt;
+&lt;label for = &quot;user&quot;&gt;Username: &lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;user&quot; size=&quot;8&quot;&gt;
+&lt;p&gt;
+&lt;label for = &quot;url&quot;&gt;My website is located at: &lt;/label&gt;
+&lt;input type=&quot;url&quot; name=&quot;url&quot; id=&quot;url&quot; &gt;&lt;/p&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit Data&quot; name = &quot;Submit&quot;&gt;</code></pre>
+<h2>Telephone Numbers</h2>
+<p>The tel input (<strong>type = &quot;tel&quot;</strong>) is used for specifying telephone numbers. Unlike the <em>url</em> and <em>email</em> types, the <em>tel</em>
+type does not enforce a particular syntax or pattern. Letters and numbers - indeed any characters other than new lines or 
+carriage returns-are valid.
+You can encourage a particular format by including a <strong>placeholder</strong> with the correct syntax, or a 
+comment after the input with an example. Or, you may specify a <strong>pattern</strong>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Numbers and Ranges</h1>
+<h2>Numbers</h2>
+<p>The number input (<strong>type = &quot;number&quot;</strong>) provides an input for entering a number. Usually, this is a &quot;spinner&quot; box, 
+where you can either enter a number or click on the up or down arrows to select a number.</p>
+<p><a href="archives/Class Htmls/form5.htm" target = "_blank">Number example</a></p>
+<pre><code>&lt;label for &quot;quantity&quot;&gt;I would like to receive
+&lt;input type = &quot;number&quot; name = &quot;quantity&quot; id = &quot;quantity&quot;&gt; copies.&lt;/label&gt;</code></pre>
+<p>The <em>number</em> input has <strong>min</strong> and <strong>max</strong> attributes to specify the minimum and maximum values allowed. 
+You can also provide a <strong>step</strong> attribute, which determines the increment by which the number steps up or down when clicking the 
+up and down arrows.</p>
+<p><a href="archives/Class Htmls/form6.htm" target = "_blank">Number example (with min, max, and step set)</a></p>
+<pre><code>&lt;label for &quot;quantity&quot;&gt;I would like to receive
+&lt;input type = &quot;number&quot; name = &quot;quantity&quot; id = &quot;quantity&quot; min = &quot;2&quot; max = &quot;12&quot; step = &quot;2&quot;&gt; copies.&lt;/label&gt;</code></pre>
+<p><strong>Note</strong>: IE presently does not provide a spinner but implements the min, max, and step attributes.</p>
+<h2>Ranges</h2>
+<p>The range input (<strong>type = &quot;range&quot;</strong>) displays a slider control. As with the number type, it allows the <strong>min</strong>, <strong>max</strong> and <strong>step</strong> 
+attributes. The exact value of the number is not important with range. Ideally suited for customer surveys, etc...</p>
+<p>Default value is the minimum value plus half of the maximum value.</p>
+<p><a href="archives/Class Htmls/form7.htm" target = "_blank">Range example</a></p>
+<pre><code>&lt;label for &quot;rating&quot;&gt;On a scale of 1 to 10, I rate Call of Duty: &lt;/label&gt;
+&lt;input type = &quot;range&quot; name = &quot;rating&quot; id = &quot;rating&quot; min = &quot;1&quot; max = &quot;10&quot;&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Checkboxes</h1>
+<p>Checkboxes are an excellent tool for gathering answers to &quot;yes or no&quot; questions. Checkboxes can either be 
+<em>checked</em> or <em>unchecked</em> by default; this is set by using the <strong>checked</strong> attribute. Checkboxes have a <strong>type</strong> of <strong>checkbox</strong>.</p>
+<p><a href="archives/Class Htmls/form8.htm" target = "_blank">Checkbox example</a></p>
+<pre><code>&lt;label for = &quot;email2&quot;&gt;E-mail address: &lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;email2&quot; id=&quot;email2&quot; size=&quot;20&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;use&quot; id=&quot;use&quot; value=&quot;subscribe&quot; checked=&quot;checked&quot; style=&quot;float:left&quot;&gt;
+&lt;label for = &quot;use&quot; style=&quot;float:left&quot;&gt;Subscribe to our newsletter&lt;/label&gt;
+&lt;br&gt;&lt;input type=&quot;checkbox&quot; name=&quot;mail&quot; id=&quot;mail&quot; value=&quot;mailing&quot; style=&quot;clear:left;float:left&quot;&gt;
+&lt;label for = &quot;mail&quot; style=&quot;float:left&quot;&gt;Check this box if you do not want to receive e-mails about our products&lt;/label&gt;</code></pre>
+<p><strong>Note</strong>: The technique we use to preselect a checkbox is <strong>checked=&quot;checked&quot;</strong>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Radio buttons</h1>
+<p>Radio buttons are similar to checkboxes, with the exception that when several radio buttons share the same name, 
+only one of them can be checked. When the form is submitted, only the value of the selected radio button is sent. 
+Radio buttons have a <strong>type</strong> of <strong>radio</strong>.</p>
+<p><a href="archives/Class Htmls/form9.htm" target = "_blank">Radio button example</a></p>
+<pre><code>&lt;label for = &quot;email3&quot;&gt;E-mail address: &lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;email3&quot; id = &quot;email3&quot; size=&quot;20&quot; &gt;
+&lt;br&gt;&lt;br&gt;Please select which format you would like to receive our newsletter in:
+&lt;br&gt;&lt;input style=&quot;float:left&quot; type=&quot;radio&quot; name=&quot;format&quot; id = &quot;text&quot; value=&quot;text&quot; checked=&quot;checked&quot;&gt;
+&lt;label for = &quot;text&quot; style=&quot;float:left&quot;&gt; Text&lt;/label&gt;
+&lt;br&gt;&lt;input style=&quot;clear:left; float:left&quot; type=&quot;radio&quot; name=&quot;format&quot; id = &quot;html&quot; value=&quot;html&quot;/&gt; &lt;label for = &quot;html&quot; style=&quot;float:left&quot;&gt; HTML&lt;/label&gt;
+&lt;br&gt;&lt;input style=&quot;clear:left; float:left&quot; type=&quot;radio&quot; name=&quot;format&quot; id = &quot;pdf&quot; value=&quot;pdf&quot;/&gt;&lt;label for = &quot;pdf&quot; style=&quot;float:left&quot;&gt; Adobe Acrobat&lt;/label&gt;</code></pre>
+<p>The key difference between this and the checkbox example is that, in this case, we have three different options, 
+yet the <strong>name</strong> attribute is the same for all three inputs. This is essential: it&#39;s this value that binds the three inputs together. 
+They share the same name, but each has a different <strong>value</strong> attribute. As a user selects an option and submits the form, 
+the appropriate value is sent to the server.
+Note also that each input has a different <strong>id</strong>. In fact, any id that is assigned to an element in the document must be unique. 
+It also benefits the label elements, which must refer to unique identifiers.</p>
+<p><strong>Note</strong>: The technique we use to preselect a radio button is also <strong>checked=&quot;checked&quot;</strong>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Select Element</h1>
+<p>The <strong>select</strong> element allows users choose from a range of options, but takes up just a single line on your web page; 
+users view the options by clicking on the drop-down arrow.
+The <strong>select</strong> element contains an array of <strong>option</strong> elements. Each option correlates to an option in the drop-down list.</p>
+<p><a href="archives/Class Htmls/form10.htm" target = "_blank">Select Element example</a></p>
+<pre><code>&lt;label for = &quot;platform&quot; &gt;Please select an operating system:&lt;/label&gt;
+&lt;select name=&quot;platform&quot; id=&quot;platform&quot;&gt;
+&lt;option value=&quot;win32&quot;&gt;Windows 95, 98 or NT&lt;/option&gt;
+&lt;option value=&quot;mac&quot;&gt;Macintosh&lt;/option&gt;
+&lt;option value=&quot;linux&quot;&gt;Linux&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+<p>A select element which allows the user to select more than one option can be seen in the following
+ <a href="archives/Class Htmls/form11.htm" target = "_blank">example</a>.</p>
+<pre><code>&lt;label for = &quot;product&quot;&gt;Which products are you interested in?
+&lt;select name=&quot;product&quot; id=&quot;product&quot; multiple&gt;
+&lt;option value=&quot;server&quot; selected=&quot;selected&quot;&gt;MORONS Server&lt;/option&gt;
+&lt;option value=&quot;runtime&quot; &gt;MORONS Run-time Application&lt;/option&gt;
+&lt;option value=&quot;devkit&quot; selected=&quot;selected&quot;&gt;MORONS Developer&#39;s Kit&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+<p>In the case of a menu with only one possible selected item, the control name will be taken from the select element&#39;s name 
+attribute and the value from the value attribute of the option element that is selected. If there are multiple selections, 
+then multiple name/value pairs are generated, all with the same name, but with different values.</p>
+<p><strong>Note:</strong> The technique we use to preselect a select element is <strong>selected=&quot;selected&quot;</strong>.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

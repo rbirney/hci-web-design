@@ -1,0 +1,525 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Forms
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="HTML5 Forms">
+      HTML5 Forms
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-00-Semantic-Layout/index.html">
+          Semantic Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-01-Figures-and-captions/index.html">
+          Figures and captions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-02-Navigation/index.html">
+          Navigation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-00-Bootstrap-Introduction/index.html">
+          Bootstrap Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-01-Bootstrap-Grid-Introduction/index.html">
+          Bootstrap-Grid-Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-02-Bootstrap-Grid-Details/index.html">
+          Bootstrap-Grid-Details
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-00-Bootstrap-4-Tables/index.html">
+          Bootstrap 4 Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-01-Bootstrap-Images-and-Buttons/index.html">
+          Bootstrap 4 Images and Buttons
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-02-Bootstrap-Spacing/index.html">
+          Bootstrap 4 Spacing
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-03-Bootstrap-Navs/index.html">
+          Bootstrap 4 Navs
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-04-Bootstrap-Dropdowns/index.html">
+          Bootstrap 4 Dropdown Menus
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-05-Bootstrap-Navbars/index.html">
+          Bootstrap 4 Navbars
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-00-Forms/index.html">
+          HTML5 Forms
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-01-Form Elements 1/index.html">
+          HTML5 Elements 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-02-Form-Elements 2/index.html">
+          HTML5 Elements 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-03-Form-Layout/index.html">
+          Form Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-04-attributes/index.html">
+          input attributes
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-05-Exercise/index.html">
+          Form Exercise
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="HTML5 Forms">
+        <h1>Objective</h1>
+<p>This lab introduces what a Form is and describes its Anatomy.</p>
+<ul>
+<li><a href="#01">What is a Form?</a></li>
+<li><a href="#02">Anatomy of a Form</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>What is a Form?</h1>
+<p>HTML forms were the first technology that allowed a user to interact with the Web. 
+Even today, they remain fundamental to achieving this interaction. Although the knowledge required to build a 
+completely form-enabled Web site involves more than HTML. Here we will look at the HTML side of things.</p>
+<p>The HTML <strong>&lt;form&gt;</strong> tag is used for declaring a form on a webpage. In the form block the user can fill any text fields, 
+select any data from the drop down list control etc.. Once the user has selected/entered the data he/she wants, 
+he/she can press the submit button and the data in the form is sent. Many things can be done with the data now. You can send the data to another page, which can process it. Usually these are server-side pages like asp, php, asp.net, cgi etc. that can do this. Or you could send the data via an email to somebody else.</p>
+<p>The <strong>&lt;form&gt;</strong> tag is used in conjunction with form-associated elements. To create a form, you can nest 
+form-associated elements inside the opening/closing <strong>&lt;form&gt;</strong> tags.
+A form can be used as follows:</p>
+<ul>
+<li>to send some data to server</li>
+<li>to get some feedback from the reader</li>
+<li>to search something in the database</li>
+<li>and to do many other things.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Anatomy of a Form</h1>
+<p>A form begins with an opening <strong>&lt;form&gt;</strong> tag and ends with a closing <strong>&lt;/form&gt;</strong> tag. 
+Inside that form element, the browser can expect to find some special HTML elements that can capture data in some way.</p>
+<h2>The Form Element</h2>
+<p>A form begins with the form element. There are a few important attributes in an opening <strong>&lt;form&gt;</strong> tag:</p>
+<ul>
+<li><strong>id</strong>: The id of the form.</li>
+<li><strong>name</strong>: Assigns a name to the form. This is used when referencing the form with stylesheets or scripts. If there are multiple forms, the name of each form must be unique.</li>
+<li><strong>method</strong>: This tells the browser how to send the data to the server from the form when the user clicks the submit button. The options are <strong>get</strong> and <strong>post</strong>.</li>
+<li><strong>action</strong>: This attribute tells the browser where to send the data that was collected in the form. It specifies the URL of the page that will process the form.</li>
+<li><strong>autocomplete</strong>: Specifies whether the form fields should be automatically completed based on the user&#39;s history 
+(i.e. based on previous forms that the user has completed). This relieves the user from having to 
+re-enter form data that could easily be re-populated from previous form history (such as address information). 
+The autocomplete attribute is an enumerated attribute which has two states; &quot;on&quot; and &quot;off&quot;. The default value is &quot;on&quot;. </li>
+<li><strong>novalidate</strong>: Specifies that the form should not be validated during submission. 
+The novalidate attribute is a boolean attribute. When present, it specifies that the form-data (input) should not be validated when submitted. Possible values: <ul>
+<li>&lt;form novalidate&gt; </li>
+<li>&lt;form novalidate=&quot;novalidate&quot;&gt; </li>
+<li>&lt;form novalidate=&quot;&quot;&gt;</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
