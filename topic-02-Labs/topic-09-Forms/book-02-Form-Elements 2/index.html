@@ -1,0 +1,653 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Forms
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="HTML5 Elements 2">
+      HTML5 Elements 2
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-00-Semantic-Layout/index.html">
+          Semantic Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-01-Figures-and-captions/index.html">
+          Figures and captions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-02-Navigation/index.html">
+          Navigation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-00-Bootstrap-Introduction/index.html">
+          Bootstrap Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-01-Bootstrap-Grid-Introduction/index.html">
+          Bootstrap-Grid-Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-02-Bootstrap-Grid-Details/index.html">
+          Bootstrap-Grid-Details
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-00-Bootstrap-4-Tables/index.html">
+          Bootstrap 4 Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-01-Bootstrap-Images-and-Buttons/index.html">
+          Bootstrap 4 Images and Buttons
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-02-Bootstrap-Spacing/index.html">
+          Bootstrap 4 Spacing
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-03-Bootstrap-Navs/index.html">
+          Bootstrap 4 Navs
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-04-Bootstrap-Dropdowns/index.html">
+          Bootstrap 4 Dropdown Menus
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-05-Bootstrap-Navbars/index.html">
+          Bootstrap 4 Navbars
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-00-Forms/index.html">
+          HTML5 Forms
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-01-Form Elements 1/index.html">
+          HTML5 Elements 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-02-Form-Elements 2/index.html">
+          HTML5 Elements 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-03-Form-Layout/index.html">
+          Form Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-04-attributes/index.html">
+          input attributes
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-05-Exercise/index.html">
+          Form Exercise
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="HTML5 Elements 2">
+        <h1>Objective</h1>
+<p>This lab introduces more of the Form elements.</p>
+<ul>
+<li><a href="#01">Colours</a></li>
+<li><a href="#02">Dates and Times</a></li>
+<li><a href="#03">The DataList Tag</a></li>
+<li><a href="#04">The Textarea Element</a></li>
+<li><a href="#05">Simple buttons</a></li>
+<li><a href="#06">Submit and Reset buttons</a></li>
+<li><a href="#07">The Fieldset and Legend Elements</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Colours</h1>
+<p>The color input <strong>(type = &quot;color&quot;)</strong> provides the user with a u picker. The colour picker should return a 
+hexadecimal RGB colour value, such as #FF3300.</p>
+<p><a href="archives/Class Htmls/form12.htm" target = "_blank">Colour example</a></p>
+<pre><code>&lt;label for=&quot;project_color&quot;&gt;Project color&lt;/label&gt;
+&lt;input type=&quot;color&quot; name=&quot;project_color&quot; id=&quot;project_color&quot;&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Dates and Times</h1>
+<p>There are several new date and time input types, including <strong>date</strong>, <strong>datetime</strong>, <strong>datetime-local</strong>, <strong>month</strong>, <strong>time</strong>, and <strong>week</strong>.</p>
+<p><a href="archives/Class Htmls/form13.htm" target = "_blank">Date example</a></p>
+<pre><code>&lt;label for=&quot;start_date&quot;&gt;Start date&lt;/label&gt;
+&lt;input type=&quot;date&quot; name=&quot;start_date&quot; id=&quot;start_date&quot;&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>The DataList Tag</h1>
+<p>The HTML5 <strong>Datalist</strong> tag contains a set of <strong>&lt;option&gt;</strong> elements that represent the values available for other elements, 
+such as a text box.</p>
+<p><a href="archives/Class Htmls/form21.htm" target = "_blank">DataList example</a></p>
+<pre><code>&lt;label for = &quot;myBrowser&quot;&gt;Choose a browser from this list:&lt;/label&gt;
+&lt;input type = &quot;text&quot; list=&quot;browsers&quot; name=&quot;myBrowser&quot; id = &quot;myBrowser&quot;&gt;
+&lt;datalist id=&quot;browsers&quot;&gt;
+  &lt;option value=&quot;Chrome&quot;&gt;
+  &lt;option value=&quot;Firefox&quot;&gt;
+  &lt;option value=&quot;Internet Explorer&quot;&gt;
+  &lt;option value=&quot;Opera&quot;&gt;
+  &lt;option value=&quot;Safari&quot;&gt;
+&lt;/datalist&gt;</code></pre>
+<p>The following <a href="archives/Class Htmls/form22.htm" target = "_blank"> example</a> illustrates the DataList tag working with the color element. When used with the color element, 
+datalist suggests the recommended colour on the swatch palette. You can optionally pick an arbitrary colour from the colour palette.</p>
+<pre><code>&lt;input type=&quot;color&quot; id=&quot;color&quot; name=&quot;color&quot; value=&quot;#000000&quot; list=&quot;colors&quot;&gt;
+&lt;datalist id=&quot;colors&quot;&gt;
+  &lt;option&gt;#ff0000&lt;/option&gt;
+  &lt;option&gt;#00ff00&lt;/option&gt;
+  &lt;option&gt;#0000ff&lt;/option&gt;
+  &lt;option&gt;#ffff00&lt;/option&gt;
+  &lt;option&gt;#00ffff&lt;/option&gt;
+&lt;/datalist&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>The Textarea Element</h1>
+<p>Another element that is used to create form controls is the <strong>textarea</strong> element, which is very similar to an input element
+with <strong>type=&quot;text&quot;</strong>, with the exception that textarea elements define multi-line text boxes.</p>
+<p><a href="archives/Class Htmls/form14.htm" target = "_blank">Textarea example</a></p>
+<pre><code>&lt;textarea name=&quot;comments&quot; id= &quot;comments&quot;&gt;
+This is a text area with default rows of 2 and default columns of 20.
+&lt;/textarea&gt;</code></pre>
+<p><strong>Note</strong>: You can specify the amount of rows and columns that you want in the textarea as in the following 
+<a href="archives/Class Htmls/form15.htm" target = "_blank"> example</a>. You may also specify the maximum number of characters that the user is allowed to enter into the textarea control, using the <strong>maxlength</strong> attribute.</p>
+<pre><code>&lt;textarea id=&quot;comments&quot; name=&quot;comments&quot; rows = &quot;5&quot; cols=&quot;40&quot; &gt;
+This is a text area with 5 rows and 40
+columns visible by default. The text
+inside the element is its default value.
+Although the control is limited in size,
+the text entered can be larger than this
+size, and the user agent will presumably
+offer a scrolling mechanism for it.
+&lt;/textarea&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Simple buttons</h1>
+<p>A simple button has a <strong>type</strong> of <strong>button</strong>, and displays the contents of the <strong>value</strong> attribute on the button face. 
+Buttons have no default behaviour, but exist so that client-side scripts (such as those written in JavaScript) 
+can use them to implement a user interface. 
+If your browser processes JavaScript, the following <a href="archives/Class Htmls/form16.htm" target = "_blank"> example</a> 
+buttons should pop up alert windows saying &quot;Hello!&quot; and &quot;Goodbye!&quot;</p>
+<pre><code>&lt;input type =&quot;button&quot;  value=&quot;Say Hello&quot; onclick=&quot;javascript:alert(&#39;Hello!&#39;)&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;Say Goodbye&quot; onclick=&quot;javascript:alert(&#39;Goodbye!&#39;)&quot;&gt;</code></pre>
+<p>There is also a <strong>&lt;button&gt;</strong> tag, which is used for creating a button control as in the following <a href="archives/Class Htmls/form17.htm" target = "_blank"> example</a>.</p>
+<pre><code>&lt;button  onclick=&quot;javascript:alert(&#39;Hello!&#39;)&quot;&gt;Say Hello&lt;/button&gt;
+&lt;button  onclick=&quot;javascript:alert(&#39;Goodbye!&#39;)&quot;&gt;Say Goodbye&lt;/button&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Submit and Reset buttons</h1>
+<h2>Submit buttons</h2>
+<p>A submit button is a button which, when clicked (or otherwise activated),
+will submit the form with its current values to the web server. Submit buttons may have names and values, or they may not. 
+If they don&#39;t then the button simply says &quot;Submit&quot; or something similar. Otherwise, it displays the contents of the <strong>value</strong> attribute.</p>
+<p><a href="archives/Class Htmls/form18.htm" target = "_blank">Submit Form example</a></p>
+<pre><code>&lt;form name = &quot;test&quot; id = &quot;test&quot; method = &quot;POST&quot; action=&quot;processform.htm&quot;&gt;
+&lt;label for  = &quot;email&quot;&gt;Enter your e-mail address:&lt;/label&gt;
+&lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; size=&quot;30&quot;&gt;
+&lt;p&gt;
+&lt;br&gt;&lt;input style=&quot;float:left&quot; type=&quot;radio&quot; name=&quot;action&quot; id = &quot;subscribe&quot; value=&quot;subscribe&quot;&gt;
+&lt;label for = &quot;subscribe&quot; style=&quot;float:left&quot;&gt; Subscribe&lt;/label&gt;
+&lt;br&gt;&lt;input style=&quot;clear:left; float:left&quot; type=&quot;radio&quot; name=&quot;action&quot; id = &quot;unsubscribe&quot; value=&quot;unsubscribe&quot; checked=&quot;checked&quot;&gt;
+&lt;label for = &quot;unsubscribe&quot; style=&quot;float:left&quot;&gt; Unsubscribe&lt;/label&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;br&gt;
+&lt;input style=&quot;clear:left&quot; type=&quot;submit&quot;&gt;
+&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+<h2>Reset buttons</h2>
+<p>A reset button, when activated, will reset all controls in a form back to their default values, whatever they may be. 
+A reset button may be useful in a large form if the user wishes to start over from scratch. Reset buttons have a <strong>type</strong> of reset. 
+Reset buttons may be given a name. The value of the <strong>value</strong> attribute is the text that is displayed on the button, otherwise, it displays &quot;Reset&quot;.</p>
+<p><a href="archives/Class Htmls/form19.htm" target = "_blank">Reset Form example</a></p>
+<pre><code>&lt;form name = &quot;tutorial&quot; id = &quot;tutorial&quot; action=&quot;processform.htm&quot; onreset=&quot;document.tutorial.name.focus();&quot;&gt;
+&lt;label for  = &quot;name&quot;&gt;Enter your name:&lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;name&quot; id = &quot;name&quot; size=&quot;20&quot;&gt;
+&lt;p&gt;
+&lt;label for  = &quot;email2&quot;&gt;Enter your e-mail address:&lt;/label&gt;
+&lt;input type=&quot;email&quot; name=&quot;email2&quot; id = &quot;email2&quot; size=&quot;30&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;br&gt;&lt;input style=&quot;float:left&quot; type=&quot;radio&quot; name=&quot;action&quot; id = &quot;subscribe&quot; value=&quot;subscribe&quot;&gt;
+&lt;label for = &quot;subscribe&quot; style=&quot;float:left&quot;&gt; Subscribe&lt;/label&gt;
+&lt;br&gt;&lt;input style=&quot;clear:left; float:left&quot; type=&quot;radio&quot; name=&quot;action&quot; id = &quot;unsubscribe&quot; value=&quot;unsubscribe&quot; checked=&quot;checked&quot;&gt;
+&lt;label for = &quot;unsubscribe&quot; style=&quot;float:left&quot;&gt; Unsubscribe&lt;/label&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;br&gt;
+&lt;input style=&quot;clear:left&quot; type=&quot;submit&quot;&gt;
+&lt;input type=&quot;reset&quot; value = &quot;Start Over&quot;&gt;
+&lt;/form&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>The Fieldset and Legend Elements</h1>
+<p>These two elements go hand in hand. The <strong>fieldset</strong> element provides the ability to group related elements within a form together,
+while the <strong>legend</strong> element lets you caption that group of elements appropriately.</p>
+<p><a href="archives/Class Htmls/form20.htm" target = "_blank">Fieldset and Legend example</a></p>
+<pre><code>&lt;fieldset&gt;
+&lt;legend&gt;All About YOU&lt;/legend&gt;
+&lt;p&gt;
+&lt;label for =&quot;yourname&quot;&gt;
+Enter your name:&lt;/label&gt;
+&lt;input type = &quot;text&quot; name = &quot;yourname&quot; id = &quot;yourname&quot; &gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;input type = &quot;submit&quot; &gt;
+&lt;/p&gt;
+&lt;/fieldset&gt;</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

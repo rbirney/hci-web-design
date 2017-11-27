@@ -1,0 +1,603 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Forms
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Form Layout">
+      Form Layout
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-00-first-html-page/index.html">
+          Create your first HTML page
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-01-formatting-text/index.html">
+          Formatting text
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-02-adding-image/index.html">
+          Adding an image
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-03-adding-lists/index.html">
+          Adding lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-04-linking-pages/index.html">
+          Linking pages
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-HTML/book-05-validating-html/index.html">
+          Validating HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-00-CSS-Introduction/index.html">
+          CSS Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-01-Adding-Style/index.html">
+          Adding Style
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-02-Controlling-the-Font/index.html">
+          Controlling the Font
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-03-Text-Properties/index.html">
+          Text Properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-CSS-1/book-04-Styling-Links/index.html">
+          Styling Links
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-00-Class-and-Id-Selectors/index.html">
+          Id and Class Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-01-Descendant-Selectors/index.html">
+          Descendant Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-CSS-2/book-02-Styling-Lists/index.html">
+          Styling Lists
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-00-Table-Introduction/index.html">
+          Table Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-01-Styling-Tables/index.html">
+          Table Styling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-02-Advanced-Tables/index.html">
+          Advanced Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-03-Using-nth-of-type/index.html">
+          Using nth-of-type
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-Tables/book-04-Table-Exercises/index.html">
+          HTML Tables Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-00-The-Box-Model/index.html">
+          The Box Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-01-Layout-Positioning/index.html">
+          Layout and Positioning
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-Layout-1/book-02-Background-Images/index.html">
+          Background Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-00-Semantic-Layout/index.html">
+          Semantic Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-01-Figures-and-captions/index.html">
+          Figures and captions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-Layout-2/book-02-Navigation/index.html">
+          Navigation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-00-Bootstrap-Introduction/index.html">
+          Bootstrap Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-01-Bootstrap-Grid-Introduction/index.html">
+          Bootstrap-Grid-Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-Bootstrap-1/book-02-Bootstrap-Grid-Details/index.html">
+          Bootstrap-Grid-Details
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-00-Bootstrap-4-Tables/index.html">
+          Bootstrap 4 Tables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-01-Bootstrap-Images-and-Buttons/index.html">
+          Bootstrap 4 Images and Buttons
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-02-Bootstrap-Spacing/index.html">
+          Bootstrap 4 Spacing
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-03-Bootstrap-Navs/index.html">
+          Bootstrap 4 Navs
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-04-Bootstrap-Dropdowns/index.html">
+          Bootstrap 4 Dropdown Menus
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-Bootstrap-2/book-05-Bootstrap-Navbars/index.html">
+          Bootstrap 4 Navbars
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-00-Forms/index.html">
+          HTML5 Forms
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-01-Form Elements 1/index.html">
+          HTML5 Elements 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-02-Form-Elements 2/index.html">
+          HTML5 Elements 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-03-Form-Layout/index.html">
+          Form Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-04-attributes/index.html">
+          input attributes
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Forms/book-05-Exercise/index.html">
+          Form Exercise
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Form Layout">
+        <h1>Objective</h1>
+<p>This lab looks at laying out form elements.</p>
+<ul>
+<li><a href="#01">Basic Form</a></li>
+<li><a href="#02">Inline Form</a></li>
+<li><a href="#03">Horizontal Form</a></li>
+<li><a href="#04">Checkboxes and radio buttons</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Basic Form</h1>
+<p>Use Bootstrap&#39;s <strong>form-control</strong> class against textual <strong>&lt;input&gt;</strong>, <strong>&lt;textarea&gt;</strong>, and <strong>&lt;select&gt;</strong> elements 
+to apply <strong>width: 100%</strong> by default.</p>
+<p>Wrap labels and controls inside a <strong>&lt;div&gt;</strong> with the Bootstrap <strong>form-group</strong> class applied for optimum spacing. 
+Alternatively, you can use a <strong>&lt;fieldset&gt;</strong> or other element.</p>
+<p><a href="archives/Class Htmls/ex1.html" target = "_blank">Basic Form example</a></p>
+<pre><code>&lt;form action=&quot;&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+   &lt;label for=&quot;first_name&quot;&gt;First Name&lt;/label&gt;
+   &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;first_name&quot; name=&quot;first_name&quot;&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;form-group&quot;&gt;
+   &lt;label for=&quot;last_name&quot;&gt;Last Name&lt;/label&gt;
+   &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;last_name&quot; name=&quot;last_name&quot;&gt;
+ &lt;/div&gt;
+ &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<h2>Sizing</h2>
+<p>Set heights using classes like <strong>form-control-lg</strong> and <strong>form-control-sm</strong>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Inline Form</h1>
+<p>Use Bootstrap&#39;s <strong>form-inline</strong> class to make the form elements render as inline-block and left-aligned (single horizontal row). 
+Use a spacer utility (eg, <em>mr-sm-2</em>) to add space between elements.</p>
+<p>Controls only appear <em>inline</em> in viewports that are at least 576px wide to account for narrow viewports on mobile devices.</p>
+<p><a href="archives/Class Htmls/ex2.html" target = "_blank">Inline Form example</a></p>
+<pre><code>&lt;form class=&quot;form-inline&quot;&gt;
+  &lt;label class=&quot;sr-only&quot; for=&quot;yourname&quot;&gt;Name&lt;/label&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control mb-2 mr-sm-2 mb-sm-0&quot; id=&quot;yourname&quot; placeholder=&quot;Jane Doe&quot;&gt;
+
+  &lt;label class=&quot;sr-only&quot; for=&quot;username&quot;&gt;Username&lt;/label&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control mb-2 mr-sm-2 mb-sm-0&quot; id=&quot;username&quot; placeholder=&quot;Username&quot;&gt;
+
+  &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<p>The following <a href="archives/Class Htmls/ex3.html" target = "_blank"> example</a>  illustrates an inline form inside a Navbar.</p>
+<h2>Hidden Labels</h2>
+<p>Labels should always be provided on input fields, otherwise screenreaders will have trouble. You can hide the label if required, 
+by using Bootstrap&#39;s <strong>sr-only</strong> class. This means the user cannot see the label but the screenreader can read it.</p>
+<p>In the above examples, we use <strong>sr-only</strong> to hide the labels. We also add a <strong>placeholder</strong> attribute to provide a 
+hint to the user as to what to enter. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Horizontal Form</h1>
+<p>You can use Bootstrap&#39;s grid classes to create horizontal forms. Just specify how many columns each element should span. 
+Specifically, add a <strong>row</strong> class with the <strong>form-group</strong> and a <strong>col-<em>-</em></strong> or <strong>col-*</strong> class for each column.</p>
+<p>You should also add Bootstrap&#39;s <strong>col-form-label</strong> class to the <strong>&lt;label&gt;</strong> element for layout purposes.</p>
+<p><a href="archives/Class Htmls/ex4a.html" target = "_blank">Horizontal Form example</a></p>
+<pre><code>&lt;form action=&quot;&quot;&gt;
+ &lt;div class=&quot;form-group row&quot;&gt;
+  &lt;label for=&quot;first_name&quot; class=&quot;col-sm-2 col-form-label-sm&quot;&gt;First Name&lt;/label&gt;
+  &lt;div class=&quot;col-sm-10&quot;&gt;
+   &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;first_name&quot; name=&quot;first_name&quot;&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;form-group row&quot;&gt;
+  &lt;label for=&quot;last_name&quot; class=&quot;col-sm-2 col-form-label-sm&quot;&gt;Last Name&lt;/label&gt;
+  &lt;div class=&quot;col-sm-10&quot;&gt;
+   &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;last_name&quot; name=&quot;last_name&quot;&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;form-group row&quot;&gt;
+  &lt;div class=&quot;col-sm-10&quot;&gt;
+   &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<h2>Sizing</h2>
+<p>Set heights using classes like <strong>form-control-lg</strong> and <strong>form-control-sm</strong> with the <strong>form-control</strong> class.</p>
+<h2>Horizontal form label sizing</h2>
+<p>You may use <strong>col-form-label-sm</strong> or <strong>col-form-label-lg</strong> to your <strong>&lt;label&gt;</strong>s to correctly follow the size of 
+<strong>form-control-lg</strong> and <strong>form-control-sm</strong> as can be seen in the following 
+<a href="archives/Class Htmls/ex4.html" target = "_blank"> sm example</a> and <a href="archives/Class Htmls/ex4b.html" target = "_blank"> lg example</a>.</p>
+<h2>Form row</h2>
+<p>You may also swap <strong>row</strong> for <strong>form-row</strong>, a variation of our standard grid row that overrides the default column gutters for
+tighter and more compact layouts.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Checkboxes and radio buttons</h1>
+<p>Default <strong>checkboxes</strong> and <strong>radio buttons</strong> are improved upon with the help of <strong>form-check</strong>, a single class for both input types 
+that improves the layout and behavior of their HTML elements. 
+Remember that checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
+<h2>Default (stacked)</h2>
+<p>By default, any number of checkboxes and radios that are immediate siblings will be vertically stacked and appropriately spaced 
+with <strong>form-check</strong>.</p>
+<p><a href="archives/Class Htmls/ex5.html" target = "_blank">Example One</a> uses <strong>form-check</strong> with checkboxes, while 
+<a href="archives/Class Htmls/ex6.html" target = "_blank">Example Two</a> uses <strong>form-check</strong> with radio buttons.</p>
+<pre><code>&lt;form&gt;
+&lt;div class=&quot;form-check&quot;&gt;
+  &lt;label class=&quot;form-check-label&quot;&gt;
+    &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; checked&gt;
+    Option one is this and that&amp;mdash;be sure to include why it&#39;s great
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-check&quot;&gt;
+  &lt;label class=&quot;form-check-label&quot;&gt;
+    &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; checked&gt;
+    Option two is another valid choice
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<p><a href="archives/Class Htmls/ex7.html" target = "_blank">Example Three</a> is a further example of laying out checkbox and radio button options. </p>
+<p><a href="archives/Class Htmls/ex7a.html" target = "_blank">Example Four</a> is the same example as above but with the Submit<em> button moved in 
+under the controls rather than the labels (using justify-content-end*</em>). </p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
